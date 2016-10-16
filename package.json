@@ -1,0 +1,25 @@
+{
+  "name": "seatingchart",
+  "version": "2.0.0",
+  "description": "App designed to generate seating charts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-waterfall": "^0.1.5",
+    "bluebird": "^3.4.1",
+    "express": "^4.14.0",
+    "jsonfile": "^2.3.1",
+    "async": "^1.4.0",
+    "body-parser": "^1.13.1",
+    "express": "^4.12.4",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.1",
+    "nodemailer": "^1.4.0",
+    "nodemailer-smtp-pool": "^1.1.1",
+    "serve-favicon": "^2.3.0"
+  }
+}

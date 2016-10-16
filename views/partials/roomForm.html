@@ -1,0 +1,101 @@
+<form name="rfc.roomForm" novalidate>
+  <div class="row">
+    <div class="col-md-12 alert alert-danger" ng-show="rfc.error">
+      <p><strong>Error! </strong>{{rfc.message}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputEmail1">Room Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="rfc.newRoom.name" 
+            ng-disabled="rfc.selectedExistingRoom.value" ng-required="!rfc.selectedExistingRoom.value">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="exampleInputPassword1">Max Width</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="20" 
+            ng-max="20" ng-min="1" ng-required="!rfc.selectedExistingRoom.value" ng-model="rfc.newRoom.width" 
+              ng-disabled="rfc.selectedExistingRoom.value">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleInputPassword2">Max Height</label>
+            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="15" 
+              ng-max="15" ng-min="1" ng-required="!rfc.selectedExistingRoom.value" ng-model="rfc.newRoom.height" 
+                ng-disabled="rfc.selectedExistingRoom.value">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="exampleInputFile">Upload Roster</label>
+          <input ng-file-reader students="rfc.newRoster.students" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="exampleInputFile" ng-disabled="rfc.selectedRoster.students" ng-required="!rfc.manualPaste && !rfc.selectedRoster.students">
+          <a ng-click="rfc.manualPaste = !rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">Manual Paste</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputEmail1">Existing Classrooms</label>
+          <select class="form-control" ng-options="room as room.name for room in rfc.rooms" ng-model="rfc.selectedExistingRoom" 
+            ng-disabled="!rfc.noInputs()" ng-required="rfc.noInputs()"></select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputPassword1">Existing Rosters</label>
+          <select class="form-control" ng-options="roster as roster.rosterName for roster in rfc.rosters" ng-model="rfc.selectedRoster" 
+            ng-disabled="!rfc.noRoster()" ng-required="rfc.noRoster()"></select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputNumber">Seed Number</label>
+          <input type="number" class="form-control" id="exampleInputNumber" placeholder="1" ng-model="rfc.seed">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-show="rfc.manualPaste">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control" ng-model="rfc.newRoster.rosterName" placeholder="Roster Name" ng-required="rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <div ng-repeat="cols in rfc.columns" class="col-md-2">
+          <input type="text" class="form-control" ng-model="cols.value" ng-disabled="rfc.selectedRoster.students">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-7">
+        <label for="delVal">Delimeter</label>
+        <select id="delVal" class="form-control" ng-options="del.value as del.name for del in rfc.delimeters" ng-model="rfc.delimeter" ng-disabled="rfc.selectedRoster.students"></select>
+                <label for="parse">Click to begin parsing</label>
+        <button class="btn btn-default" ng-click="rfc.parse()">Parse</button>
+      </div>
+      <div class="form-group col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <strong>List the custom fields. Fields that are required are: First Name, Last Name, and Email. First Name and Last Name can be substituted for Student. If the Student field is placed, the value will be treated as Last Name, First Name</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <textarea rows="20" class="form-control" ng-model="rfc.manualRosterText" ng-required="rfc.manualPaste" ng-disabled="rfc.selectedRoster.students"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-5">
+      <button type="submit" class="btn btn-default" ng-click="rfc.verifyAndGo()">Submit</button>
+    </div>
+  </div>
+  <div>{{ rfc.roomForm.$valid }}</div>
+</form>
