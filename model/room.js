@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var roomSchema = new mongoose.Schema({
+var Schema = mongoose.Schema;
+var roomSchema = new Schema({
 	name: {
 		type: String,
 		required: true
@@ -14,6 +15,7 @@ var roomSchema = new mongoose.Schema({
 	},
 	type: {
 		type: String,
+		enum: ["Class", "Lab"],
 		required: true
 	},
 	ghostSeats: {
@@ -29,7 +31,8 @@ var roomSchema = new mongoose.Schema({
 		default: []
 	},
 	totalSeats: { 
-		type: Number
+		type: Number,
+		default: 0
 	},
 	numPerStation: {
 		type: Number,
@@ -45,4 +48,5 @@ var roomSchema = new mongoose.Schema({
 	}
 });
 
-mongoose.model('Room', roomSchema);
+var Room = mongoose.model('Room', roomSchema);
+module.exports = Room;

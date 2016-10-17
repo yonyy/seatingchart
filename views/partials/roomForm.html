@@ -1,6 +1,11 @@
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+    25%
+  </div>
+</div>
 <form name="rfc.roomForm" novalidate>
   <div class="row">
-    <div class="col-md-12 alert alert-danger" ng-show="rfc.error">
+    <div class="col-md-offset-4 col-md-6 alert alert-danger" ng-show="rfc.error">
       <p><strong>Error! </strong>{{rfc.message}}</p>
     </div>
   </div>
@@ -10,27 +15,27 @@
         <div class="form-group col-md-12">
           <label for="exampleInputEmail1">Room Name</label>
           <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="rfc.newRoom.name" 
-            ng-disabled="rfc.selectedExistingRoom.value" ng-required="!rfc.selectedExistingRoom.value">
+            ng-disabled="rfc.selectedExistingRoom._id" ng-required="!rfc.selectedExistingRoom._id">
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-6">
           <label for="exampleInputPassword1">Max Width</label>
           <input type="number" class="form-control" id="exampleInputPassword1" placeholder="20" 
-            ng-max="20" ng-min="1" ng-required="!rfc.selectedExistingRoom.value" ng-model="rfc.newRoom.width" 
-              ng-disabled="rfc.selectedExistingRoom.value">
+            ng-max="30" max="30" ng-min="1"  min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.width" 
+              ng-disabled="rfc.selectedExistingRoom._id">
         </div>
         <div class="form-group col-md-6">
             <label for="exampleInputPassword2">Max Height</label>
             <input type="number" class="form-control" id="exampleInputPassword2" placeholder="15" 
-              ng-max="15" ng-min="1" ng-required="!rfc.selectedExistingRoom.value" ng-model="rfc.newRoom.height" 
-                ng-disabled="rfc.selectedExistingRoom.value">
+              ng-max="15" max="15" ng-min="1" min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.height" 
+                ng-disabled="rfc.selectedExistingRoom._id">
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-6">
           <label for="exampleInputFile">Upload Roster</label>
-          <input ng-file-reader students="rfc.newRoster.students" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="exampleInputFile" ng-disabled="rfc.selectedRoster.students" ng-required="!rfc.manualPaste && !rfc.selectedRoster.students">
+          <input ng-file-reader type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="exampleInputFile" ng-disabled="rfc.selectedRoster.students" ng-required="!rfc.manualPaste && !rfc.selectedRoster.students">
           <a ng-click="rfc.manualPaste = !rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">Manual Paste</a>
         </div>
       </div>
@@ -46,7 +51,7 @@
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputPassword1">Existing Rosters</label>
-          <select class="form-control" ng-options="roster as roster.rosterName for roster in rfc.rosters" ng-model="rfc.selectedRoster" 
+          <select class="form-control" ng-options="roster as roster.name for roster in rfc.rosters" ng-model="rfc.selectedRoster" 
             ng-disabled="!rfc.noRoster()" ng-required="rfc.noRoster()"></select>
         </div>
       </div>
@@ -97,5 +102,4 @@
       <button type="submit" class="btn btn-default" ng-click="rfc.verifyAndGo()">Submit</button>
     </div>
   </div>
-  <div>{{ rfc.roomForm.$valid }}</div>
 </form>

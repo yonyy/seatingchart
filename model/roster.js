@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
-var rosterSchema = new mongoose.Schema({
-	rosterName : {
+var Schema = mongoose.Schema;
+var rosterSchema = new Schema({
+	name : {
 		type: String,
 		required: true
 	},
@@ -18,4 +19,5 @@ var rosterSchema = new mongoose.Schema({
 	}
 });
 
-mongoose.model('Roster', rosterSchema);
+var Roster = mongoose.model('Roster', rosterSchema);
+module.exports = Roster;
