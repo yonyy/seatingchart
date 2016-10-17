@@ -29,8 +29,8 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			url: 'roster/:id',
 			views: {
 				'content' : {
-					templateUrl: 'partials/roster.html',
-					controller: 'rosterController as rc'
+					templateUrl: 'partials/roomRoster.html',
+					controller: 'roomRosterController as rrc'
 				}
 			},
 			params: {
@@ -69,6 +69,36 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 					controller: 'eventsController as ec'
 				}
 			}
+		})
+		.state('dashboard.rosters', {
+			url: 'rosters',
+			views: {
+				'content' : {
+					templateUrl: 'partials/rosters.html',
+					controller: 'rostersController as rc'
+				}
+			}
+		})
+		.state('dashboard.openRoster', {
+			url: 'open/:id',
+			views: {
+				'content' : {
+					templateUrl: 'partials/roster.html',
+					controller : 'rosterController as rc'
+				}
+			},
+			params: {
+				id: null
+			}
+		})
+		.state('dashboard.rooms', {
+			url: 'rooms',
+			views: {
+				'content': {
+					templateUrl: 'partials/rooms.html',
+					controller: 'roomsController as rc'
+				}
+			}
 		});
 }
 ]);
@@ -87,7 +117,8 @@ app.factory('resource', ['$resource', function($resource) {
 			'getRosters' : {url: '/api/rosters', method : 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/rosters/:id', method: 'GET', isArray: false, params: {id: '@id'}},
 			'addRoster' : {url: '/api/rosters', method: 'POST', isArray: false, params: {roster: '@roster'}},
-			'updateRoster' : {url: '/api/rosters/:id', method: 'PUT', isArray: false, params: {id: '@id', roster: '@roster'}}
+			'updateRoster' : {url: '/api/rosters/:id', method: 'PUT', isArray: false, params: {id: '@id', roster: '@roster'}},
+			'deleteRoster': {url: '/api/rosters/:id', method: 'DELETE', isArray: false, params: {id: '@id'}}
 		}
 	);
 
@@ -98,7 +129,8 @@ app.factory('resource', ['$resource', function($resource) {
 			'getByID' : {url: '/api/rooms/:id', method: 'GET', isArray: false, params: {id: '@id'}},
 			'getClasses' : {url: '/api/rooms/class', method: 'GET', isArray: true, params: {}},
 			'getLabs' : {url: '/api/rooms/labs', method: 'GET', isArray: true, params: {}},
-			'updateRoom': {url: '/api/rooms/:id', method: 'PUT', isArray: false, params: {id: '@id', room: '@room'}}
+			'updateRoom': {url: '/api/rooms/:id', method: 'PUT', isArray: false, params: {id: '@id', room: '@room'}},
+			'deleteRoom': {url: '/api/rooms/:id', method: 'DELETE', isArray: false, params: {id: '@id'}}
 		}
 	);
 

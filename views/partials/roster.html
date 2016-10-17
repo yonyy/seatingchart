@@ -1,11 +1,6 @@
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-    50%
-  </div>
-</div>
 <div class="row">
 	<div class="col-md-6" ng-show="rc.saved">
-		<h1>Roster: {{rc.roster.name}}</h1>
+		<h3>Roster: {{rc.roster.name}}</h3>
 	</div>
 	<div class="col-md-4" ng-show="rc.saved">
 		<button class="btn btn-default" ng-click="rc.saved = !rc.saved">Edit</button>
@@ -42,7 +37,7 @@
 					<td>{{student.lastName}}</td>
 					<td>{{student.email}}</td>
 					<td>
-						<select ng-model="student.isLeftHanded" ng-options="op.val as op.text for op in [{ text: 'Right Handed', val: false }, { text: 'Left Handed', val: true }]">
+						<select class="form-control" ng-model="student.isLeftHanded" ng-options="op.val as op.text for op in [{ text: 'Right Handed', val: false }, { text: 'Left Handed', val: true }]">
 						</select>
 					</td>
 				</tr>
@@ -52,6 +47,7 @@
 </div>
 <div class="row">
 	<div class="col-md-offset-6 col-md-4">
-		<button class="btn btn-default" ng-click="rc.continue()">Next</button>
+		<button class="btn btn-default" ng-click="rc.back()">Back</button>
+		<button class="btn btn-default" ng-click="rc.save()">Update</button>
 	</div>
 </div>

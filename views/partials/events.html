@@ -14,17 +14,19 @@
 				<tr>
 					<th ng-click="ec.predicate = 'created_at'">Date</th>
 					<th ng-clcik="ec.predicate = 'name'">Event Title</th>
-					<th></th>
+					<th>Roster</th>
+					<th>Room</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="event in ec.events | orderBy: ec.predicate | filter: ec.query">
 					<td>{{event.created_at | date: 'medium'}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.roster.name}}</td>
+					<td>{{event.room.name}}</td>
 					<td>
-						{{event.name}}
-					</td>
-					<td>
-						<span class="badge" ng-click="ec.open(event._id)">Open</span>
+						<span class="badge" ng-click="ec.open(event)">Open</span>
 						<span class="badge" ng-click="ec.delete(event._id, $index)">Delete</span>
 					</td>
 				</tr>

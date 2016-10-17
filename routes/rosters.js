@@ -85,10 +85,9 @@ router.route('/:id')
 				res.status(500).send(err);
 			}
 			else {
-				var newStudents = req.body.roster.students;
-				roster.students = newStudents;
-				roster.totalStudents = newStudents.length;
-				roster.rosterName = req.body.roster.name;
+				roster.students = req.body.roster.students;
+				roster.totalStudents = req.body.roster.students.length;
+				roster.name = req.body.roster.name;
 				roster.save(function (err, r){
 					console.log("Updated");
 					res.json(r);

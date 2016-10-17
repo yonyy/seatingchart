@@ -144,6 +144,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.placeSeat = function(cell) {
     	// verify that placing a seat will not exceed with
+    	if (cell.realCell) {
+    		growl.error('Please select an empty cell to place a seat');
+    		return;
+    	}
+
     	var j = cell.vX;
     	var i = cell.vY;
     	var fromBack = false;
@@ -214,7 +219,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.separateSeatsHelper = function(i,j) {
-    	if (!self.virtualMap[i][j].realCell || !self.virtualMap[i][j].realCell.valid) 
+    	if (!self.virtualMap[i][j].realCell) 
     		return true;
     	
     	if (self.shiftLeft) {

@@ -1,0 +1,33 @@
+<div class="row">
+<h1>All Rosters</h1>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<label for="query">Search</label>
+		<input type="text" id="query" class="form-control" ng-model="rc.query">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="roster in rc.rosters | filter: rc.query">
+					<td>
+						{{roster.name}}
+						<span class="badge">{{roster.totalStudents}}</span>
+					</td>
+					<td>
+						<span class="badge" ng-click="rc.open(roster._id)">Open</span>
+						<span class="badge" ng-click="rc.delete(roster._id, $index)">Delete</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

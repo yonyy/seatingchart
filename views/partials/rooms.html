@@ -1,0 +1,37 @@
+<div class="row">
+<h1>All Rooms</h1>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<label for="query">Search</label>
+		<input type="text" id="query" class="form-control" ng-model="rc.query">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Width</th>
+					<th>Height</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="room in rc.rooms | filter: rc.query">
+					<td>
+						{{room.name}}
+						<span class="badge">{{room.totalSeats}}</span>
+					</td>
+					<td>{{room.width}}</td>
+					<td>{{room.height}}</td>
+					<td>
+						<span class="badge">Open</span>
+						<span class="badge" ng-click="rc.delete(room._id, $index)">Delete</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
