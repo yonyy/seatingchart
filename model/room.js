@@ -38,7 +38,11 @@ var roomSchema = new Schema({
 		type: Number,
 		default: 1
 	},
-	map: {
+	vmap: {
+		type: Array,
+		default: []
+	},
+	pmap: {
 		type: Array,
 		default: []
 	},

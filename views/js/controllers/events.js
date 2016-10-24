@@ -5,25 +5,26 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     var self = this;
     self.events = null;
 
+    var i = 0;
     resource.events.getEvents({},
         function success(events) {
-            self.events = events;
-            for (var i = 0; i < self.events.length; i++) {
-                var event = self.events[i];
+            self.events = events.map(function(e) {
+                var event = Object.assign({}, e);
                 resource.rooms.getByID({id: event.roomID},
                     function success(room) {
-                        console.log(room);
                         if (!room.name) event.room = {name: 'Room has been deleted'};
                         else event.room = room;
+    
+                        resource.rosters.getByID({id: event.rosterID},
+                            function success(roster) {
+                                event.roster = roster;
+                            }
+                        );
+                    }
+                );
 
-                    }
-                );
-                resource.rosters.getByID({id: event.rosterID},
-                    function success(roster) {
-                        event.roster = roster;
-                    }
-                );
-            }
+                return event;
+            });
         }, function error(err) {
             console.log(err);
         }
@@ -34,7 +35,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             growl.error('Can not open because the room has been deleted');
             return;
         }
-        $state.go('dashboard.room', {id: event._id});
+        $state.go('dashboard.room', {id: event._id, touched: 1});
     }
 
     self.delete = function(id, index) {

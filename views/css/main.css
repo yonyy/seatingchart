@@ -29,16 +29,33 @@
 	background-color: #3F51B5;
 }
 
+.assigned {
+  background-color: #76FF03;
+}
+
 .outline {
 	font-size: 17px;
 	left: 11px;
 	position: absolute;
-	bottom: -14px;
+	bottom: -5px;
+  font-family: 'Raleway', sans-serif;
 }
 
-.alive:hover {
+.right-item:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   background-color: #FF8A65;
   color: white; 
+}
+
+.left:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #C5CAE9;
+}
+
+.assigned:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #CCFF90;
 }

@@ -45,7 +45,6 @@ router.route('/')
 
 router.route('/:id')
 	.get(function(req, res, next){
-		console.log("id: " + req.params.id)
 		Roster.findById(req.params.id, function (err, roster){
 			if (err) {
 				console.error(err);

@@ -33,11 +33,17 @@ router.put('/:id', function(req, res, next) {
 			res.status(500).send(err);
 		} else {
 			/** TODO set new values */
-			room.map = req.body.room.map;
+			room.vmap = req.body.room.vmap;
+			room.pmap = req.body.room.pmap;
 			room.totalSeats = req.body.room.totalSeats;
 			room.save(function(err, r) {
-				console.log('updated');
-				res.json(r);
+				if (err) {
+					console.log(err);
+					res.status(500).send(err);
+				} else {
+					console.log('updated room');
+					res.json(r);
+				}
 			});
 		}
 	});

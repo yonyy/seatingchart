@@ -26,7 +26,7 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			}
 		})
 		.state('dashboard.roster', {
-			url: 'roster/:id',
+			url: 'roster/:id?{touched:int}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomRoster.html',
@@ -34,11 +34,12 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			},
 			params: {
-				id: null
+				id: null,
+				touched: 0
 			}
 		})
 		.state('dashboard.room', {
-			url: 'room/:id',
+			url: 'room/:id?{touched:int}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomDraft.html',
@@ -46,7 +47,8 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			},
 			params: {
-				id: null
+				id: null,
+				touched: 0
 			}
 		})
 		.state('dashboard.publish', {
@@ -116,20 +118,20 @@ app.factory('resource', ['$resource', function($resource) {
 		{
 			'getRosters' : {url: '/api/rosters', method : 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/rosters/:id', method: 'GET', isArray: false, params: {id: '@id'}},
-			'addRoster' : {url: '/api/rosters', method: 'POST', isArray: false, params: {roster: '@roster'}},
-			'updateRoster' : {url: '/api/rosters/:id', method: 'PUT', isArray: false, params: {id: '@id', roster: '@roster'}},
+			'addRoster' : {url: '/api/rosters', method: 'POST', isArray: false},
+			'updateRoster' : {url: '/api/rosters/:id', method: 'PUT', isArray: false, params: {id: '@id'}},
 			'deleteRoster': {url: '/api/rosters/:id', method: 'DELETE', isArray: false, params: {id: '@id'}}
 		}
 	);
 
 	self.rooms = $resource('/api/rooms', null,
 		{
-			'addRoom' : {url: '/api/rooms', method: 'POST', isArray: false, params: {room: '@room'}},
+			'addRoom' : {url: '/api/rooms', method: 'POST', isArray: false},
 			'getRooms' : {url: '/api/rooms', method: 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/rooms/:id', method: 'GET', isArray: false, params: {id: '@id'}},
 			'getClasses' : {url: '/api/rooms/class', method: 'GET', isArray: true, params: {}},
 			'getLabs' : {url: '/api/rooms/labs', method: 'GET', isArray: true, params: {}},
-			'updateRoom': {url: '/api/rooms/:id', method: 'PUT', isArray: false, params: {id: '@id', room: '@room'}},
+			'updateRoom': {url: '/api/rooms/:id', method: 'PUT', isArray: false, params: {id: '@id'}},
 			'deleteRoom': {url: '/api/rooms/:id', method: 'DELETE', isArray: false, params: {id: '@id'}}
 		}
 	);
@@ -137,11 +139,11 @@ app.factory('resource', ['$resource', function($resource) {
 	self.events = $resource('/api/events', null,
 		{
 			'addEvent' : {url: '/api/events', method: 'POST', isArray: false, params: {event: '@event'}},
-			'editEvent' : {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id', event: '@event'}},
+			'editEvent' : {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id'}},
 			'getEvents' : {url: '/api/events', method: 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/events/:id', method: 'GET', isArray: false, params: {id: '@id'}},
 			'deleteEvent': {url: '/api/events/:id', method: 'DELETE', isArray: false, params: {id: '@id'}},
-			'updateEvent': {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id', event: '@event'}}
+			'updateEvent': {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id'}}
 		}
 	);
 

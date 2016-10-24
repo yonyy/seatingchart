@@ -30,6 +30,7 @@
     "angular-typeahead": "~0.3.1",
     "ng-showdown": "~1.1.0",
     "jspdf": "~1.2.61",
-    "angular-touch": "~1.5.8"
+    "angular-touch": "~1.5.8",
+    "seedrandom": "~2.4.2"
   }
 }

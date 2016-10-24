@@ -6,6 +6,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.room = null;
 	self.virtualMap = [];
 	self.physicalMap = [];
+    self.untouchedVirtualMap = null;
 	self.maxWidth = 42; // on extra for display
 	self.maxHeight = 16;
 	self.rowStrOffset = 0;
@@ -20,12 +21,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     if (self.maxHeight > room.height) 
                     	self.maxHeight = room.height;
                     
-                    console.log(room.map);
-                    if (room.map.length > 0) {
-                    	self.virtualMap = room.map[0];
-                    	self.physicalMap = room.map[1]
-                    }
-                    else self.generateVMap();
+                    self.virtualMap = room.vmap;
+                    self.physicalMap = room.pmap;
+                    if ($stateParams.touched == 0) self.generateVMap();
                 }, function error(err) {
                     console.log(err);
                 }
@@ -65,21 +63,20 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 					leftHanded: false,
 					ghostSeat: false,
 					valid: true, 	// to distinguish between viable cells and cells that just for display
-					x: j,
-					y: i
+                    x: j,
+					y: i,
+                    isEmpty: true
 				};
 
 				// last column should be letters
 				if (j == self.room.width) {
-/*					console.log(i);
-					console.log(self.rowStrings[self.rowStrings.length-i]);	*/
 					cell.str = self.rowStrings[self.rowStrings.length-i-1];
 					cell.valid = false;
 
 				// any valid seat in between
 				} else if (j < self.room.width) {
 					cell.str = (j+1).toString();
-					cell.id = self.rowStrings[i] + j.toString();
+					cell.id = self.rowStrings[self.rowStrings.length-i-1] + (j+1).toString();
 				}
 
 				self.physicalMap[i].push(cell);
@@ -87,6 +84,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 				self.virtualMap[(i+roffset)][(j+coffset)].realCell = self.physicalMap[i][j];
 			}
 		}
+
+        self.untouchedVirtualMap = JSON.parse(JSON.stringify(self.virtualMap));
+        self.room.vmap = self.untouchedVirtualMap;
     }
 
     self.generateRowStr = function() {
@@ -128,6 +128,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     		var i = cell.vY;
     		var x = cell.realCell.x;
     		j += 1;
+
 	    	for (; j < self.maxWidth; j++) {
 	    		if (self.virtualMap[i][j].realCell && self.virtualMap[i][j].realCell.valid) {
 	    			self.virtualMap[i][j].realCell = self.physicalMap[i][x];
@@ -143,7 +144,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.placeSeat = function(cell) {
-    	// verify that placing a seat will not exceed with
+    	// place seat at an empty spot
     	if (cell.realCell) {
     		growl.error('Please select an empty cell to place a seat');
     		return;
@@ -153,18 +154,19 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     	var i = cell.vY;
     	var fromBack = false;
     	var counter = 0;
-    	for(var k = 0; k < self.maxWidth; k++) {
-    		if (self.virtualMap[i][k].realCell && self.virtualMap[i][k].realCell.valid)
+    	// verify that placing a seat will not exceed width
+        for(var k = 0; k < self.maxWidth; k++) {
+    		if (self.virtualMap[i][k].realCell 
+                    && self.virtualMap[i][k].realCell.valid)
     			counter++;
     	}
 
-    	console.log(counter);
     	if (counter >= self.room.width) {
     		growl.error('Can not place a seat. It will exceed the width');
     		return;
     	}
 
-    	// get nearest valid cell
+    	// get nearest valid cell checking backwards
     	var nearestCell = null;
     	for (var k = j; k >= 0; k--) {
     		if (self.virtualMap[i][k].realCell) {
@@ -187,7 +189,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     	// value of nearest cell;
     	var x = nearestCell.x;
+        // if nearest real cell is from behind we override the next one
     	if (fromBack) x += 1;
+
     	var nearestCell = self.physicalMap[i][x];
     	self.virtualMap[i][j].realCell = nearestCell;
     	self.virtualMap[i][j].realCell.valid = true;
@@ -285,22 +289,37 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.shiftLeft = self.directions[0].val;
 
 	self.saveMapping = function() {
-		var map = [];
-		map.push(self.virtualMap);
-		map.push(self.physicalMap);
-		self.room.map = map;
-		console.log(self.room.map);
+
+		self.room.vmap = self.virtualMap;
+        self.room.pmap = self.physicalMap;
+
+        console.log(self.room.pmap);
+        console.log(self.room.vmap);
+
 		resource.rooms.updateRoom({id: self.room._id, room: self.room},
 			function success(room) {
 				console.log(room);
-				growl.success('Room Updated');
+				growl.success('Room Arrangement Updated');
 			}, function error(err){
+                console.log(err);
 				growl.error('Error updating the room');
 			}
 		);
 	}
 
 	self.next = function() {
+        self.room.pmap = self.physicalMap;
+        console.log(self.room.pmap);
+        console.log(self.room.vmap);
+
+        resource.rooms.updateRoom({id: self.room._id, room: self.room},
+            function success(room) {
+                console.log(room);
+                growl.success('Room Updated');
+            }, function error(err){
+                growl.error('Error updating the room');
+            }
+        );
 		$state.go('dashboard.publish', {id: $stateParams.id});
 	}
 }]);

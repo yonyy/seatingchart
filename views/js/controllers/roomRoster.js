@@ -28,10 +28,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         resource.rosters.updateRoster({id: self.roster._id, roster: self.roster},
             function success(roster) {
                 growl.success('Updated Roster');
-                $state.go('dashboard.room', {id: $stateParams.id});
+                $state.go('dashboard.room', {id: $stateParams.id, touched: $stateParams.touched});
             }, function error(err) {
                 growl.error('Error updating the roster');
-                $state.go('dashboard.room', {id: $stateParams.id});
+                $state.go('dashboard.room', {id: $stateParams.id, touched: $stateParams.touched});
             });
     }
 

@@ -41,7 +41,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             self.rooms = rooms;
             self.rooms.push({name: '--Select--', _id: null});
             self.selectedExistingRoom = self.rooms[self.rooms.length-1];
-            console.log(rooms);
         })
 
 	resource.rosters.getRosters({}, 
@@ -49,7 +48,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 				self.rosters = rosters;
 				self.rosters.push({name: '--Select--', students: null});
 				self.selectedRoster = self.rosters[self.rosters.length-1];
-                console.log(rosters);
 		}, function error(err) {
 			growl.error('Error getting rosters');
 		}
@@ -87,7 +85,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     });
 
     self.verifyAndGo = function() {
-        console.log('verifying')
     	if (self.roomForm.$invalid) {
             self.error = true;
     		self.message = 'Form is incomplete. Make sure all fields are completed'
@@ -104,8 +101,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     		return false;
     	}
 
-        console.log(self.newRoom);
-        console.log(self.newRoster);
         self.uploadRoom();
     }
 
@@ -125,7 +120,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.uploadRoster = function(roomID) {
-                            console.log(2);
         if (self.isNewRoster) {
             resource.rosters.addRoster({roster: self.newRoster},
                 function success (roster) {
@@ -139,11 +133,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
     
     self.createEvent = function(roomID, rosterID) {
-                        console.log('here');
-        resource.events.addEvent({event: {roomID: roomID, rosterID: rosterID}},
+        var touched = (self.isNewRoom) ? 0 : 1;
+        var event = {event: {roomID: roomID, rosterID: rosterID}};
+        resource.events.addEvent(event,
             function success (e) {
-                console.log(e);
-                $state.go('dashboard.roster', {id: e._id});
+                $state.go('dashboard.roster', {id: e._id, touched: touched});
             }, function error(err) {
                 console.log(err);
             });
