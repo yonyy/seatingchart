@@ -3,15 +3,19 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose') //mongo connection
-
+var Room = require('../model/room');
 
 router.post('/', function(req, res, next) {
-	mongoose.model('Room').findOne({name : req.body.room.name}, function (err, room){
-		if (err) res.json(err);
-		if (!newClass) {
-			mongoose.model('Room').create(req.body.room, function (err, room){
-				if (err) res.json(err);
-				else res.json(room);
+	console.log(req.body.room);
+	Room.findOne({name : req.body.room.name}, function (err, room){
+		if (err) res.status(500).send(err);
+		if (!room) {
+			Room.create(req.body.room, function (err, room){
+				if (err) res.status(500).send(err);
+				else {
+					console.log("created room");
+					res.json(room);
+				}
 			});
 		}
 		else {
@@ -23,15 +27,23 @@ router.post('/', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-	mongoose.model('Room').findById(req.params.id, function(err, room) {
+	Room.findById(req.params.id, function(err, room) {
 		if (err) {
 			console.log(err);
-			res.json(err);
+			res.status(500).send(err);
 		} else {
 			/** TODO set new values */
+			room.vmap = req.body.room.vmap;
+			room.pmap = req.body.room.pmap;
+			room.totalSeats = req.body.room.totalSeats;
 			room.save(function(err, r) {
-				console.log('updated');
-				res.json(r);
+				if (err) {
+					console.log(err);
+					res.status(500).send(err);
+				} else {
+					console.log('updated room');
+					res.json(r);
+				}
 			});
 		}
 	});
@@ -39,10 +51,10 @@ router.put('/:id', function(req, res, next) {
 
 router.route('/')
 	.get(function(req, res, next){
-		mongoose.model('Room').find({}, function (err, rooms){
+		Room.find({}, function (err, rooms){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(rooms);
@@ -52,11 +64,10 @@ router.route('/')
 
 router.route('/:id')
 	.get(function(req, res, next){
-		console.log("id: " + req.params.id)
-		mongoose.model('Room').findById(req.params.id, function (err, room){
+		Room.findById(req.params.id, function (err, room){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(room);
@@ -65,16 +76,16 @@ router.route('/:id')
 	})
 
 	.delete(function(req, res, next){
-		mongoose.model('Room').findById(req.params.id, function (err, room){
+		Room.findById(req.params.id, function (err, room){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				room.remove(function (err, room){
 					if (err) {
 						console.error(err);
-						res.json(err);
+						res.status(500).send(err);
 					}
 					else {
 						console.log('DELETE removing ID: ' + room._id);
@@ -87,10 +98,10 @@ router.route('/:id')
 
 router.route('/class')
 	.get(function(req, res, next){
-		mongoose.model('Room').find({classType: 'class'}, function (err, rooms){
+		Room.find({classType: 'class'}, function (err, rooms){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(classrooms);
@@ -100,10 +111,10 @@ router.route('/class')
 
 router.route('/labs')
 	.get(function(req, res, next){
-		mongoose.model('Room').find({classType: 'lab'}, function (err, rooms){
+		Room.find({classType: 'lab'}, function (err, rooms){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(classrooms);

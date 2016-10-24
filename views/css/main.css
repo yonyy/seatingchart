@@ -1,21 +1,61 @@
-html, body {
-    margin: 0px;
-    width: 100%;
-    height: 100%;
+.grid-item {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: #EEEEEE;
+  border-radius:5px;
+  text-align:center;
+  text-decoration:none;
+  position: relative;
+  -o-transition:all 200ms ease-out;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all .200ms ease-out;
+  transition: all 200ms ease-out;
+   -webkit-font-smoothing: antialiased;
 }
 
-.angular-google-map-container {
-	height: 100vh;
+.dead {
+	background-color: #EEEEEE
 }
 
-.no-box-shadow md-autocomplete-wrap {
-	box-shadow: 0px 0px 0px;
+.right {
+  background-color: #FF5722;
 }
 
-.no-box-shadow md-autocomplete-wrap md-input-container {
-	padding-bottom: 0px;
+.left {
+	background-color: #3F51B5;
 }
 
-.longer-width {
-	width: 300px;
+.assigned {
+  background-color: #76FF03;
+}
+
+.outline {
+	font-size: 17px;
+	left: 11px;
+	position: absolute;
+	bottom: -5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.right-item:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #FF8A65;
+  color: white; 
+}
+
+.left:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #C5CAE9;
+}
+
+.assigned:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #CCFF90;
 }

@@ -1,1 +1,68 @@
-<div class="content">ss</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+    100%
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>Your room is done!</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<p>Room: {{rpc.room.name}}</p>
+		<p>Height: {{rpc.room.height}}</p>
+		<p>Width: {{rpc.room.width}}</p>
+		<p>Maximum Seats: {{rpc.room.width * rpc.room.height}}</p>
+		<p>Total Available Seats: {{rpc.room.totalSeats}}</p>
+		<p>Total Students: {{rpc.roster.students.length}}</p>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{rpc.room.name}}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row" ng-repeat="row in rpc.virtualMap">
+			<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-click="rpc.display(cell)">
+				<p class="outline">{{cell.realCell.str}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-offset-5 col-md-4">
+		<button class="btn btn-default">Save and Send</button>
+		<button class="btn btn-default" ng-click="rpc.displayTable = !rpc.displayTable">Manually Change</button>
+	</div>
+</div>
+<div class="row" ng-show="rpc.displayTable">
+	<p><strong>Note:</strong> If each seat only holds one student, this will swap the two students. Else if the seats hold more than one student, then if the seat has an empty spot, it will place that student there. Else, you will need to request an empty seat</p>
+	<div class="col-md-12">
+		<div>
+			<label for="query">Search</label>
+			<input id="query" type="text" class="form-control" ng-model="rpc.filter">
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Last Name</th>
+					<th>First Name</th>
+					<th>Seat Number</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="student in rpc.roster.students | orderBy: 'lastName' | filter: rpc.filter ">
+					<td>{{student.lastName}}</td>
+					<td>{{student.firstName}}</td>
+					<td><input type="text" class="form-control" ng-model="student.seat.id"></td>
+					<td>
+						<span class="badge" ng-click="rpc.applyChange(student)">Apply</span>
+						<span class="badge" ng-click="rpc.discardChange(student)">Cancel</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

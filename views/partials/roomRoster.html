@@ -1,0 +1,57 @@
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+    50%
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-6" ng-show="rrc.saved">
+		<h3>Roster: {{rrc.roster.name}}</h3>
+	</div>
+	<div class="col-md-4" ng-show="rrc.saved">
+		<button class="btn btn-default" ng-click="rrc.saved = !rrc.saved">Edit</button>
+	</div>
+	<div class="col-md-6" ng-hide="rrc.saved">
+		<input class="form-control" type="txt" ng-model="rrc.roster.name">
+	</div>
+	<div class="col-md-4" ng-hide="rrc.saved">
+		<button class="btn btn-default" ng-click="rrc.saved = !rrc.saved">Save</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<label for="query">Search</label>
+		<input type="text" id="query" class="form-control" ng-model="rrc.query">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th ng-click="rrc.predicate = 'studentID'">Exam ID</th>
+					<th ng-clcik="rrc.predicate = 'firstName'">First Name</th>
+					<th ng-click="rrc.predicate = 'lastName'">Last Name</th>
+					<th ng-click="rrc.predicate = 'email'">Email</th>
+					<th>Preferences</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="student in rrc.roster.students | orderBy: rrc.predicate | filter: rrc.query">
+					<td>{{student.studentID}}</td>
+					<td>{{student.firstName}}</td>
+					<td>{{student.lastName}}</td>
+					<td>{{student.email}}</td>
+					<td>
+						<select class="form-control" ng-model="student.isLeftHanded" ng-options="op.val as op.text for op in [{ text: 'Right Handed', val: false }, { text: 'Left Handed', val: true }]">
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-offset-6 col-md-4">
+		<button class="btn btn-default" ng-click="rrc.continue()">Next</button>
+	</div>
+</div>

@@ -3,13 +3,14 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose') //mongo connection
+var Roster = require('../model/roster');
 
 router.route('/')
 	.get(function(req, res, next){
-		mongoose.model('Roster').find({}, function (err, rosters){
+		Roster.find({}, function (err, rosters){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(rosters);
@@ -18,25 +19,22 @@ router.route('/')
 	})
 
 	.post(function(req, res) {
-		mongoose.model('Roster').findOne({rosterName : req.body.roster.rosterName}, function (err, newRoster){
-			if (err) {
-				res.json(err);
-			}
-			if (!newRoster) {
-				mongoose.model('Roster').create(req.body.roster, function (err, newRoster){
-					if (err)
-						res.json(err);
+		console.log(req.body.room);
+		Roster.findOne({rosterName : req.body.roster.rosterName}, function (err, roster){
+			if (err) res.status(500).send(err);
+			if (!roster) {
+				Roster.create(req.body.roster, function (err, roster){
+					if (err) res.status(500).send(err);
 					else {
-						console.log("Uploaded : " + newRoster.rosterName);
-						res.json(newRoster);
+						console.log("Uploaded : " + roster.rosterName);
+						res.json(roster);
 					}
 				});
 			}
 			else {
-				var newStudents = (req.body.students) ? req.body.students : roster.students;
 				roster.students = req.body.roster.students;
 				roster.totalStudents = req.body.roster.totalStudents;
-				roster.rosterName = req.body.roster.rosterName;
+				roster.name = req.body.roster.name;
 				roster.save(function (err, r){
 					console.log("Updated");
 					res.json(r);
@@ -47,11 +45,10 @@ router.route('/')
 
 router.route('/:id')
 	.get(function(req, res, next){
-		console.log("id: " + req.params.id)
-		mongoose.model('Roster').findById(req.params.id, function (err, roster){
+		Roster.findById(req.params.id, function (err, roster){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				res.json(roster);
@@ -60,16 +57,16 @@ router.route('/:id')
 	})
 
 	.delete(function(req, res, next){
-		mongoose.model('Roster').findById(req.params.id, function (err, roster){
+		Roster.findById(req.params.id, function (err, roster){
 			if (err) {
 				console.error(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
 				roster.remove(function (err, roster){
 					if (err) {
 						console.error(err);
-						res.json(err);
+						res.status(500).send(err);
 					}
 					else {
 						console.log('DELETE removing ID: ' + roster._id);
@@ -81,16 +78,15 @@ router.route('/:id')
 	})
 
 	.put(function(req, res, next){
-		mongoose.model('Roster').findById(req.params.id, function (err, roster){
+		Roster.findById(req.params.id, function (err, roster){
 			if (err) {
 				console.log(err);
-				res.json(err);
+				res.status(500).send(err);
 			}
 			else {
-				var newStudents = (req.body.students) ? req.body.students : roster.students;
-				roster.students = newStudents;
-				roster.totalStudents = newStudents.length;
-				roster.rosterName = (req.body.title) ? req.body.title : roster.rosterName;
+				roster.students = req.body.roster.students;
+				roster.totalStudents = req.body.roster.students.length;
+				roster.name = req.body.roster.name;
 				roster.save(function (err, r){
 					console.log("Updated");
 					res.json(r);

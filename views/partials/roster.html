@@ -1,15 +1,21 @@
 <div class="row">
 	<div class="col-md-6" ng-show="rc.saved">
-		{{rc.roster.rosterName}}
+		<h3>Roster: {{rc.roster.name}}</h3>
 	</div>
 	<div class="col-md-4" ng-show="rc.saved">
 		<button class="btn btn-default" ng-click="rc.saved = !rc.saved">Edit</button>
 	</div>
 	<div class="col-md-6" ng-hide="rc.saved">
-		<input class="form-control" type="txt" ng-model="rc.roster.rosterName">
+		<input class="form-control" type="txt" ng-model="rc.roster.name">
 	</div>
 	<div class="col-md-4" ng-hide="rc.saved">
 		<button class="btn btn-default" ng-click="rc.saved = !rc.saved">Save</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<label for="query">Search</label>
+		<input type="text" id="query" class="form-control" ng-model="rc.query">
 	</div>
 </div>
 <div class="row">
@@ -25,15 +31,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="student in rc.roster.students | orderBy: rc.predicate">
+				<tr ng-repeat="student in rc.roster.students | orderBy: rc.predicate | filter: rc.query">
 					<td>{{student.studentID}}</td>
 					<td>{{student.firstName}}</td>
 					<td>{{student.lastName}}</td>
 					<td>{{student.email}}</td>
 					<td>
-						<select ng-model="student.isLeftHanded">
-							<option value="false">Right Handed</option>
-							<option value="true">Left Handed</option>
+						<select class="form-control" ng-model="student.isLeftHanded" ng-options="op.val as op.text for op in [{ text: 'Right Handed', val: false }, { text: 'Left Handed', val: true }]">
 						</select>
 					</td>
 				</tr>
@@ -42,5 +46,8 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-offset-md-4 col-md-4">Next</div>
+	<div class="col-md-offset-6 col-md-4">
+		<button class="btn btn-default" ng-click="rc.back()">Back</button>
+		<button class="btn btn-default" ng-click="rc.save()">Update</button>
+	</div>
 </div>
