@@ -72,11 +72,15 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	}
 
     self.parse = function() {
-      var pack = textParser.tp.readText(self.columns, self.manualRosterText, self.delimeter);
-      self.newRoster.students = pack.students;
-      self.newRoster.students.length = pack.students.length;
-      $scope.success = pack.success;
-      self.manualRosterText = '';
+        var pack = textParser.tp.readText(self.columns, self.manualRosterText, self.delimeter);
+        self.newRoster.students = pack.students;
+        self.newRoster.totalStudents = pack.students.length;
+        $scope.success = pack.success;
+        if ($scope.success) {
+          growl.success('Parsed Successfully');
+        } else {
+            growl.error('Error Parsing');
+        }
     };
 
     $scope.$watch('students', function(value){
@@ -136,8 +140,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
-        var event = {event: {roomID: roomID, rosterID: rosterID}};
-        resource.events.addEvent(event,
+        var seed = (self.seed) ? 1 : self.seed;
+        var event = {roomID: roomID, rosterID: rosterID, seed: seed};
+        resource.events.addEvent({event: event},
             function success (e) {
                 $state.go('dashboard.roster', {id: e._id, touched: touched});
             }, function error(err) {

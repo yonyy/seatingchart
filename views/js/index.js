@@ -138,12 +138,18 @@ app.factory('resource', ['$resource', function($resource) {
 
 	self.events = $resource('/api/events', null,
 		{
-			'addEvent' : {url: '/api/events', method: 'POST', isArray: false, params: {event: '@event'}},
+			'addEvent' : {url: '/api/events', method: 'POST', isArray: false},
 			'editEvent' : {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id'}},
 			'getEvents' : {url: '/api/events', method: 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/events/:id', method: 'GET', isArray: false, params: {id: '@id'}},
 			'deleteEvent': {url: '/api/events/:id', method: 'DELETE', isArray: false, params: {id: '@id'}},
 			'updateEvent': {url: '/api/events/:id', method: 'PUT', isArray: false, params: {id: '@id'}}
+		}
+	);
+
+	self.emails = $resource('/api/emails', null,
+		{
+			'sendEmails' : {url: '/api/emails', method: 'POST', isArray: false}
 		}
 	);
 

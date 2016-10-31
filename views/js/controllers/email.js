@@ -1,19 +1,16 @@
 'use strict';
 angular.module('app').controller('emailController',
 ['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'room',
-function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal, growl, students, room) {
+function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, room) {
     var self = this;
     self.nonnull = [];
     self.docDefinition = {
         content: [
-            {
-                text: [
-                    {text: 'Email Log', style: 'header'}
-                ]
-            }
+            { text: 'Email Log\n\n', style: 'header' }
         ],
         styles: {
-            header: { fontSize: 14 }
+            header: { fontSize: 14 },
+            message: {fontSize: 11 }
         }
     }
     
@@ -29,7 +26,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.paragraph += "Seat: [seat]\n";
     self.paragraph += "Exam Serial Number: [id]\n\n";
     self.paragraph += "Please be sure to put your Exam Serial Number on your exam.\n";
-    self.paragraph += "Note: Exam Serial Number may change in future exams\n"
+    self.paragraph += "Note: Exam Serial Number may change in future exams\n\n"
     self.paragraph += "See you in class,\n[ ]";
 
     self.close = function() {
@@ -37,7 +34,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     };
 
     self.generateRecievers = function(students) {
-        var list = students.sort(sortByName);
+        var list = students.sort(self.sortByName);
 
         for (var i = 0; i < list.length; i++) {
             if (list[i].email) {
@@ -48,7 +45,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         }
     }
 
-    self.generateRecievers();
+    self.generateRecievers(students);
 
     /* Comparison functions to sort by lastname */
     self.sortByName = function(stud1, stud2) {
@@ -111,7 +108,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         var emails = [];
         for (var i = 0; i < self.nonnull.length; i++) {
             var parsedText = self.parse(text, self.nonnull[i]);
-            self.docDefinition.content[0].text.push({text: parsedText});
+            self.docDefinition.content.push({text: parsedText, style: 'message'});
 
             var email = {
                 email: self.nonnull[i].email,
@@ -124,6 +121,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         resource.emails.sendEmails({emails: emails},
             function success(res) {
                 growl.success('Emails Sent!');
+                console.log(self.docDefinition);
                 pdfMake.createPdf(self.docDefinition).open();
             }, function error(err) {
                 growl.error('Error sending emails');

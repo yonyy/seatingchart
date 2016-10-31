@@ -2,6 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 var env       = process.env.NODE_ENV || 'development';
 var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 var nodemailer = require('nodemailer');

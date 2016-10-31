@@ -19,23 +19,23 @@ router.route('/')
 	})
 
 	.post(function(req, res) {
-		Roster.findOne({rosterName : req.body.roster.rosterName}, function (err, roster){
+		Roster.findOne({name : req.body.roster.name}, function (err, roster){
 			if (err) res.status(500).send(err);
 			if (!roster) {
 				Roster.create(req.body.roster, function (err, roster){
 					if (err) res.status(500).send(err);
 					else {
-						console.log("Uploaded : " + roster.rosterName);
+						console.log("Uploaded : " + roster.name);
 						res.json(roster);
 					}
 				});
 			}
 			else {
 				roster.students = req.body.roster.students;
-				roster.totalStudents = req.body.roster.totalStudents;
+				roster.totalStudents = req.body.roster.students.length;
 				roster.name = req.body.roster.name;
 				roster.save(function (err, r){
-					console.log("Updated");
+					console.log("Updated" + roster.name);
 					res.json(r);
 				});
 			}

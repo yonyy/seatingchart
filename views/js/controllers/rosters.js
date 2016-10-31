@@ -21,7 +21,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         resource.rosters.deleteRoster({id: id},
             function success(r) {
                 growl.success('Deleted ' + r.name);
-                self.events.splice(index,1);
+                self.rosters.splice(index,1);
             }, function error(err) {
                 growl.error('Error deleting');
             }

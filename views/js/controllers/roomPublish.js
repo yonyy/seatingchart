@@ -11,11 +11,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.islands = [];
     self.hasBeenMarkedMarked = [];
     self.sIndex = 0;
+    self.seed = 0;
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
             self.event = event;
-            
+            self.seed = self.event.seed;
             resource.rosters.getByID({id: event.rosterID},
                 function success(roster) {
                     self.roster = roster;
@@ -120,7 +121,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.beginProcess = function() {
         self.prepareIslands();
-        self.roster.students = self.shuffle(self.roster.students, 0);
+        self.roster.students = self.shuffle(self.roster.students, self.seed);
         for (var i = 0; i < self.islands.length; i++) {
             var total = self.islands[i].length;
             var info = self.getQuotaAndOffset(total);
@@ -365,8 +366,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 students: function () {
                     return JSON.parse(JSON.stringify(self.roster.students));
                 },
-                seats: function() {
-                    return JSON.parse(JSON.stringify(self.physicalMap));
+                room: function() {
+                    return JSON.parse(JSON.stringify(self.room));
                 }
             }
         });

@@ -15,28 +15,30 @@
 		<p>Width: {{rpc.room.width}}</p>
 		<p>Maximum Seats: {{rpc.room.width * rpc.room.height}}</p>
 		<p>Total Available Seats: {{rpc.room.totalSeats}}</p>
-		<p>Total Students: {{rpc.roster.students.length}}</p>
+		<p>Total Students: {{rpc.roster.totalStudents}}</p>
 	</div>
 </div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">{{rpc.room.name}}</h3>
-	</div>
-	<div class="panel-body">
-		<div class="row" ng-repeat="row in rpc.virtualMap">
-			<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-click="rpc.display(cell)">
-				<span class="objectInfo">
-					<p ng-repeat="student in cell.realCell.students">
-						Name: {{student.lastName}}, {{student.firstName}}
-					</p>
-					<p ng-repeat="student in cell.realCell.students">
-						Email: {{student.email}}
-					</p>
-					<p ng-repeat="student in cell.realCell.students">
-						ID: {{student.studentID}}
-					</p>
-				</span>
-				<p class="outline">{{cell.realCell.str}}</p>
+<div class="row">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{rpc.room.name}}</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row" ng-repeat="row in rpc.virtualMap">
+				<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-click="rpc.display(cell)">
+					<span class="objectInfo">
+						<p ng-repeat="student in cell.realCell.students">
+							Name: {{student.lastName}}, {{student.firstName}}
+						</p>
+						<p ng-repeat="student in cell.realCell.students">
+							Email: {{student.email}}
+						</p>
+						<p ng-repeat="student in cell.realCell.students">
+							ID: {{student.studentID}}
+						</p>
+					</span>
+					<p class="outline">{{cell.realCell.str}}</p>
+				</div>
 			</div>
 		</div>
 	</div>
