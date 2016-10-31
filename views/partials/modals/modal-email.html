@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Email Your Students</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pdfName" placeholder="Quiz 1 Seating Assignment" ng-model="ec.subject">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pdfTitle" class="col-sm-2 control-label">Recipients</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pdfTitle" ng-model="ec.recievers">
+            </div>
+        </div>
+        <div class="form-group">
+            <p>The following syntaxs are supported</p>
+            <p><code>[fullname]</code> - Places the student's full name</p>
+            <p><code>[firstname]</code> - Places the student's first name</p>
+            <p><code>[lastname]</code> - Places the student's last name</p>
+            <p><code>[id]</code> - Places the student's id</p>
+            <p><code>[seat]</code> - Places the student's assigned seat</p>
+        </div>
+        <div class="form-group">
+        <textarea class="form-control" cols="15" rows="15" ng-model="ec.paragraph"></textarea>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" type="button">Send</button>
+    <button class="btn btn-default" type="button" ng-click="ec.close()">Done</button>
+</div>

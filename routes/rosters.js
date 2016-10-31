@@ -19,7 +19,6 @@ router.route('/')
 	})
 
 	.post(function(req, res) {
-		console.log(req.body.room);
 		Roster.findOne({rosterName : req.body.roster.rosterName}, function (err, roster){
 			if (err) res.status(500).send(err);
 			if (!roster) {

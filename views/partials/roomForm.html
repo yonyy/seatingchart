@@ -66,7 +66,7 @@
   <div ng-show="rfc.manualPaste">
     <div class="row">
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" ng-model="rfc.newRoster.rosterName" placeholder="Roster Name" ng-required="rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">
+        <input type="text" class="form-control" ng-model="rfc.newRoster.name" placeholder="Roster Name" ng-required="rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">
       </div>
     </div>
     <div class="row">
@@ -88,7 +88,7 @@
     </div>
     <div class="row">
       <div class="form-group col-md-12">
-        <strong>List the custom fields. Fields that are required are: First Name, Last Name, and Email. First Name and Last Name can be substituted for Student. If the Student field is placed, the value will be treated as Last Name, First Name</strong>
+        <strong>List the custom fields. Fields that are required are: <code>First Name</code>, <code>Last Name</code>, and <code>Email</code>. <code>First Name</code> and <code>Last Name</code> can be substituted for <code>Student<code>. If the <code>Student</code> field is placed, the value will be treated as <code>Last Name</code><code>, First Name</code></strong>
       </div>
     </div>
     <div class="row">

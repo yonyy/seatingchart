@@ -25,6 +25,17 @@
 	<div class="panel-body">
 		<div class="row" ng-repeat="row in rpc.virtualMap">
 			<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-click="rpc.display(cell)">
+				<span class="objectInfo">
+					<p ng-repeat="student in cell.realCell.students">
+						Name: {{student.lastName}}, {{student.firstName}}
+					</p>
+					<p ng-repeat="student in cell.realCell.students">
+						Email: {{student.email}}
+					</p>
+					<p ng-repeat="student in cell.realCell.students">
+						ID: {{student.studentID}}
+					</p>
+				</span>
 				<p class="outline">{{cell.realCell.str}}</p>
 			</div>
 		</div>
@@ -32,12 +43,13 @@
 </div>
 <div class="row">
 	<div class="col-md-offset-5 col-md-4">
-		<button class="btn btn-default">Save and Send</button>
+		<button class="btn btn-default" ng-click="rpc.openModal()">Download PDFs</button>
+		<button class="btn btn-default" ng-click="rpc.openEmailModal()">Email Students</button>
 		<button class="btn btn-default" ng-click="rpc.displayTable = !rpc.displayTable">Manually Change</button>
 	</div>
 </div>
 <div class="row" ng-show="rpc.displayTable">
-	<p><strong>Note:</strong> If each seat only holds one student, this will swap the two students. Else if the seats hold more than one student, then if the seat has an empty spot, it will place that student there. Else, you will need to request an empty seat</p>
+	<div class="col-md-12"><p><strong>Note:</strong> If each seat only holds one student, this will swap the two students. Else if the seats hold more than one student, then if the seat has an empty spot, it will place that student there. Else, you will need to request an empty seat</p></div>
 	<div class="col-md-12">
 		<div>
 			<label for="query">Search</label>

@@ -18,6 +18,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             resource.rooms.getByID({id: event.roomID},
                 function success(room) {
                     self.room = room;
+                    console.log(self.room);
                     if (self.maxHeight > room.height) 
                     	self.maxHeight = room.height;
                     
@@ -309,8 +310,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	self.next = function() {
         self.room.pmap = self.physicalMap;
-        console.log(self.room.pmap);
-        console.log(self.room.vmap);
 
         resource.rooms.updateRoom({id: self.room._id, room: self.room},
             function success(room) {

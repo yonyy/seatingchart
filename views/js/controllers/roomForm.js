@@ -73,7 +73,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.parse = function() {
       var pack = textParser.tp.readText(self.columns, self.manualRosterText, self.delimeter);
-      $scope.students = pack.students;
+      self.newRoster.students = pack.students;
+      self.newRoster.students.length = pack.students.length;
       $scope.success = pack.success;
       self.manualRosterText = '';
     };
@@ -85,11 +86,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     });
 
     self.verifyAndGo = function() {
-    	if (self.roomForm.$invalid) {
+/*    	if (self.roomForm.$invalid) {
             self.error = true;
     		self.message = 'Form is incomplete. Make sure all fields are completed'
     		return false;
-    	}
+    	}*/
 
     	var numStudents = (self.selectedRoster.students) ? self.selectedRoster.students.length : self.newRoster.students.length;
     	var width = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.width : self.newRoom.width;
@@ -120,6 +121,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.uploadRoster = function(roomID) {
+        console.log(self.newRoster);
         if (self.isNewRoster) {
             resource.rosters.addRoster({roster: self.newRoster},
                 function success (roster) {

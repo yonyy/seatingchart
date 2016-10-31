@@ -18,10 +18,12 @@ app.use(bodyParser.json());
 var rooms = require('./routes/rooms');
 var rosters = require('./routes/rosters');
 var events = require('./routes/events');
+var emails = require('./routes/emails');
 
 app.use('/api/rooms/', rooms);
 app.use('/api/rosters/', rosters);
 app.use('/api/events/', events);
+app.use('/api/emails/', emails);
 
 app.set('port', process.env.PORT || 3000);
 
