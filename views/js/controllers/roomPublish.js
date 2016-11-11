@@ -11,11 +11,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.islands = [];
     self.hasBeenMarkedMarked = [];
     self.sIndex = 0;
+    self.seed = 0;
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
             self.event = event;
-            
+            self.seed = self.event.seed;
             resource.rosters.getByID({id: event.rosterID},
                 function success(roster) {
                     self.roster = roster;
@@ -120,7 +121,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.beginProcess = function() {
         self.prepareIslands();
-        self.roster.students = self.shuffle(self.roster.students, 0);
+        self.roster.students = self.shuffle(self.roster.students, self.seed);
         for (var i = 0; i < self.islands.length; i++) {
             var total = self.islands[i].length;
             var info = self.getQuotaAndOffset(total);
@@ -155,7 +156,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     }
                 }
                 if (counter < quota) {
-                    for (var i = 0; i < subClass.length; i -= (offset.row + 1)) {
+                    for (var i = 0; i < subClass.length; i += (offset.row + 1)) {
                         for (var j = 0; j < subClass[i].length; j += 1) {
                             if (subClass[i][j].isEmpty) {
                                 subClass[i][j].isEmpty = false;
@@ -175,35 +176,51 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     subClass[i][j].students = [];
                     for (var s = 0; s < self.room.numPerStation; s++) {
                         if (self.sIndex >= self.roster.students.length) {
-                            subClass[i][j].students.push({
+                            var emptyStudent = {
                                 firstName: 'EMPTY',
                                 lastName: 'EMPTY',
                                 email: null,
                                 studentID: 0,
-                                isLeftHanded: false
-                            });
+                                isLeftHanded: false,
+                                seat: {
+                                    id: subClass[i][j].id,
+                                    x: subClass[i][j].x,
+                                    y: subClass[i][j].y
+                                }
+                            };
+                            subClass[i][j].students.push(emptyStudent);
+                            self.roster.students.push(emptyStudent);
                         } else {
-                            subClass[i][j].students.push(self.roster.students[self.sIndex]);
                             self.roster.students[self.sIndex].seat = {
                                 id: subClass[i][j].id,
                                 x: subClass[i][j].x,
                                 y: subClass[i][j].y
                             }
+                            subClass[i][j].students.push(self.roster.students[self.sIndex]);
                             self.sIndex++;
                         }
                     }
                 } else {
                     subClass[i][j].students = [];
                     for (var s = 0; s < self.room.numPerStation; s++) {
-                        subClass[i][j].students.push({
+                        var emptyStudent = {
                             firstName: 'EMPTY',
                             lastName: 'EMPTY',
                             email: null,
                             studentID: 0,
-                            isLeftHanded: false
-                        });
+                            isLeftHanded: false,
+                            seat: {
+                               id: subClass[i][j].id,
+                                x: subClass[i][j].x,
+                                y: subClass[i][j].y
+                            }
+                        };
+                        subClass[i][j].students.push(emptyStudent);
+                        self.roster.students.push(emptyStudent);
                     }
                 }
+                
+                self.physicalMap[subClass[i][j].y][subClass[i][j].x] = subClass[i][j];
             }
         }
     }
@@ -238,7 +255,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             offset.col = 1;
             offset.row = 0;
         } else {
-            offset.col = 0;
+            offset.col = 1;
             offset.row = 0;
         }
 
@@ -250,19 +267,26 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         var target = student.seat.id;   // get id of the targeted seat
         var origin = self.physicalMap[student.seat.y][student.seat.x].id;   // get id of current seat
 
-        // create an array that should hold the targeted seat
-        var targetSeat = self.physicalMap.filter(function(seat) {
-            return seat.id == target;
-        });
+        // get object that should hold the targeted seat
+        var targetSeat = null;
+        for (var i = 0; i < self.physicalMap.length; i++) {
+            for (var j = 0; j < self.physicalMap[i].length; j++) {
+                if (self.physicalMap[i][j].id == target)  {
+                    targetSeat = self.physicalMap[i][j];
+                }
+            }
+        }
+
 
         // if array is empty, targeted seat is nonexistent
-        if (targetSeat.length == 0) {
+        if (targetSeat == null) {
             growl.error('Invalid seat requested');
             return;
         }
 
         // verifying that there is a spot avaliable if the seat holds more than one
         var targetIndex = -1;
+        console.log(targetSeat);
         if (targetSeat.students.length > 1) {
             for (var i = 0; i < targetSeat.students.length; i++) {
                 if (targetSeat.students[i].id == 0){
@@ -278,10 +302,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             return;
         }
 
-        // create an array that should hold the original seat
-        var originSeat = seat.physicalMap.filter(function(seat) {
-            return seat.id == origin;
-        });
+        // get object should hold the original seat
+        var originSeat = self.physicalMap[student.seat.y][student.seat.x];
 
         // finding the index at which the student is stored in the students array
         var originIndex = 0;
@@ -298,30 +320,82 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         originSeat.students[originIndex] = holder;
 
         // update values of students
-        targetSeat.students[targetIndex].id = targetSeat.id;
-        targetSeat.students[targetIndex].x = targetSeat.x;
-        targetSeat.students[targetIndex].y = targetSeat.y;
+        targetSeat.students[targetIndex].seat.id = targetSeat.id;
+        targetSeat.students[targetIndex].seat.x = targetSeat.x;
+        targetSeat.students[targetIndex].seat.y = targetSeat.y;
 
-        originSeat.students[originIndex].id = originSeat.id;
-        originSeat.students[originIndex].x = originSeat.x;
-        originSeat.students[originIndex].y = originSeat.y;
+        originSeat.students[originIndex].seat.id = originSeat.id;
+        originSeat.students[originIndex].seat.x = originSeat.x;
+        originSeat.students[originIndex].seat.y = originSeat.y;
 
         targetSeat.isEmpty = false; // targeted seat is no long empty
         originSeat.isEmpty = true;  // original seat might be empty
 
         // verifies is original seat is empty
-        for (var i = 0; i < originSeat.students.length; i++){
-            if (originSeat.students[i].id != 0) {
+        for (var i = 0; i < originSeat.students.length; i++) {
+            if (originSeat.students[i].email != null) {
                 originSeat.isEmpty = false;
             }
         }
 
+        console.log('original seat:');
+        console.log(originSeat);
+
+        console.log('targetSeat:');
+        console.log(targetSeat);
         growl.success('Swapped seats');
 
     }
 
     self.discardChange = function(student) {
         student.seat.id = self.physicalMap[student.seat.y][student.seat.x].id;
+    }
+
+    self.openModal = function() {
+
+        /* Modal */
+        var modalInstance = $uibModal.open({
+            animation: true,
+            ariaLabelledBy: 'modal-title',
+            ariaDescribedBy: 'modal-body',
+            templateUrl: 'partials/modals/modal-download.html',
+            controller: 'pdfDownloadController',
+            controllerAs: 'pdc',
+            size: 'lg',
+            resolve: {
+                students: function () {
+                    return JSON.parse(JSON.stringify(self.roster.students));
+                },
+                room: function() {
+                    return JSON.parse(JSON.stringify(self.room));
+                }
+            }
+        });
+
+        modalInstance.result.then(function () {});
+    }
+
+    self.openEmailModal = function() {
+        /* Modal */
+        var modalInstance = $uibModal.open({
+            animation: true,
+            ariaLabelledBy: 'modal-title',
+            ariaDescribedBy: 'modal-body',
+            templateUrl: 'partials/modals/modal-email.html',
+            controller: 'emailController',
+            controllerAs: 'ec',
+            size: 'lg',
+            resolve: {
+                students: function () {
+                    return JSON.parse(JSON.stringify(self.roster.students));
+                },
+                room: function() {
+                    return self.room.name;
+                }
+            }
+        });
+
+        modalInstance.result.then(function () {});      
     }
 
     /* Comparison function to sort by row */

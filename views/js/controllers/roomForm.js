@@ -72,10 +72,15 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	}
 
     self.parse = function() {
-      var pack = textParser.tp.readText(self.columns, self.manualRosterText, self.delimeter);
-      $scope.students = pack.students;
-      $scope.success = pack.success;
-      self.manualRosterText = '';
+        var pack = textParser.tp.readText(self.columns, self.manualRosterText, self.delimeter);
+        self.newRoster.students = pack.students;
+        self.newRoster.totalStudents = pack.students.length;
+        $scope.success = pack.success;
+        if ($scope.success) {
+          growl.success('Parsed Successfully');
+        } else {
+            growl.error('Error Parsing');
+        }
     };
 
     $scope.$watch('students', function(value){
@@ -85,11 +90,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     });
 
     self.verifyAndGo = function() {
-    	if (self.roomForm.$invalid) {
+/*    	if (self.roomForm.$invalid) {
             self.error = true;
     		self.message = 'Form is incomplete. Make sure all fields are completed'
     		return false;
-    	}
+    	}*/
 
     	var numStudents = (self.selectedRoster.students) ? self.selectedRoster.students.length : self.newRoster.students.length;
     	var width = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.width : self.newRoom.width;
@@ -120,6 +125,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.uploadRoster = function(roomID) {
+        console.log(self.newRoster);
         if (self.isNewRoster) {
             resource.rosters.addRoster({roster: self.newRoster},
                 function success (roster) {
@@ -134,8 +140,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
-        var event = {event: {roomID: roomID, rosterID: rosterID}};
-        resource.events.addEvent(event,
+        var seed = (self.seed) ? 1 : self.seed;
+        var event = {roomID: roomID, rosterID: rosterID, seed: seed};
+        resource.events.addEvent({event: event},
             function success (e) {
                 $state.go('dashboard.roster', {id: e._id, touched: touched});
             }, function error(err) {

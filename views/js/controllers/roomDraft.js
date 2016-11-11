@@ -18,12 +18,13 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             resource.rooms.getByID({id: event.roomID},
                 function success(room) {
                     self.room = room;
+
                     if (self.maxHeight > room.height) 
                     	self.maxHeight = room.height;
                     
                     self.virtualMap = room.vmap;
                     self.physicalMap = room.pmap;
-                    if ($stateParams.touched == 0) self.generateVMap();
+                    if ($stateParams.touched == 0 || self.virtualMap.length == 0) self.generateVMap();
                 }, function error(err) {
                     console.log(err);
                 }
@@ -309,12 +310,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	self.next = function() {
         self.room.pmap = self.physicalMap;
-        console.log(self.room.pmap);
-        console.log(self.room.vmap);
 
         resource.rooms.updateRoom({id: self.room._id, room: self.room},
             function success(room) {
-                console.log(room);
                 growl.success('Room Updated');
             }, function error(err){
                 growl.error('Error updating the room');

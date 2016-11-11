@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Email Your Students</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="subject" class="col-md-2 control-label">Subject</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="pdfName" placeholder="Quiz 1 Seating Assignment" ng-model="ec.subject">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pdfTitle" class="col-md-2 control-label">Recipients</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="pdfTitle" ng-model="ec.recievers" ng-disabled="true">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-4">
+                    <p>The following syntaxs are supported</p>
+                    <p><code>[fullname]</code> - Places the student's full name</p>
+                    <p><code>[firstname]</code> - Places the student's first name</p>
+                    <p><code>[lastname]</code> - Places the student's last name</p>
+                    <p><code>[id]</code> - Places the student's id</p>
+                    <p><code>[seat]</code> - Places the student's assigned seat</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="body" class="col-md-2 control-label">Message</label>
+            <div class="col-md-9">
+                <textarea id="body" class="form-control" cols="15" rows="15" ng-model="ec.paragraph"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-6">
+            <button class="btn btn-default" type="button" ng-click="ec.generateEmails(ec.paragraph)">Send</button>
+            <button class="btn btn-default" type="button" ng-click="ec.close()">Done</button>
+        </div>
+    </div>
+</div>
