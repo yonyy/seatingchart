@@ -255,7 +255,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             offset.col = 1;
             offset.row = 0;
         } else {
-            offset.col = 0;
+            offset.col = 1;
             offset.row = 0;
         }
 

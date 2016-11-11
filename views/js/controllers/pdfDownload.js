@@ -4,6 +4,7 @@ angular.module('app').controller('pdfDownloadController',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, room) {
     var self = this;
 
+    self.formatText = '';
     self.pdfTitle = '';
     self.formats = [
         {
@@ -55,7 +56,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             styles: {
                 header: { fontSize: 14 },
                 predicate: {fontSize: 14, bold: true, italics: true},
-                student: {fontSize: 11}
+                student: {fontSize: 10}
             }
         }
 
@@ -64,14 +65,17 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         switch(predicate) {
             case 'ln':
                 container = students.sort(self.sortByName);
+                self.formatText = 'Last Name Sorted';
                 break;
 
             case 'row':
                 container = students.sort(self.sortByRow);
+                self.formatText = 'Row Sorted';
                 break;
             
             case 'col':
                 container = students.sort(self.sortByColumns);
+                self.formatText = 'Column Sorted';
                 break
 
         }
@@ -110,10 +114,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             text.text += extraInfo[i];
         }
 
-        if (tracker <= maxPerCol) self.docDefinition.content[1].columns.push(text);
+        self.docDefinition.content[1].columns.push(text);
         console.log(self.docDefinition);
         pdfMake.createPdf(self.docDefinition).open();
-        pdfMake.createPdf(self.docDefinition).download(self.pdfName);
+        pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
 
 
     }

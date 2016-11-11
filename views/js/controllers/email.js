@@ -117,12 +117,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             };
             emails.push(email);
         }
-
+        pdfMake.createPdf(self.docDefinition).open();
         resource.emails.sendEmails({emails: emails},
             function success(res) {
                 growl.success('Emails Sent!');
                 console.log(self.docDefinition);
-                pdfMake.createPdf(self.docDefinition).open();
             }, function error(err) {
                 growl.error('Error sending emails');
             });
