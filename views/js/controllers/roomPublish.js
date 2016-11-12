@@ -2,12 +2,12 @@
 angular.module('app').controller('roomPublishController',
 ['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModal', 'growl',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal, growl) {
-	var self = this;
-	self.events = null;
-	self.room = null;
-	self.roster = null;
-	self.virtualMap = null;
-	self.physicalMap = null;
+        var self = this;
+        self.events = null;
+        self.room = null;
+        self.roster = null;
+        self.virtualMap = null;
+        self.physicalMap = null;
     self.islands = [];
     self.hasBeenMarkedMarked = [];
     self.sIndex = 0;
@@ -20,24 +20,25 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             resource.rosters.getByID({id: event.rosterID},
                 function success(roster) {
                     self.roster = roster;
+                    resource.rooms.getByID({id: event.roomID},
+                        function success(room) {
+                            self.room = room;
+                            self.virtualMap = room.vmap;
+                                self.physicalMap = room.pmap;
+                            self.findIslands();
+                            self.beginProcess();
+                            self.removeOutsideBorders();
+
+                        }, function error(err) {
+                            growl.error('Error retrieving room');
+                            console.log(err);
+                        }
+                    );
                 }, function error(err) {
                     growl.error('Error retrieving roster');
                 }
             );
 
-            resource.rooms.getByID({id: event.roomID},
-                function success(room) {
-                    self.room = room;
-                    self.virtualMap = room.vmap;
-                   	self.physicalMap = room.pmap;
-                    self.findIslands();
-                    self.beginProcess();
-
-                }, function error(err) {
-                    growl.error('Error retrieving room');
-                    console.log(err);
-                }
-            );
 
         }, function error(err) {
             console.log(err);
@@ -45,10 +46,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     );
 
     self.cellClass = function(cell) {
-    	if (!cell.realCell || !cell.realCell.valid) return 'dead';
-    	if (cell.realCell && cell.realCell.leftHanded) return 'left';
+        if (!cell.realCell || !cell.realCell.valid) return 'dead';
+        if (cell.realCell && cell.realCell.leftHanded) return 'left';
         if (cell.realCell && !cell.realCell.isEmpty) return 'assigned';
-    	return 'right';
+        return 'right';
     }
 
     self.findIslands = function() {
@@ -128,6 +129,49 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             var subClass = self.buildSubClass(self.islands[i]);
             self.applyStudents(subClass, info.quota, info.offset);
         }
+    }
+
+    self.removeOutsideBorders = function() {
+        console.log( "here" );
+        for (var i = 0; i < self.virtualMap[0].length; i++) {
+            var insideBorder = false;
+
+            for (var j = 0; j < self.virtualMap.length; j++) {
+                if ( self.virtualMap[j][i].realCell ) {
+                    insideBorder = true;
+                    break;
+                }
+            }
+
+            if ( !insideBorder ) {
+                for (var j = 0; j < self.virtualMap.length; j++) {
+                    self.virtualMap[j][i].outsideBorder = true;
+                }
+            } else {
+                break;
+            }
+        }        
+
+        for (var i = self.virtualMap[0].length - 1; i >= 0; i--) {
+            var insideBorder = false;
+
+            for (var j = 0; j < self.virtualMap.length; j++) {
+                if ( self.virtualMap[j][i].realCell ) {
+                    insideBorder = true;
+                    break;
+                }
+            }
+
+            if ( !insideBorder ) {
+                for (var j = 0; j < self.virtualMap.length; j++) {
+                    self.virtualMap[j][i].outsideBorder = true;
+                }
+            } else {
+                break;
+            }
+        }        
+
+
     }
 
     self.getQuotaAndOffset = function(total) {
