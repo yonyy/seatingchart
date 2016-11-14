@@ -42,7 +42,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 				self.virtualMap[i].push({
 					vX: j,
 					vY: i,
-					realCell: null
+					realCell: null,
+					outsideBorder: false
 				});
 			}
 		}

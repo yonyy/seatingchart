@@ -1,19 +1,22 @@
 'use strict';
 angular.module('app').controller('pdfDownloadController',
-['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'room',
-function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, room) {
+['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'event', 'room',
+function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
 
     self.formatText = '';
-    self.pdfTitle = '';
+    self.pdfTitle = event.name;
+    self.pdfName = event.name.toLowerCase();
+    self.dateStr = $filter('date')(event.date, 'mediumDate');
+    self.timeStr = $filter('date')(event.time, 'shortTime');
     self.confidential_text = ''
     self.formats = [
         {
-            text: 'Last Name Sorted (For Quizzes)',
-            val: 'lnqz'
+            text: 'Last Name Sorted',
+            val: 'ln'
         },
         {
-            text: 'Last Name Sorted (For Midterms)',
+            text: 'Last Name Sorted (Grouped By Last Name)',
             val: 'lnmdt'
         },
         {
@@ -27,7 +30,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     ];
 
     self.predicate = self.formats[0];
-
+    students = students.filter(function(elmt){ return elmt.email != null});
 
     self.generateDoc = function(confidential_text, pdfTitle, predicate) {
         return {
@@ -35,12 +38,20 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 {
                     text: confidential_text, style: 'secrecy', alignment: 'center'
                 },
-
                 {
-                    text: pdfTitle + ' HEADER -- ', style: 'header'
-                }, 
+                        style: 'label',
+                        alignment: 'right',
+                        table: {
+                                body: [
+                                        [predicate.substring(0,16)]
+                                ]
+                        }
+                },
                 {
-                    text: predicate + "\n\n", style: 'predicate'
+                    text: pdfTitle + " in " + room.name, style: 'header'
+                },
+                {
+                    text: self.dateStr + " at " + self.timeStr + "      Total Students: " + students.length + "\n\n", style: 'header'
                 },
                 {
                     columns: []
@@ -50,7 +61,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 header: {fontSize: 14},
                 predicate: {fontSize: 14, bold: true, italics: true},
                 student: {fontSize: 10},
-                secrecy: {fontSize: 14, bold: true}
+                secrecy: {fontSize: 14, bold: true},
+                label: {bold: true}
             }
         }
     }
@@ -58,11 +70,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     self.download = function(predicate) {
         //console.log(students);
         var container = [];
-        var colIndex = 3;
+        var colIndex = 4;
         var midterm = false;
 
         switch(predicate) {
-            case 'lnqz':
+            case 'ln':
                 container = students.sort(self.sortByName);
                 self.formatText = 'Last Name Sorted';
                 self.confidential_text = '';
@@ -71,7 +83,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             case 'lnmdt':
                 container = students.sort(self.sortByName);
                 self.formatText = 'Last Name Sorted';
-                self.confidential_text = '----------- For Instructors Only -----------';
+                self.confidential_text = '----------- For Students Only -----------';
                 midterm = true;
                 break;
             case 'row':
@@ -91,20 +103,22 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text);
 
         if (midterm) {
-            self.docDefinition = self.writeStudents(self.docDefinition, container, 3);
+/*            self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
-
+            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);*/
+            
             self.confidential_text = '----------- For Students Only -----------';
             var containers = self.separateStudents(container);
             self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text)
             self.docDefinition = self.writeGroupStudents(self.docDefinition, containers);
             pdfMake.createPdf(self.docDefinition).open();
+            pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.formatText + self.pdfName);
 
         } else {
-            self.docDefinition = self.writeStudents(self.docDefinition, container, 3);
+            self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
+            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);
         }
-        //pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
     }
 
     self.writeStudents = function (docDefinition, container, colIndex) {
@@ -133,8 +147,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         var totalStudents = "\n\nTotal Students: " + totalStudents.toString() + "\n";
         var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
-        var actualPresent = "# of Students Absent: _____\n"
-        var extraInfo = [totalStudents, totalSeats, actualPresent];
+        var actualPresent = "# of Students Absent: _____\n";
+        var tutorInfo = "Tutor taking attendance: _____\n"
+        var extraInfo = [totalStudents, totalSeats, actualPresent, tutorInfo];
         if (maxPerCol - tracker < 5) {
             docDefinition.content[colIndex].columns.push(text);
             text = {text: '', style: 'student'};
@@ -149,7 +164,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     }
 
     self.writeGroupStudents = function(docDefinition, containers) {
-        var colIndex = 3;
+        var colIndex = 4;
         var fromStr = "";
         var toStr = "";
         for (var index = 0; index < containers.length; index++) {
