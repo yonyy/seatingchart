@@ -101,3 +101,8 @@
   visibility:visible;
   z-index: 1;
 }
+
+.voffset3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

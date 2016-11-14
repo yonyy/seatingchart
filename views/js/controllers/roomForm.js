@@ -25,6 +25,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.selectedRoster = null;
 
 	self.newRoom = {type: "Class"};
+	self.event = {};
 	self.newRoster = {};
 	self.manualPaste = false;
 
@@ -32,9 +33,24 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.isNewRoom = false;
     self.isNewRoster = false;
 
+    // Variables for time picker
+    self.ismeridian = true;
+    self.hstep = 1;
+    self.mstep = 1;
+
 	$scope.students;
 	$scope.success;
     $scope.filename;
+
+
+    // Calendar Controls for submission form
+    self.popup1 = {
+      opened: false
+    };
+
+    self.open1 = function() {
+      self.popup1.opened = true;
+    };
 
     resource.rooms.getRooms({},
         function success(rooms) {
@@ -141,9 +157,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
         var seed = (self.seed) ? 1 : self.seed;
-        var event = {roomID: roomID, rosterID: rosterID, seed: seed};
-        resource.events.addEvent({event: event},
+        self.event.roomID  =  roomID;
+        self.event.rosterID = rosterID;
+        self.event.seed = seed;
+        resource.events.addEvent({event: self.event},
             function success (e) {
+                growl.success('Event created!');
                 $state.go('dashboard.roster', {id: e._id, touched: touched});
             }, function error(err) {
                 console.log(err);

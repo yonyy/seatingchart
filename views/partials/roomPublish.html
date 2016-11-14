@@ -3,29 +3,35 @@
     100%
   </div>
 </div>
-<div class="row">
+<div class="row text-center">
 	<div class="col-md-12">
 		<h2>Your room is done!</h2>
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-12">
-		<p>Room: {{rpc.room.name}}</p>
-		<p>Height: {{rpc.room.height}}</p>
-		<p>Width: {{rpc.room.width}}</p>
-		<p>Maximum Seats: {{rpc.room.width * rpc.room.height}}</p>
-		<p>Total Available Seats: {{rpc.room.totalSeats}}</p>
-		<p>Total Students: {{rpc.roster.totalStudents}}</p>
+<div class="row text-center">
+	<div class="col-md-4">
+		<h1><strong>{{rpc.room.name}}</strong></h1>
+	</div>
+	<div class="col-md-4">
+		<h1>{{rpc.event.name}}</h1>
+	</div>
+	<div class="col-md-4">
+		<h1><strong><u>{{rpc.event.section}}</u></strong> {{rpc.event.time | date:'shortTime'}}</h1>
 	</div>
 </div>
-<div class="row">
+<div class="row text-center">
+	<div class="col-md-4">
+		<h2>Total Seats: {{rpc.room.totalSeats}}</h2>
+	</div>
+	<div class="col-md-4">
+		<h2>Date: {{rpc.event.date | date: 'MMM d, yyyy'}}</h2>
+	</div>
+</div>
+<div class="row" id="img">
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">{{rpc.room.name}}</h3>
-		</div>
-		<div class="panel-body">
+		<div class="panel-body text-center">
 			<div class="row" ng-repeat="row in rpc.virtualMap">
-				<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-click="rpc.display(cell)">
+				<div class="grid-item ng-class:rpc.cellClass(cell)" ng-repeat="cell in row" ng-model="cell" ng-show="!cell.outsideBorder" ng-click="rpc.display(cell)">
 					<span class="objectInfo">
 						<p ng-repeat="student in cell.realCell.students">
 							Name: {{student.lastName}}, {{student.firstName}}
@@ -43,8 +49,18 @@
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-offset-5 col-md-4">
+<div class="row text-center">
+	<div class="col-md-4">
+		<h1>Expected Students: {{rpc.roster.totalStudents}}</h1>
+	</div>
+	<div class="col-md-4">
+	</div>
+	<div class="col-md-4">
+		<h1>Actual Attendance: ______</h1>
+	</div>
+</div>
+<div class="row text-center center-block voffset3">
+	<div class="col-md-4 col-md-offset-4">
 		<button class="btn btn-default" ng-click="rpc.openModal()">Download PDFs</button>
 		<button class="btn btn-default" ng-click="rpc.openEmailModal()">Email Students</button>
 		<button class="btn btn-default" ng-click="rpc.displayTable = !rpc.displayTable">Manually Change</button>

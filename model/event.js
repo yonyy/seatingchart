@@ -5,6 +5,11 @@ var eventSchema = new Schema({
 		type: String,
 		default: "Unnamed Event"
 	},
+	section: {
+		type: String,
+		default: "Undef",
+		required: true
+	},
 	roomID: {
 		type: Schema.ObjectId,
 		required: true
@@ -16,6 +21,14 @@ var eventSchema = new Schema({
 	seed: {
 		type: Number,
 		default: 1
+	},
+	date: {
+		type: Date,
+		default: Date.now
+	},
+	time: {
+		type: Date,
+		default: Date.now
 	},
 	created_at: {
 		type: Date,

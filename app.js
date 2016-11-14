@@ -12,8 +12,8 @@ var event = require('./model/event');
 
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/views'));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
 
 var rooms = require('./routes/rooms');
 var rosters = require('./routes/rosters');

@@ -14,8 +14,22 @@
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputEmail1">Room Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="rfc.newRoom.name" 
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Room Name" ng-model="rfc.newRoom.name" 
             ng-disabled="rfc.selectedExistingRoom._id" ng-required="!rfc.selectedExistingRoom._id">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputEmail2">Event Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="CSE XX Midterm" ng-model="rfc.event.name" 
+            ng-required="true">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleInputEmail3">Section ID</label>
+          <input type="text" class="form-control" id="exampleInputEmail3" placeholder="A00" ng-model="rfc.event.section" 
+            ng-required="true">
         </div>
       </div>
       <div class="row">
@@ -33,11 +47,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="form-group col-md-6">
-          <label for="exampleInputFile">Upload Roster</label>
-          <input ng-file-reader type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="exampleInputFile" ng-disabled="rfc.selectedRoster.students" ng-required="!rfc.manualPaste && !rfc.selectedRoster.students">
-          <a ng-click="rfc.manualPaste = !rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">Manual Paste</a>
+        <div class="col-md-6">
+          <label for="time">Event Time</label>
+          <p id="time" class="input-group">
+            <div uib-timepicker ng-model="rfc.event.time" ng-change hour-step="rfc.hstep" ng-required="true" show-spinners="false" minute-step="rfc.mstep" show-meridian="rfc.ismeridian"></div>
+          </p>
         </div>
+        <div class="col-md-6">
+          <label for="cal">Event Date</label>
+          <p id="cal" class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup ng-model="rfc.event.date" is-open="rfc.popup1.opened" datepicker-options="rfc.dateOptions" ng-required="true" close-text="Close" alt-input-formats="rfc.altInputFormats" />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="rfc.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="row">
       </div>
     </div>
     <div class="col-md-6">
@@ -59,6 +85,13 @@
         <div class="form-group col-md-12">
           <label for="exampleInputNumber">Seed Number</label>
           <input type="number" class="form-control" id="exampleInputNumber" placeholder="1" ng-model="rfc.seed">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="exampleInputFile">Upload Roster</label>
+          <input ng-file-reader type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="exampleInputFile" ng-disabled="rfc.selectedRoster.students" ng-required="!rfc.manualPaste && !rfc.selectedRoster.students">
+          <a ng-click="rfc.manualPaste = !rfc.manualPaste" ng-disabled="rfc.selectedRoster.students">Manual Paste</a>
         </div>
       </div>
     </div>
