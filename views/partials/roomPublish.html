@@ -18,7 +18,7 @@
 		<p>Total Students: {{rpc.roster.totalStudents}}</p>
 	</div>
 </div>
-<div class="row">
+<div class="row" id="img">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">{{rpc.room.name}}</h3>
@@ -44,7 +44,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-offset-5 col-md-4">
+	<div class="col-md-offset-4 col-md-4">
 		<button class="btn btn-default" ng-click="rpc.openModal()">Download PDFs</button>
 		<button class="btn btn-default" ng-click="rpc.openEmailModal()">Email Students</button>
 		<button class="btn btn-default" ng-click="rpc.displayTable = !rpc.displayTable">Manually Change</button>

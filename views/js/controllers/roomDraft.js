@@ -309,15 +309,15 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	}
 
 	self.next = function() {
-        self.room.pmap = self.physicalMap;
+        self.saveMapping();
 
-        resource.rooms.updateRoom({id: self.room._id, room: self.room},
+/*        resource.rooms.updateRoom({id: self.room._id, room: self.room},
             function success(room) {
                 growl.success('Room Updated');
             }, function error(err){
                 growl.error('Error updating the room');
             }
-        );
+        );*/
 		$state.go('dashboard.publish', {id: $stateParams.id});
 	}
 }]);
