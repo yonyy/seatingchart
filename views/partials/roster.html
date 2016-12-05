@@ -12,6 +12,24 @@
 		<button class="btn btn-default" ng-click="rc.saved = !rc.saved">Save</button>
 	</div>
 </div>
+<div class="row" ng-show="rc.success && rc.imported">
+	<div class="col-md-6">
+		<div class="alert alert-danger">
+			<div>Removed the following students:</div>
+			<ul>
+				<li ng-repeat="student in rc.removed">{{student.firstName}} {{student.lastName}}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="alert alert-success">
+			<div>Added the following students:</div>
+			<ul>
+				<li ng-repeat="student in rc.added">{{student.firstName}} {{student.lastName}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
 <div class="row">
 	<div class="col-md-6">
 		<label for="query">Search</label>
@@ -45,8 +63,38 @@
 		</table>
 	</div>
 </div>
+<div ng-show="rc.manualPaste">
 <div class="row">
-	<div class="col-md-offset-6 col-md-4">
+  <div class="form-group">
+    <div ng-repeat="cols in rc.columns" class="col-md-2">
+      <input type="text" class="form-control" ng-model="cols.value">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-md-7">
+    <label for="delVal">Delimeter</label>
+    <select id="delVal" class="form-control" ng-options="del.value as del.name for del in rc.delimeters" ng-model="rc.delimeter"></select>
+            <label for="parse">Click to begin parsing</label>
+    <button class="btn btn-default" ng-click="rc.parse()">Parse</button>
+  </div>
+  <div class="form-group col-md-3">
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <strong>List the custom fields. Fields that are required are: <code>First Name</code>, <code>Last Name</code>, and <code>Email</code>. <code>First Name</code> and <code>Last Name</code> can be substituted for <code>Student<code>. If the <code>Student</code> field is placed, the value will be treated as <code>Last Name</code><code>, First Name</code></strong>
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <textarea rows="20" class="form-control" ng-model="rc.manualRosterText" ng-required="rc.manualPaste"></textarea>
+  </div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<button class="btn btn-default" ng-click="rc.manualPaste = !rc.manualPaste">Manually Paste a New Roster</button>
 		<button class="btn btn-default" ng-click="rc.back()">Back</button>
 		<button class="btn btn-default" ng-click="rc.save()">Update</button>
 	</div>

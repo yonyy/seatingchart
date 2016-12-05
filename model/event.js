@@ -26,10 +26,6 @@ var eventSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	time: {
-		type: Date,
-		default: Date.now
-	},
 	created_at: {
 		type: Date,
 		default: Date.now

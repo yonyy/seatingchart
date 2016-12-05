@@ -34,7 +34,7 @@ router.post('/', function(req, res, next) {
 
 	emails.forEach(function(email) {
 		var mailOptions = {
-			from: 'Seating Charts <seatingcharts@ucsd.edu>', // sender address
+			from: 'Seating Charts <cs12x@ucsd.edu>', // sender address
 			to: email.email, // list of receivers
 			subject: email.subject, // Subject line
 			text: email.text // plaintext body

@@ -16,7 +16,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             val: 'ln'
         },
         {
-            text: 'Last Name Sorted (Grouped By Last Name)',
+            text: 'Last Name Sorted (Grouped By Last Name) [For Finals and Midterms]',
             val: 'lnmdt'
         },
         {
@@ -43,12 +43,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                         alignment: 'right',
                         table: {
                                 body: [
-                                        [predicate.substring(0,16)]
+                                        [predicate.substring(0,16)],
                                 ]
                         }
                 },
                 {
-                    text: pdfTitle + " in " + room.name, style: 'header'
+                    text: event.section + " " + pdfTitle + " in " + room.name, style: 'header'
                 },
                 {
                     text: self.dateStr + " at " + self.timeStr + "      Total Students: " + students.length + "\n\n", style: 'header'
@@ -199,8 +199,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         if (seatId.length < 3 ) seatId += "  ";
         /*  ID Seat Last Name, First Name */
         return self.padZero(studentId,3) + " _____ " + seatId + 
-                " " + lastname + ", " + 
-                firstname.substring(0,9) + "\n";
+                " " + lastname.split(" ")[0].substring(0,9) + ", " + 
+                firstname.substring(0,7) + "\n";
     }
 
     self.padZero = function(str, maxPad) {

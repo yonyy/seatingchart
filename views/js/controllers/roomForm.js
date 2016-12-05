@@ -25,7 +25,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.selectedRoster = null;
 
 	self.newRoom = {type: "Class"};
-	self.event = {};
+	self.event = {date: new Date() };
 	self.newRoster = {};
 	self.manualPaste = false;
 
