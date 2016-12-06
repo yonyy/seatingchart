@@ -24,7 +24,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                         function success(room) {
                             self.room = room;
                             self.virtualMap = room.vmap;
-                                self.physicalMap = room.pmap;
+                            self.physicalMap = room.pmap;
                             self.findIslands();
                             self.beginProcess();
                             self.removeOutsideBorders();
@@ -188,8 +188,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.applyStudents = function(subClass, quota, offset) {
         var counter = 0;
 
+        console.log(offset);
+
         (function() {
             while(counter < quota) {
+                // start from bottom row and move upwards left to right
                 for (var i = 0; i < subClass.length; i += (offset.row + 1)) {
                     for (var j = 0; j < subClass[i].length; j += (offset.col + 1)) {
                         if (subClass[i][j].isEmpty) {
@@ -201,7 +204,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 }
                 if (counter < quota) {
                     for (var i = 0; i < subClass.length; i += (offset.row + 1)) {
-                        for (var j = 0; j < subClass[i].length; j += 1) {
+                        for (var j = 0; j < subClass[i].length; j += (offset.row + 1)) {
                             if (subClass[i][j].isEmpty) {
                                 subClass[i][j].isEmpty = false;
                                 counter += self.room.numPerStation;
@@ -330,7 +333,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
         // verifying that there is a spot avaliable if the seat holds more than one
         var targetIndex = -1;
-        console.log(targetSeat);
         if (targetSeat.students.length > 1) {
             for (var i = 0; i < targetSeat.students.length; i++) {
                 if (targetSeat.students[i].id == 0){
@@ -382,11 +384,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             }
         }
 
-        console.log('original seat:');
-        console.log(originSeat);
-
-        console.log('targetSeat:');
-        console.log(targetSeat);
         growl.success('Swapped seats');
 
     }

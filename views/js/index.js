@@ -165,9 +165,19 @@ app.factory('textParser', function() {
 	var studentIndex = 2; // if the name is arranged [lastname, firstname]
 	var examIndex = -1;
 
+	var titleCase = function (str) {
+	  return str.toLowerCase().split(' ').map(function(word) {
+	    return word.replace(word[0], word[0].toUpperCase());
+	  }).join(' ');
+	}
+
 	/* Reads from vm.columns to define where a student's last name,
 	* first name, and email is located */
 	tp.readText = function(columns, manualRoster, deli) {
+		if (deli === ' ') console.log("space");
+		else if (deli === '	') console.log("tab");
+		else console.log("word" + deli + "with deli");
+
 		for (var i = 0; i < columns.length; i++) {
 			var cData = columns[i].value.toLowerCase();
 			if (cData === 'first name') {
@@ -195,7 +205,7 @@ app.factory('textParser', function() {
 	tp.createUsers = function (csv, start, deli) {
 		var stud = [];
 		for (var i = start; i < csv.length; i++) {
-			var info = csv[i].split(deli);
+			var info = csv[i].split("	");
 			var fname = '';
 			var lname = '';
 			var sname = null;
@@ -216,8 +226,8 @@ app.factory('textParser', function() {
 
 			if (!fname || !lname || !email) { continue; }
 			stud.push({
-				firstName: fname.replace(/['"]+/g, ''),
-				lastName: lname.replace(/['"]+/g, ''),
+				firstName:  titleCase(fname.trim()),
+				lastName: titleCase(lname.trim()),
 				email: email,
 				studentID: exam,
 				isLeftHanded: false
@@ -226,6 +236,7 @@ app.factory('textParser', function() {
 
 		if (!stud.length) { success = false; }
 		else { success = true; }
+
 		return {
 			students : stud,
 			success : success
@@ -247,6 +258,7 @@ app.directive('ngFileReader', function() {
     var success = false;
     var students = [];
 
+
     /* Creates users from the text. Depends upon fnameIndex, lnameIndex
     * and emailIndex */
     var createUsers = function (csv, start) {
@@ -259,8 +271,8 @@ app.directive('ngFileReader', function() {
             //console.log(fname + ' ' + lname + ' ' + email)
             if (!fname || !lname || !email) { continue; }
             stud.push({
-                firstName: fname.replace(/['"]+/g, ''),
-                lastName: lname.replace(/['"]+/g, ''),
+                firstName: fname.replace(/['"]+/g, '').toTitleCase(),
+                lastName: lname.replace(/['"]+/g, '').toTitleCase(),
                 email: email,
                 studentID: (i-start + 1).toString(),
                 isLeftHanded: false
@@ -268,6 +280,7 @@ app.directive('ngFileReader', function() {
         }
         if (!stud.length) { success = false; }
         else { success = true; }
+
         return stud;
     };
 

@@ -15,7 +15,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     ];
 
     self.delimeters = [
-        {name: "Tab", value: '  '},
+        {name: "Tab", value: "  "},
         {name: "Comma", value: ','},
         {name: "Space", value: ' '}
     ];
@@ -68,7 +68,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.showDifference = function() {
         self.removed = self.oldRoster.filter(function(element,index) {
             for (var i = 0; i < self.roster.students.length; i++) {
-                if (self.roster.students[i] === element) {
+                if (self.roster.students[i].email === element.email) {
                     return false;
                 }
             }
@@ -78,7 +78,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
         self.added = self.roster.students.filter(function(element, index) {
             for (var i = 0; i < self.oldRoster.length; i++) {
-                if (self.oldRoster[i] === element) {
+                if (self.oldRoster[i].email === element.email) {
                     return false;
                 }
             }
