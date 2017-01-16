@@ -6,9 +6,11 @@
 		"host" : "smtp.gmail.com"
 	},
 	"production" : {
-		"url" : "mongodb://heroku_9hl1rm8f:cpa1oo6pq2u7svermp0ejjrb0v@ds111479.mlab.com:11479/heroku_9hl1rm8fb",
+		"url" : "mongodb://heroku_n962vc91:tpt3f1qo5taamu1r82jnmvjn3p@ds111559.mlab.com:11559/heroku_n962vc91",
 		"email" : "cseseatingcharts@gmail.com",
 		"pw" : "s3@tingCh@rt5",
 		"host" : "smtp.gmail.com"
 	}
 }
+
+// "mongodb://heroku_9hl1rm8f:s3@tingCh@rt5@ds111479.mlab.com:11479/heroku_9hl1rm8fb"

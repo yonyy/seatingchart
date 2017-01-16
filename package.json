@@ -23,6 +23,7 @@
     "morgan": "^1.6.1",
     "nodemailer": "^2.6.4",
     "nodemailer-smtp-pool": "^2.8.2",
+    "pdfmake": "^0.1.24",
     "request": "^2.79.0",
     "serve-favicon": "^2.3.0"
   }
