@@ -5,19 +5,17 @@ var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 
 // Here we find an appropriate database to connect to, defaulting to
 // localhost if we don't find one.
-/*var uristring =
+var uristring =
 process.env.UCSDSC ||	// mongolab connecting url
 process.env.MONGOLAB_URI ||	// default monglab url  for the addon
 process.env.MONGOHQ_URL ||
-config.url*/
-var uristring = 'mongodb://localhost/seating_chart_dev';	// localhost database
-//
+config.url
 
 // The http server will listen to an appropriate port, or default to
 // port 5000.
-/*var theport = process.env.PORT || 5000;*/
+var theport = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/seating_chart_dev', function (err, res) {
+mongoose.connect(uristring, function (err, res) {
 	if (err)
 		console.log('ERROR connecting to: ' + uristring + '. ' + err);
 	else

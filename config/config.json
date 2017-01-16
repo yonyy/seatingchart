@@ -1,12 +1,12 @@
 {
 	"development" : {
-		"url" : "mongodb://yonyperez:natanoy13@ds031893.mongolab.com:31893/seatingchartsdb",
+		"url" : "mongodb://localhost/seating_chart_dev",
 		"email" : "cseseatingcharts@gmail.com",
 		"pw" : "s3@tingCh@rt5",
 		"host" : "smtp.gmail.com"
 	},
 	"production" : {
-		"url" : "mongodb://yonyperez:natanoy13@ds111479.mlab.com:11479/heroku_9hl1rm8fb",
+		"url" : "mongodb://heroku_9hl1rm8f:s3@tingCh@rt5@ds111479.mlab.com:11479/heroku_9hl1rm8fb",
 		"email" : "cseseatingcharts@gmail.com",
 		"pw" : "s3@tingCh@rt5",
 		"host" : "smtp.gmail.com"
