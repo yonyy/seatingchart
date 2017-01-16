@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
 		For most non-UCSD ISPs, such as cable modem services, specify smtp.ucsd.edu 
 		as your outgoing server. */
 	var transporter = nodemailer.createTransport(smtpPool({
-		host: 'smtp.ucsd.edu',
+		host: config.host,
 		secure: true, // use SSL
 		port : 465, // port for secure SMTP
 		auth: {

@@ -24,10 +24,13 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.selectedExistingRoom = self.rooms[2];
 	self.selectedRoster = null;
 
-	self.newRoom = {type: "Class"};
+    var type = ($stateParams.lab) ? "Lab" : "Class";
+
+	self.newRoom = {type: type, numPerStation: 1};
 	self.event = {date: new Date() };
 	self.newRoster = {};
 	self.manualPaste = false;
+    self.lab = !$stateParams.lab;
 
 	self.error = false;
     self.isNewRoom = false;
@@ -61,9 +64,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	resource.rosters.getRosters({}, 
 		function success (rosters){
-				self.rosters = rosters;
-				self.rosters.push({name: '--Select--', students: null});
-				self.selectedRoster = self.rosters[self.rosters.length-1];
+			self.rosters = rosters;
+			self.rosters.push({name: '--Select--', students: null});
+			self.selectedRoster = self.rosters[self.rosters.length-1];
 		}, function error(err) {
 			growl.error('Error getting rosters');
 		}
@@ -106,17 +109,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     });
 
     self.verifyAndGo = function() {
-/*    	if (self.roomForm.$invalid) {
-            self.error = true;
-    		self.message = 'Form is incomplete. Make sure all fields are completed'
-    		return false;
-    	}*/
-
     	var numStudents = (self.selectedRoster.students) ? self.selectedRoster.students.length : self.newRoster.students.length;
     	var width = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.width : self.newRoom.width;
     	var height = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.height : self.newRoom.height;
+        var numPerStation = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.numPerStation : self.newRoom.numPerStation;
 
-    	if (width * height < numStudents) { 
+    	if (width * height * numPerStation < numStudents) { 
     		self.error = true;
     		self.message = 'Invalid dimensions! Not enough seats.';
     		return false;
@@ -163,7 +161,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         resource.events.addEvent({event: self.event},
             function success (e) {
                 growl.success('Event created!');
-                $state.go('dashboard.roster', {id: e._id, touched: touched});
+                $state.go('dashboard.roster', {id: e._id, touched: touched, lab: $stateParams.lab});
             }, function error(err) {
                 console.log(err);
             });

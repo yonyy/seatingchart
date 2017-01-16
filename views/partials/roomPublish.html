@@ -16,7 +16,7 @@
 		<h1>{{rpc.event.name}}</h1>
 	</div>
 	<div class="col-md-4">
-		<h1><strong><u>{{rpc.event.section}}</u></strong> {{rpc.event.date | date:'shortTime'}}</h1>
+		<h1><strong><u>{{rpc.event.section || ''}}</u></strong> {{rpc.event.date | date:'shortTime'}}</h1>
 	</div>
 </div>
 <div class="row text-center">

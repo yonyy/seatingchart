@@ -132,7 +132,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
     self.removeOutsideBorders = function() {
-        console.log( "here" );
         for (var i = 0; i < self.virtualMap[0].length; i++) {
             var insideBorder = false;
 
@@ -187,9 +186,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.applyStudents = function(subClass, quota, offset) {
         var counter = 0;
-
-        console.log(offset);
-
         (function() {
             while(counter < quota) {
                 // start from bottom row and move upwards left to right

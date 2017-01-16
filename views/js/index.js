@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngResource', 'ui.router', 'ngAnimate', 'ui.boo
 app.config(['$stateProvider', '$urlRouterProvider', '$compileProvider', '$httpProvider', 'growlProvider',
 function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, growlProvider){
  	growlProvider.globalTimeToLive(5000);
-	$urlRouterProvider.otherwise('/dashboard/form');
+	$urlRouterProvider.otherwise('/dashboard/form/class');
 	$stateProvider
 		.state('dashboard', {
 			url: '/dashboard/',
@@ -16,17 +16,42 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			}
 		})
-		.state('dashboard.form', {
-			url: 'form',
+		.state('dashboard.class', {
+			url: 'form/class',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomForm.html',
 					controller: 'roomFormController as rfc'
 				}
+			},
+			params: {
+				lab: false
+			},
+			resolve: {
+				lab: ['$stateParams', function($stateParams) {
+					return false;
+				}]
+			}
+		})
+		.state('dashboard.lab', {
+			url: 'form/lab',
+			views: {
+				'content' : {
+					templateUrl: 'partials/roomForm.html',
+					controller: 'roomFormController as rfc'
+				}
+			},
+			params: {
+				lab: true
+			},
+			resolve: {
+				lab: ['$stateParams', function($stateParams) {
+					return true;
+				}]
 			}
 		})
 		.state('dashboard.roster', {
-			url: 'roster/:id?{touched:int}',
+			url: 'roster/:id?{touched:int}&{lab:bool}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomRoster.html',
@@ -35,11 +60,12 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			},
 			params: {
 				id: null,
-				touched: 0
+				touched: 0,
+				lab: false
 			}
 		})
-		.state('dashboard.room', {
-			url: 'room/:id?{touched:int}',
+		.state('dashboard.classDraft', {
+			url: 'room/class/:id?{touched:int}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomDraft.html',
@@ -48,10 +74,25 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			},
 			params: {
 				id: null,
-				touched: 0
+				touched: 0,
+				lab: false
 			}
 		})
-		.state('dashboard.publish', {
+		.state('dashboard.labDraft', {
+			url: 'room/lab/:id?{touched:int}',
+			views: {
+				'content' : {
+					templateUrl: 'partials/roomDraft.html',
+					controller: 'roomDraftController as rdc'
+				}
+			},
+			params: {
+				id: null,
+				touched: 0,
+				lab: true
+			}
+		})
+		.state('dashboard.publishClass', {
 			url: 'publish/:id',
 			views: {
 				'content' : {
@@ -60,7 +101,8 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			},
 			params: {
-				id: null
+				id: null,
+				lab: false
 			}
 		})
 		.state('dashboard.events', {

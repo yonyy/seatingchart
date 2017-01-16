@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').controller('roomDraftController',
+angular.module('app').controller('labDraftController',
 ['$rootScope', '$scope', '$state','$stateParams', '$filter', 'resource', '$uibModal', 'growl',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal, growl) {
 	var self = this;
@@ -10,7 +10,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 	self.maxWidth = 42; // on extra for display
 	self.maxHeight = 16;
 	self.rowStrOffset = 0;
-	self.rowStrings = [];
+
+    console.log($stateParams.lab);
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
@@ -35,7 +36,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     );
 
     self.generateVMap = function() {
-
     	for (var i = 0; i < self.maxHeight; i++) {
     		self.virtualMap.push([]);
 			for(var j = 0; j < self.maxWidth; j++) {
@@ -55,9 +55,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			self.physicalMap.push([]);
 		}
 
-        if ($stateParams.lab) generateVMapLabs();
-        else generateVMapClass();
-  
+        generateVMapLabs();
         self.untouchedVirtualMap = JSON.parse(JSON.stringify(self.virtualMap));
         self.room.vmap = self.untouchedVirtualMap;
     }
@@ -92,67 +90,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
 
-    var generateVMapClass = function() {
-        self.generateRowStr();
-        for(var i = self.maxHeight - 1; i >= 0; i--) {
-            for(var j = 0; j < self.room.width + 1; j++) {
-                var cell = {
-                    students: null,
-                    id: "",
-                    str: "",
-                    leftHanded: false,
-                    ghostSeat: false,
-                    valid: true,    // to distinguish between viable cells and cells that just for display
-                    x: j,
-                    y: i,
-                    isEmpty: true
-                };
-
-                // last column should be letters
-                if (j == self.room.width) {
-                    cell.str = self.rowStrings[self.rowStrings.length-i-1];
-                    cell.valid = false;
-
-                // any valid seat in between
-                } else if (j < self.room.width) {
-                    cell.str = (j+1).toString();
-                    cell.id = self.rowStrings[self.rowStrings.length-i-1] + (j+1).toString();
-                }
-
-                self.physicalMap[i].push(cell);
-                self.virtualMap[(i+roffset)][(j+coffset)].realCell = self.physicalMap[i][j];
-            }
-        }
-    }
-
-
-    self.generateRowStr = function() {
-    	var ascii_a = 65;
-    	var ascii_i = 73;
-    	var ascii_o = 79;
-    	var ascii_q = 81;
-    	var rowStrOffset = 0;
-
-    	for(var i = 0; i < self.room.height; i++) {
-    		var id = ascii_a + i + rowStrOffset;
-    		if (id == ascii_i || id == ascii_o || id == ascii_q) {
-    			rowStrOffset++;
-    			id++;
-    		}
-
-    		self.rowStrings.push(String.fromCharCode(id));
-    	}
-    }
-
     self.cellClass = function(cell) {
     	if (!cell.realCell || !cell.realCell.valid) return 'dead';
     	if (cell.realCell && cell.realCell.leftHanded) return 'left';
     	return 'right';
-    }
-
-    self.toggleLeft = function(cell) {
-    	if (cell.realCell)
-    		cell.realCell.leftHanded = !cell.realCell.leftHanded;
     }
 
     self.toggleGhost = function(cell) {
@@ -296,10 +237,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			text: 'Apply Nothing'
 		},
 		{
-			val: self.toggleLeft,
-			text: 'Assign Left'
-		},
-		{
 			val: self.toggleGhost,
 			text: 'Assign Ghost'
 		},
@@ -312,6 +249,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			text: 'Place Seat'
 		}
 	];
+
 	self.handleClick = self.options[0].val;
 	self.directions = [
 		{
@@ -323,6 +261,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			text: 'Right'
 		}
 	];
+
 	self.shiftLeft = self.directions[0].val;
 
 	self.saveMapping = function() {
@@ -332,6 +271,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 		resource.rooms.updateRoom({id: self.room._id, room: self.room},
 			function success(room) {
+				console.log(room);
 				growl.success('Room Arrangement Updated');
 			}, function error(err){
                 console.log(err);
@@ -342,6 +282,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	self.next = function() {
         self.saveMapping();
-		$state.go('dashboard.publishClass', {id: $stateParams.id, lab: $stateParams.lab});
+		$state.go('dashboard.publishClass', {id: $stateParams.id});
 	}
 }]);

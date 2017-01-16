@@ -3,7 +3,6 @@ angular.module('app').controller('pdfDownloadController',
 ['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'event', 'room',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
-    
     var titleCase = function (str) {
       return str.toLowerCase().split(' ').map(function(word) {
         return word.replace(word[0], word[0].toUpperCase());
@@ -35,6 +34,13 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             val: 'row'
         }
     ];
+
+    if ($stateParams.lab) {
+        self.formats.push({
+            text: 'Grid Layout',
+            val: 'grd'
+        });
+    }
 
     self.predicate = self.formats[0];
     students = students.filter(function(elmt){ return elmt.email != null});
@@ -82,7 +88,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 predicate: {fontSize: 14, bold: true, italics: true},
                 student: {fontSize: 10},
                 secrecy: {fontSize: 14, bold: true},
-                label: {bold: true}
+                label: {bold: true},
+                grid: {fontSize: 9}
             }
         }
     }
@@ -92,17 +99,22 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var container = [];
         var colIndex = 4;
         var midterm = false;
-        
+        var grid = false;
         self.lastNameLength = 9;
         self.firstNameLength = 6;
         
         switch(predicate) {
+            case 'grd':
+                container = room.pmap;
+                self.formatText = 'Grid Layout';
+                self.confidential_text = '----------- For Students -----------';
+                grid = true;
+                break;
             case 'ln':
                 container = students.sort(self.sortByName);
                 self.formatText = 'Last Name Sorted';
                 self.confidential_text = '----------- Seating Chart -----------';
                 break;
-
             case 'lnmdt':
                 container = students.sort(self.sortByName);
                 self.formatText = 'Last Name Sorted (Into Groups)';
@@ -128,22 +140,76 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text);
 
         if (midterm) {
-/*            self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
-            pdfMake.createPdf(self.docDefinition).open();
-            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);*/
-            
-            //self.confidential_text = '----------- For Students Only -----------';
             var containers = self.separateStudents(container);
             self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text)
             self.docDefinition = self.writeGroupStudents(self.docDefinition, containers);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.formatText + self.pdfName);
 
+        } else if (grid) {
+            self.docDefinition.pageOrientation = 'landscape';
+            self.docDefinition = self.createGrid(self.docDefinition, container, colIndex);
+            pdfMake.createPdf(self.docDefinition).open();
+            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);
         } else {
             self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);
         }
+    }
+
+
+    self.createGrid = function(docDefinition, container, colIndex) {
+        var widths = [];
+        var totalStudents = 0;
+        for (var i = 0; i < room.width; i++ ) {
+            widths.push('*');
+        }
+
+        docDefinition.content[colIndex] = {
+            table: {
+                widths: widths,
+                body: []
+            }
+        };
+
+        var partnerString = function(seat) {
+            var str = {text: seat.id + '\n\n', style: 'grid'};
+            for (var i = 0; i < seat.students.length; i++) {
+                if (seat.students[i].email) {
+                    totalStudents++;
+                }
+                var stud = seat.students[i];
+                var fName = stud.firstName.substring(0,self.firstNameLength);
+                var lName = stud.lastName.substring(0,self.lastNameLength)
+                str.text += fName + ' ' + lName + ' ________' + '\n ';
+            }
+
+            return str;
+        }
+
+        for(var i = 0; i < room.height; i++) {
+            var gridRow = [];
+            for(var j = 0; j < room.width; j++) {
+                gridRow.push(partnerString(container[i][j]));
+            }
+            docDefinition.content[colIndex].table.body.push(gridRow);
+        }
+
+        var totalStudentsStr = "\n\nTotal Students: " + totalStudents.toString() + "\n";
+        var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
+        var actualPresent = "# of Students Absent: _____\n";
+        var tutorInfo = "Tutor taking attendance: _____\n"
+        var extraInfo = [totalStudentsStr, totalSeats, actualPresent, tutorInfo];
+        var text = {text: '', style: 'student'};
+        for (var i = 0; i < extraInfo.length; i++) {
+            text.text += extraInfo[i];
+        }
+
+        docDefinition.content.push(text);
+
+        return docDefinition;
+
     }
 
     self.writeStudents = function (docDefinition, container, colIndex) {
@@ -377,5 +443,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         else
             return 1;
     }
+
+    self.sortByGrid = function(station1, station2) {
+        if (parseInt(station1.id,10) < parseInt(station2.id,10));
+           return -1;
+        if (parseInt(station1.id,10) > parseInt(station2.id,10));
+            return 1;
+        return 0;
+    }
+
 
 }]);

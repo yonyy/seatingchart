@@ -6,7 +6,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.roster = null;
     self.event = null;
     self.saved = true;
-    console.log($stateParams.id);
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
@@ -24,14 +23,23 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         }
     );
 
+    self.go = function() {
+        console.log($stateParams.lab);
+        if ($stateParams.lab) {
+            $state.go('dashboard.labDraft', {id: $stateParams.id, touched: $stateParams.touched});
+        } else {
+            $state.go('dashboard.classDraft', {id: $stateParams.id, touched: $stateParams.touched});
+        }
+    }
+
     self.continue = function() {
         resource.rosters.updateRoster({id: self.roster._id, roster: self.roster},
             function success(roster) {
                 growl.success('Updated Roster');
-                $state.go('dashboard.room', {id: $stateParams.id, touched: $stateParams.touched});
+                self.go();
             }, function error(err) {
                 growl.error('Error updating the roster');
-                $state.go('dashboard.room', {id: $stateParams.id, touched: $stateParams.touched});
+                self.go();
             });
     }
 
