@@ -55,14 +55,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			self.physicalMap.push([]);
 		}
 
-        if ($stateParams.lab) generateVMapLabs();
-        else generateVMapClass();
+        if ($stateParams.lab) generateVMapLabs(coffset, roffset);
+        else generateVMapClass(coffset, roffset);
   
         self.untouchedVirtualMap = JSON.parse(JSON.stringify(self.virtualMap));
         self.room.vmap = self.untouchedVirtualMap;
     }
 
-    var generateVMapLabs = function() {
+    var generateVMapLabs = function(coffset, roffset) {
         var seatId = 1;
         var flip = false;
         for(var i = 0; i < self.maxHeight; i++) {
