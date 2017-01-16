@@ -3,8 +3,8 @@
   display: inline-block;
   margin-left: 6px;
   margin-top: 5px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background-color: #EEEEEE;
   border-radius:5px;
   text-align:center;
@@ -34,7 +34,7 @@
 }
 
 .outline {
-	font-size: 17px;
+	font-size: 15px;
 	left: 11px;
 	position: absolute;
 	bottom: -5px;
@@ -66,8 +66,8 @@
   color:#666;
   position:absolute;
   bottom:0;
-  left:-70px;
-  right:-70px;
+  left:-75px;
+  right:-75px;
   padding:5px 7px;
   z-index:-1;
   font-size:12px;
