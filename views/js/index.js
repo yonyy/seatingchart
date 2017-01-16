@@ -211,15 +211,11 @@ app.factory('textParser', function() {
 	  return str.toLowerCase().split(' ').map(function(word) {
 	    return word.replace(word[0], word[0].toUpperCase());
 	  }).join(' ');
-	}
+	};
 
 	/* Reads from vm.columns to define where a student's last name,
 	* first name, and email is located */
 	tp.readText = function(columns, manualRoster, deli) {
-		if (deli === ' ') console.log("space");
-		else if (deli === '	') console.log("tab");
-		else console.log("word" + deli + "with deli");
-
 		for (var i = 0; i < columns.length; i++) {
 			var cData = columns[i].value.toLowerCase();
 			if (cData === 'first name') {
@@ -247,7 +243,7 @@ app.factory('textParser', function() {
 	tp.createUsers = function (csv, start, deli) {
 		var stud = [];
 		for (var i = start; i < csv.length; i++) {
-			var info = csv[i].split("	");
+			var info = csv[i].split(deli);
 			var fname = '';
 			var lname = '';
 			var sname = null;
@@ -310,8 +306,7 @@ app.directive('ngFileReader', function() {
             var fname = info[fnameIndex];
             var lname = info[lnameIndex];
             var email = info[emailIndex];
-            //console.log(fname + ' ' + lname + ' ' + email)
-            if (!fname || !lname || !email) { continue; }
+			if (!fname || !lname || !email) { continue; }
             stud.push({
                 firstName: fname.replace(/['"]+/g, '').toTitleCase(),
                 lastName: lname.replace(/['"]+/g, '').toTitleCase(),
