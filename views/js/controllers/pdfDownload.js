@@ -4,9 +4,10 @@ angular.module('app').controller('pdfDownloadController',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
     var titleCase = function (str) {
-      return str.toLowerCase().split(' ').map(function(word) {
-        return word.replace(word[0], word[0].toUpperCase());
-      }).join(' ');
+        if (!str) return '';
+        return str.toLowerCase().split(' ').map(function(word) {
+            return word.replace(word[0], word[0].toUpperCase());
+        }).join(' ');
     };
 
     self.formatText = '';
