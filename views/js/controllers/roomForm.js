@@ -60,7 +60,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             self.rooms = rooms;
             self.rooms.push({name: '--Select--', _id: null});
             self.selectedExistingRoom = self.rooms[self.rooms.length-1];
-        })
+        }, function error(err) {
+            self.rooms.push({name: '--Select--', _id: null});
+            self.selectedExistingRoom = self.rooms[self.rooms.length-1];
+            growl.error('Error getting rosters');
+        });
 
 	resource.rosters.getRosters({}, 
 		function success (rosters){
@@ -68,6 +72,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 			self.rosters.push({name: '--Select--', students: null});
 			self.selectedRoster = self.rosters[self.rosters.length-1];
 		}, function error(err) {
+            self.rosters.push({name: '--Select--', students: null});
+            self.selectedRoster = self.rosters[0];
 			growl.error('Error getting rosters');
 		}
 	);
