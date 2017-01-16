@@ -7,8 +7,8 @@ var eventSchema = new Schema({
 	},
 	section: {
 		type: String,
-		default: "Undef",
-		required: true
+		default: "",
+		required: false
 	},
 	roomID: {
 		type: Schema.ObjectId,

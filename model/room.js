@@ -18,15 +18,7 @@ var roomSchema = new Schema({
 		enum: ["Class", "Lab"],
 		required: true
 	},
-	ghostSeats: {
-		type: Array,
-		default: []
-	},
 	leftSeats: {
-		type: Array,
-		default: []
-	},
-	aisleSeats: {
 		type: Array,
 		default: []
 	},

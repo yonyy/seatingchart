@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngResource', 'ui.router', 'ngAnimate', 'ui.boo
 app.config(['$stateProvider', '$urlRouterProvider', '$compileProvider', '$httpProvider', 'growlProvider',
 function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, growlProvider){
  	growlProvider.globalTimeToLive(5000);
-	$urlRouterProvider.otherwise('/dashboard/form');
+	$urlRouterProvider.otherwise('/dashboard/form/class');
 	$stateProvider
 		.state('dashboard', {
 			url: '/dashboard/',
@@ -16,17 +16,42 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			}
 		})
-		.state('dashboard.form', {
-			url: 'form',
+		.state('dashboard.class', {
+			url: 'form/class',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomForm.html',
 					controller: 'roomFormController as rfc'
 				}
+			},
+			params: {
+				lab: false
+			},
+			resolve: {
+				lab: ['$stateParams', function($stateParams) {
+					return false;
+				}]
+			}
+		})
+		.state('dashboard.lab', {
+			url: 'form/lab',
+			views: {
+				'content' : {
+					templateUrl: 'partials/roomForm.html',
+					controller: 'roomFormController as rfc'
+				}
+			},
+			params: {
+				lab: true
+			},
+			resolve: {
+				lab: ['$stateParams', function($stateParams) {
+					return true;
+				}]
 			}
 		})
 		.state('dashboard.roster', {
-			url: 'roster/:id?{touched:int}',
+			url: 'roster/:id?{touched:int}&{lab:bool}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomRoster.html',
@@ -35,11 +60,12 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			},
 			params: {
 				id: null,
-				touched: 0
+				touched: 0,
+				lab: false
 			}
 		})
-		.state('dashboard.room', {
-			url: 'room/:id?{touched:int}',
+		.state('dashboard.classDraft', {
+			url: 'room/class/:id?{touched:int}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomDraft.html',
@@ -48,10 +74,25 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			},
 			params: {
 				id: null,
-				touched: 0
+				touched: 0,
+				lab: false
 			}
 		})
-		.state('dashboard.publish', {
+		.state('dashboard.labDraft', {
+			url: 'room/lab/:id?{touched:int}',
+			views: {
+				'content' : {
+					templateUrl: 'partials/roomDraft.html',
+					controller: 'roomDraftController as rdc'
+				}
+			},
+			params: {
+				id: null,
+				touched: 0,
+				lab: true
+			}
+		})
+		.state('dashboard.publishClass', {
 			url: 'publish/:id',
 			views: {
 				'content' : {
@@ -60,7 +101,8 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 				}
 			},
 			params: {
-				id: null
+				id: null,
+				lab: false
 			}
 		})
 		.state('dashboard.events', {
@@ -165,9 +207,19 @@ app.factory('textParser', function() {
 	var studentIndex = 2; // if the name is arranged [lastname, firstname]
 	var examIndex = -1;
 
+	var titleCase = function (str) {
+	  return str.toLowerCase().split(' ').map(function(word) {
+	    return word.replace(word[0], word[0].toUpperCase());
+	  }).join(' ');
+	}
+
 	/* Reads from vm.columns to define where a student's last name,
 	* first name, and email is located */
 	tp.readText = function(columns, manualRoster, deli) {
+		if (deli === ' ') console.log("space");
+		else if (deli === '	') console.log("tab");
+		else console.log("word" + deli + "with deli");
+
 		for (var i = 0; i < columns.length; i++) {
 			var cData = columns[i].value.toLowerCase();
 			if (cData === 'first name') {
@@ -195,7 +247,7 @@ app.factory('textParser', function() {
 	tp.createUsers = function (csv, start, deli) {
 		var stud = [];
 		for (var i = start; i < csv.length; i++) {
-			var info = csv[i].split(deli);
+			var info = csv[i].split("	");
 			var fname = '';
 			var lname = '';
 			var sname = null;
@@ -216,8 +268,8 @@ app.factory('textParser', function() {
 
 			if (!fname || !lname || !email) { continue; }
 			stud.push({
-				firstName: fname.replace(/['"]+/g, ''),
-				lastName: lname.replace(/['"]+/g, ''),
+				firstName:  titleCase(fname.trim()),
+				lastName: titleCase(lname.trim()),
 				email: email,
 				studentID: exam,
 				isLeftHanded: false
@@ -226,6 +278,7 @@ app.factory('textParser', function() {
 
 		if (!stud.length) { success = false; }
 		else { success = true; }
+
 		return {
 			students : stud,
 			success : success
@@ -247,6 +300,7 @@ app.directive('ngFileReader', function() {
     var success = false;
     var students = [];
 
+
     /* Creates users from the text. Depends upon fnameIndex, lnameIndex
     * and emailIndex */
     var createUsers = function (csv, start) {
@@ -259,8 +313,8 @@ app.directive('ngFileReader', function() {
             //console.log(fname + ' ' + lname + ' ' + email)
             if (!fname || !lname || !email) { continue; }
             stud.push({
-                firstName: fname.replace(/['"]+/g, ''),
-                lastName: lname.replace(/['"]+/g, ''),
+                firstName: fname.replace(/['"]+/g, '').toTitleCase(),
+                lastName: lname.replace(/['"]+/g, '').toTitleCase(),
                 email: email,
                 studentID: (i-start + 1).toString(),
                 isLeftHanded: false
@@ -268,6 +322,7 @@ app.directive('ngFileReader', function() {
         }
         if (!stud.length) { success = false; }
         else { success = true; }
+
         return stud;
     };
 

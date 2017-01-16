@@ -35,7 +35,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             growl.error('Can not open because the room has been deleted');
             return;
         }
-        $state.go('dashboard.room', {id: event._id, touched: 1});
+        if (event.type === "Class") $state.go('dashboard.classDraft', {id: event._id, touched: 1});
+        else $state.go('dashboard.labDraft', {id: event._id, touched: 1});
     }
 
     self.delete = function(id, index) {
