@@ -175,7 +175,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         };
 
         var partnerString = function(seat) {
-            if (seat.valid) {
+            if (!seat.valid) {
                 return 'Unavailable';
             }
             var str = {text: seat.id + '\n\n', style: 'grid'};
