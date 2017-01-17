@@ -260,7 +260,8 @@ app.factory('textParser', function() {
 	
 			var email = info[emailIndex];
 			if (examIndex != -1) exam = info[examIndex];
-			else exam = (i-start + 1).toString();
+			
+			if (!exam) exam = (i-start + 1).toString();
 
 			if (!fname || !lname || !email) { continue; }
 			stud.push({
