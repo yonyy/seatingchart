@@ -14,7 +14,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         }
     }
     
-    self.subject = (lab) ? "Quiz [] Seating Assignment" : "Lab [] Seating Assignment";
+    self.subject = (lab) ? "Lab [] Seating Assignment" : "Quiz [] Seating Assignment";
     self.recievers = "";
 
     var dateStr = $filter('date')(date, "EEEE, LLLL dd 'at' hh:mm a");
