@@ -75,15 +75,34 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         };
     };
 
-    var generatorMetaData = function() {
+    var generatorGridMetaData = function() {
+        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +  
+                "      Total Students: " + students.length.toString();
+
+        var totalSeats = "Total Seats: " + room.totalSeats.toString();
+        var actualPresent = "# of Students Absent: _____";
+        textStr += "      " + totalSeats + "      " + actualPresent;
+
         return {
-            text: self.dateStr + " at " + self.timeStr + " in " + room.name +  "      Total Students: " + students.length + "\n\n", style: 'header'
+            text: textStr + "\n\n", style: 'header'
         };
     };
 
-    self.generateDoc = function(confidential_text, pdfTitle, predicate) {        
+    var generatorMetaData = function() {
+        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +  
+                "      Total Students: " + students.length.toString();
         return {
-            content: [generateHeader(),generateSubHeader(),generatePredicate(),generatorMetaData(),{columns: []}],
+            text: textStr + "\n\n", style: 'header'
+        };
+    };
+
+    self.generateDoc = function(confidential_text, pdfTitle, predicate, grid) {     
+        var metaData = null;
+        if (grid) metaData = generatorGridMetaData();
+        else metaData = generatorMetaData();
+
+        return {
+            content: [generateHeader(),generateSubHeader(),generatePredicate(),metaData,{columns: []}],
             styles: {
                 header: {fontSize: 14, bold: true},
                 predicate: {fontSize: 14, bold: true, italics: true},
@@ -138,7 +157,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         }
 
-        self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text);
+        self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text, grid);
 
         if (midterm) {
             var containers = self.separateStudents(container);
@@ -201,17 +220,16 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             docDefinition.content[colIndex].table.body.push(gridRow);
         }
 
-        var totalStudentsStr = "\n\nTotal Students: " + totalStudents.toString() + "\n";
-        var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
-        var actualPresent = "# of Students Absent: _____\n";
-        var tutorInfo = "Tutor taking attendance: _____\n"
-        var extraInfo = [totalStudentsStr, totalSeats, actualPresent, tutorInfo];
-        var text = {text: '', style: 'student'};
-        for (var i = 0; i < extraInfo.length; i++) {
-            text.text += extraInfo[i];
-        }
+        // var totalStudentsStr = "\n\nTotal Students: " + totalStudents.toString() + "\n";
+        // var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
+        // var actualPresent = "# of Students Absent: _____\n";
+        // var extraInfo = [totalStudentsStr, totalSeats, actualPresent];
+        // var text = {text: '', style: 'student'};
+        // for (var i = 0; i < extraInfo.length; i++) {
+        //     text.text += extraInfo[i];
+        // }
 
-        docDefinition.content.push(text);
+        // docDefinition.content.push(text);
 
         return docDefinition;
 

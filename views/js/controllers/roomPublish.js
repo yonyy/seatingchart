@@ -3,7 +3,7 @@ angular.module('app').controller('roomPublishController',
 ['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModal', 'growl',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal, growl) {
     var self = this;
-    self.events = null;
+    self.event = null;
     self.room = null;
     self.roster = null;
     self.virtualMap = null;
@@ -426,6 +426,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             controllerAs: 'ec',
             size: 'lg',
             resolve: {
+                lab: function() {
+                    return $stateParams.lab;
+                },
+                date: function() {
+                    return self.event.date;
+                },
                 students: function () {
                     return JSON.parse(JSON.stringify(self.roster.students));
                 },

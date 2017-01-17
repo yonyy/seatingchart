@@ -65,7 +65,7 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			}
 		})
 		.state('dashboard.classDraft', {
-			url: 'room/class/:id?{touched:int}',
+			url: 'room/class/:id?{touched:int}&{lab:bool}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomDraft.html',
@@ -79,7 +79,7 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			}
 		})
 		.state('dashboard.labDraft', {
-			url: 'room/lab/:id?{touched:int}',
+			url: 'room/lab/:id?{touched:int}&{lab:bool}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomDraft.html',
@@ -93,7 +93,7 @@ function($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider, gr
 			}
 		})
 		.state('dashboard.publishClass', {
-			url: 'publish/:id',
+			url: 'publish/:id?&{lab:bool}',
 			views: {
 				'content' : {
 					templateUrl: 'partials/roomPublish.html',

@@ -24,7 +24,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     
                     self.virtualMap = room.vmap;
                     self.physicalMap = room.pmap;
-                    if ($stateParams.touched == 0 || self.virtualMap.length == 0) self.generateVMap();
+                    if ($stateParams.touched == 0 || self.virtualMap.length == 0) 
+                        self.generateVMap();
                 }, function error(err) {
                     console.log(err);
                 }
@@ -92,7 +93,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     }
 
 
-    var generateVMapClass = function() {
+    var generateVMapClass = function(coffset, roffset) {
         self.generateRowStr();
         for(var i = self.maxHeight - 1; i >= 0; i--) {
             for(var j = 0; j < self.room.width + 1; j++) {
@@ -330,7 +331,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 		self.room.vmap = self.virtualMap;
         self.room.pmap = self.physicalMap;
 
-		resource.rooms.updateRoom({id: self.room._id, room: self.room},
+		resource.rooms.updateRoom({id: self.room._id, room: self.room, lab: $stateParams.lab},
 			function success(room) {
 				growl.success('Room Arrangement Updated');
 			}, function error(err){

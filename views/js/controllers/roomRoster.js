@@ -24,12 +24,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     );
 
     self.go = function() {
-        console.log($stateParams.lab);
-        if ($stateParams.lab) {
-            $state.go('dashboard.labDraft', {id: $stateParams.id, touched: $stateParams.touched});
-        } else {
-            $state.go('dashboard.classDraft', {id: $stateParams.id, touched: $stateParams.touched});
-        }
+        $state.go('dashboard.classDraft', {id: $stateParams.id, touched: $stateParams.touched, lab: $stateParams.lab});
     }
 
     self.continue = function() {
