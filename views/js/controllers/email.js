@@ -39,9 +39,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         self.paragraph += "Exam Serial Number: [id]\n\n";
         self.paragraph += "Please be sure to put your Exam Serial Number on your exam.\n";
         self.paragraph += "Note: Exam Serial Number may change in future exams\n\n"
-        self.paragraph += "See you in lab,\n[ ]";
+        self.paragraph += "See you in class,\n[ ]";
     } else {
-        self.paragraph += "\nSee you in class,\n[ ]";
+        self.paragraph += "\nSee you in lab,\n[ ]";
     }
 
 
