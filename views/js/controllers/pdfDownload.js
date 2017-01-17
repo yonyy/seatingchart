@@ -312,10 +312,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var firstname = student.firstName;
         var lastname = student.lastName;
         var studentId = student.studentID.toString();
+        var paddedId = self.padZero(studentId, 3);
+        
+        if ($stateParams.lab) paddedId = "";
 
         if (seatId.length < 3 ) seatId += "  ";
         /*  ID Seat Last Name, First Name */
-        return self.padZero(studentId,3) + " _____ " + seatId + 
+
+        return paddedId + " _____ " + seatId + 
                 " " + lastname.split(" ")[0].substring(0,self.lastNameLength) + ", " + 
                 firstname.substring(0,self.firstNameLength) + "\n";
     }
