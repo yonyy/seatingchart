@@ -58,12 +58,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             for (var j = 0; j < self.virtualMap[i].length; j++) {
                 self.hasBeenMarkedMarked[i].push(false);
             }
-        }        
+        }
 
         for (var i = 0; i < self.virtualMap.length; i++) {
             for (var j = 0; j < self.virtualMap[i].length; j++) {
                 if (!self.hasBeenMarkedMarked[i][j]) {
-                    if (self.virtualMap[i][j].realCell 
+                    if (self.virtualMap[i][j].realCell
                             && self.virtualMap[i][j].realCell.valid) {
 
                         self.islands.push([]);
@@ -83,11 +83,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         if (self.hasBeenMarkedMarked[i][j]) return;
 
         self.hasBeenMarkedMarked[i][j] = true;
-        if (!self.virtualMap[i][j].realCell 
+        if (!self.virtualMap[i][j].realCell
                 || !self.virtualMap[i][j].realCell.valid) {
             return;
         }
-            
+
         self.islands[island].push(self.virtualMap[i][j].realCell);
 
         self.findIslandsHelper(i+1,j,island);
@@ -102,10 +102,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         var subClass = [];
         var currentRow = "";
         var index = -1;
-        
+
         for (var i = 0; i < island.length; i++) {
             var rowStr = island[i].id[0];
-            
+
             if (rowStr == currentRow) {
                 subClass[index].push(island[i]);
             } else {
@@ -149,7 +149,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             } else {
                 break;
             }
-        }        
+        }
 
         for (var i = self.virtualMap[0].length - 1; i >= 0; i--) {
             var insideBorder = false;
@@ -168,7 +168,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             } else {
                 break;
             }
-        }        
+        }
 
 
     }
@@ -207,7 +207,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                                 if (counter >= quota) return;
                             }
                         }
-                    }   
+                    }
                 }
 
             }
@@ -262,7 +262,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                         self.roster.students.push(emptyStudent);
                     }
                 }
-                
+
                 self.physicalMap[subClass[i][j].y][subClass[i][j].x] = subClass[i][j];
             }
         }
@@ -429,8 +429,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 lab: function() {
                     return $stateParams.lab;
                 },
-                date: function() {
-                    return self.event.date;
+                event: function() {
+                    return self.event;
                 },
                 students: function () {
                     return JSON.parse(JSON.stringify(self.roster.students));
@@ -441,7 +441,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             }
         });
 
-        modalInstance.result.then(function () {});      
+        modalInstance.result.then(function () {});
     }
 
     /* Comparison function to sort by row */

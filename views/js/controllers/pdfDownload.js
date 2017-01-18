@@ -3,18 +3,10 @@ angular.module('app').controller('pdfDownloadController',
 ['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'event', 'room',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
-    var titleCase = function (str) {
-        if (!str) return '';
-        return str.toLowerCase().split(' ').map(function(word) {
-            return word.replace(word[0], word[0].toUpperCase());
-        }).join(' ');
-    };
-
     self.formatText = '';
-    self.pdfTitle = event.name;
-    self.dateStr = $filter('date')(event.date, 'mediumDate');
+    self.dateStr = $filter('date')(event.date, 'EEEE, MMMM dd');
     self.timeStr = $filter('date')(event.date, 'shortTime');
-    self.pdfName = titleCase(event.name) + " " + titleCase(event.section) + " " + self.dateStr + " " + self.timeStr + " " + room.name; 
+    self.pdfName = event.name + " " + event.section + " " + self.dateStr + " " + self.timeStr + " " + room.name;
     // CSE 12 Quiz 5 Thurs 4:30pm - 4:50pm, Center Hall 119
     self.confidential_text = '';
     self.formats = [
@@ -51,7 +43,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             alignment: 'right',
             table: {
                 body: [
-                    [{text: self.pdfTitle + " " + event.section, style: 'header'}]
+                    [{text: event.name + " " + event.section, style: 'header'}]
                 ]
             }
         };
@@ -76,7 +68,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     };
 
     var generatorGridMetaData = function() {
-        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +  
+        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +
                 "      Total Students: " + students.length.toString();
 
         var totalSeats = "Total Seats: " + room.totalSeats.toString();
@@ -89,14 +81,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     };
 
     var generatorMetaData = function() {
-        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +  
+        var textStr = self.dateStr + " at " + self.timeStr + " in " + room.name +
                 "      Total Students: " + students.length.toString();
         return {
             text: textStr + "\n\n", style: 'header'
         };
     };
 
-    self.generateDoc = function(confidential_text, pdfTitle, predicate, grid) {     
+    self.generateDoc = function(grid) {
         var metaData = null;
         if (grid) metaData = generatorGridMetaData();
         else metaData = generatorMetaData();
@@ -122,7 +114,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var grid = false;
         self.lastNameLength = 9;
         self.firstNameLength = 6;
-        
+
         switch(predicate) {
             case 'grd':
                 container = room.pmap;
@@ -148,7 +140,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 self.formatText = 'Row Sorted';
                 self.confidential_text = '----------- Attendance Reconciliation -----------';
                 break;
-            
+
             case 'col':
                 container = students.sort(self.sortByColumns);
                 self.formatText = 'Column Sorted';
@@ -157,24 +149,24 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         }
 
-        self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text, grid);
+        self.docDefinition = self.generateDoc(grid);
 
         if (midterm) {
             var containers = self.separateStudents(container);
-            self.docDefinition = self.generateDoc(self.confidential_text, self.pdfTitle, self.predicate.text)
+            self.docDefinition = self.generateDoc(grid)
             self.docDefinition = self.writeGroupStudents(self.docDefinition, containers);
             pdfMake.createPdf(self.docDefinition).open();
-            pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.formatText + self.pdfName);
+            pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.pdfName +  self.formatText);
 
         } else if (grid) {
             self.docDefinition.pageOrientation = 'landscape';
             self.docDefinition = self.createGrid(self.docDefinition, container, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
-            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);
+            pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         } else {
             self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
-            pdfMake.createPdf(self.docDefinition).download(self.formatText + self.pdfName);
+            pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         }
     }
 
@@ -241,9 +233,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var tracker = 1;
         var totalStudents = 0;
         var empty = [];
-        
+
         for (var i = 0; i < container.length; i++) {
-            
+
             if (tracker == maxPerCol) {
                 docDefinition.content[colIndex].columns.push(text);
                 text = {text: '', style: 'student'};
@@ -283,11 +275,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var toStr = "";
         for (var index = 0; index < containers.length; index++) {
             var group = containers[index];
-            
+
             fromStr = group[0].lastName.substring(0,1);
             toStr = group[group.length-1].lastName.substring(0,1);
             var rangeStr = fromStr.toUpperCase() + " to " + toStr.toUpperCase();
-            
+
  //           docDefinition.content[colIndex] = {text: rangeStr, bold: true, fontSize: 20};
             docDefinition = self.writeStudents(docDefinition, group, colIndex);
             docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 60});
@@ -313,14 +305,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var lastname = student.lastName;
         var studentId = student.studentID.toString();
         var paddedId = self.padZero(studentId, 3);
-        
+
         if ($stateParams.lab) paddedId = "";
 
         if (seatId.length < 3 ) seatId += "  ";
         /*  ID Seat Last Name, First Name */
 
-        return paddedId + " _____ " + seatId + 
-                " " + lastname.split(" ")[0].substring(0,self.lastNameLength) + ", " + 
+        return paddedId + " _____ " + seatId +
+                " " + lastname.split(" ")[0].substring(0,self.lastNameLength) + ", " +
                 firstname.substring(0,self.firstNameLength) + "\n";
     }
 
@@ -361,7 +353,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         }
 
         lastnameCounter.push(counter);
-        
+
         var generator = function*() {
             var perGroup = 0;
             for (var index = 0; index < lastnameCounter.length; index++) {
@@ -405,7 +397,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             else
                 return 1
         }
-        
+
         return 0;
     }
 

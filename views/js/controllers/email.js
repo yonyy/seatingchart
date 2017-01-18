@@ -1,7 +1,7 @@
 'use strict';
 angular.module('app').controller('emailController',
-['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'room', 'date', 'lab',
-function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, room, date, lab) {
+['$rootScope', '$scope', '$state', '$stateParams', '$filter', 'resource', '$uibModalInstance', 'growl', 'students', 'room', 'event', 'lab',
+function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, room, event, lab) {
     var self = this;
     self.nonnull = [];
     self.docDefinition = {
@@ -14,24 +14,18 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         }
     }
 
-    self.subject = (lab) ? "Lab [] Seating Assignment" : "Quiz [] Seating Assignment";
+    self.subject = event.name + " Seating Assignment";
     self.recievers = "";
 
-    var dateStr = $filter('date')(date, "EEEE, LLLL dd 'at' hh:mm a");
+    var dateStr = $filter('date')(event.date, "EEEE, LLLL dd 'at' hh:mm a");
     self.paragraph = "Dear [fullname], \n\n";
 
 
-    self.paragraph += (lab) ? "Here is your assigned seat for Lab [ ].\n" : "Here is your assigned seat for Quiz [ ].\n";
+    self.paragraph += "Here is your assigned seat for " + event.name + ".\n";
     self.paragraph += "Please arrive early to find your seat.\n";
     self.paragraph += "If you cannot find your seat, please ask for assistance.\n";
     self.paragraph += "We have seating charts available in the front of the classroom.\n\n";
-
-    if (lab) {
-        self.paragraph += "Lab [ ] - " + dateStr + " in " + room + "\n";
-    } else {
-        self.paragraph += "Quiz [ ] - " + dateStr + " in " + room + "\n";
-    }
-
+    self.paragraph += event.name + " - " + dateStr + " in " + room + "\n";
     self.paragraph += "Seat: [seat]\n";
 
 
@@ -152,16 +146,15 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     }
 
     self.retry = function(email, index) {
-        emails.map(function(email) {
-            resource.emails.sendEmail({email: email},
-                function success(res) {
-                    self.sent += 1;
-                    self.errors.splice(index,1);
-                    growl.success('Email Sent!');
-                }, function error(err) {
-                    growl.error('Error sending to ' + email.email);
-                });
-        });
+        resource.emails.sendEmail({email: email},
+            function success(res) {
+                self.sent += 1;
+                self.errors.splice(index,1);
+                growl.success('Email Sent!');
+            }, function error(err) {
+                growl.error('Error sending to ' + email.email);
+            }
+        );
     }
 
 }]);
