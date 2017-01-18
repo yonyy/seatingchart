@@ -13,25 +13,25 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             message: {fontSize: 11 }
         }
     }
-    
+
     self.subject = (lab) ? "Lab [] Seating Assignment" : "Quiz [] Seating Assignment";
     self.recievers = "";
 
     var dateStr = $filter('date')(date, "EEEE, LLLL dd 'at' hh:mm a");
     self.paragraph = "Dear [fullname], \n\n";
-    
+
 
     self.paragraph += (lab) ? "Here is your assigned seat for Lab [ ].\n" : "Here is your assigned seat for Quiz [ ].\n";
     self.paragraph += "Please arrive early to find your seat.\n";
     self.paragraph += "If you cannot find your seat, please ask for assistance.\n";
     self.paragraph += "We have seating charts available in the front of the classroom.\n\n";
-    
+
     if (lab) {
         self.paragraph += "Lab [ ] - " + dateStr + " in " + room + "\n";
     } else {
         self.paragraph += "Quiz [ ] - " + dateStr + " in " + room + "\n";
     }
-    
+
     self.paragraph += "Seat: [seat]\n";
 
 
@@ -75,7 +75,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             else
                 return 1
         }
-        
+
         return 0;
     }
 
@@ -105,14 +105,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 leftBracket = true;
                 continue;
             }
-        
+
             if (text[i] == "]") {
                 leftBracket = false;
                 parsedText += info[syntax];
                 syntax = ""
                 continue;
             }
-        
+
             if (!leftBracket) parsedText += text[i]
             else syntax += text[i]
         }
@@ -133,14 +133,35 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             };
             emails.push(email);
         }
-        pdfMake.createPdf(self.docDefinition).open();
-        resource.emails.sendEmails({emails: emails},
-            function success(res) {
-                growl.success('Emails Sent!');
-                console.log(self.docDefinition);
-            }, function error(err) {
-                growl.error('Error sending emails');
-            });
+
+        self.sending = true;
+        self.sent = 0;
+        self.total = emails.length;
+        self.errors = [];
+        //pdfMake.createPdf(self.docDefinition).open();
+        emails.map(function(email) {
+            resource.emails.sendEmail({email: email},
+                function success(res) {
+                    self.sent += 1;
+                    growl.success('Email Sent! ' + self.sent + '/' + emails.length);
+                }, function error(err) {
+                    self.errors.push(email);
+                    growl.error('Error sending to ' + email.email);
+                });
+        });
+    }
+
+    self.retry = function(email, index) {
+        emails.map(function(email) {
+            resource.emails.sendEmail({email: email},
+                function success(res) {
+                    self.sent += 1;
+                    self.errors.splice(index,1);
+                    growl.success('Email Sent!');
+                }, function error(err) {
+                    growl.error('Error sending to ' + email.email);
+                });
+        });
     }
 
 }]);

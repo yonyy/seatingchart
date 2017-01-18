@@ -11,13 +11,11 @@ var smtpPool = require('nodemailer-smtp-pool');
 
 
 router.post('/', function(req, res, next) {
-	var emails = req.body.emails;
-	var status = false;
-	var sent = 0;
+	var email = req.body.email;
 
-	/* UCSD requires you to authorize SMTP with SSL (Secure Sockets Layer) to use 
+	/* UCSD requires you to authorize SMTP with SSL (Secure Sockets Layer) to use
 		the outgoing mail server from off campus.
-		For most non-UCSD ISPs, such as cable modem services, specify smtp.ucsd.edu 
+		For most non-UCSD ISPs, such as cable modem services, specify smtp.ucsd.edu
 		as your outgoing server. */
 	var transporter = nodemailer.createTransport(smtpPool({
 		host: config.host,
@@ -32,29 +30,25 @@ router.post('/', function(req, res, next) {
     	}
 	}));
 
-	emails.forEach(function(email) {
-		var mailOptions = {
-			from: 'Seating Charts <cs12x@ucsd.edu>', // sender address
-			to: email.email, // list of receivers
-			subject: email.subject, // Subject line
-			text: email.text // plaintext body
-		};
-		
-		// send mail with defined transport object
-		transporter.sendMail(mailOptions, function(error, info){
-			if(error) {
-				status = false;
-				console.log("Error sending to: " + email.email);
-				console.log(error);
-		    } else {
-		    	sent++;
-		        console.log('Message sent: ' + info.response);
-		        console.log("sentTotal: " + sent + " out of " + emails.length);
-		    }
-		});
-	});
+	var mailOptions = {
+		from: 'Seating Charts <cs12x@ucsd.edu>', // sender address
+		to: email.email, // list of receivers
+		subject: email.subject, // Subject line
+		text: email.text // plaintext body
+	};
 
-	res.json({status: status, sent: sent});
+	// send mail with defined transport object
+	transporter.sendMail(mailOptions, function(error, info){
+		if(error) {
+			res.json(err);
+			console.log("Error sending to: " + email.email);
+			console.log(error);
+	    } else {
+			res.json({status: true});
+	        console.log('Message sent: ' + info.response);
+	        console.log("sentTotal: " + sent + " out of " + emails.length);
+	    }
+	});
 
 });
 

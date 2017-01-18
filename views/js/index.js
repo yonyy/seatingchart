@@ -191,7 +191,7 @@ app.factory('resource', ['$resource', function($resource) {
 
 	self.emails = $resource('/api/emails', null,
 		{
-			'sendEmails' : {url: '/api/emails', method: 'POST', isArray: false}
+			'sendEmail' : {url: '/api/emails', method: 'POST', isArray: false}
 		}
 	);
 
@@ -257,10 +257,10 @@ app.factory('textParser', function() {
 				lname = sname[0];
 				fname = sname[1];
 			}
-	
+
 			var email = info[emailIndex];
 			if (examIndex != -1) exam = info[examIndex];
-			
+
 			if (!exam) exam = (i-start + 1).toString();
 
 			if (!fname || !lname || !email) { continue; }

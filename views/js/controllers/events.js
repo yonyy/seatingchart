@@ -14,7 +14,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     function success(room) {
                         if (!room.name) event.room = {name: 'Room has been deleted'};
                         else event.room = room;
-    
+
                         resource.rosters.getByID({id: event.rosterID},
                             function success(roster) {
                                 event.roster = roster;
@@ -35,8 +35,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             growl.error('Can not open because the room has been deleted');
             return;
         }
-        if (event.type === "Class") $state.go('dashboard.classDraft', {id: event._id, touched: 1});
-        else $state.go('dashboard.labDraft', {id: event._id, touched: 1});
+        var lab = (event.type === "Class") ? false : true;
+        $state.go('dashboard.classDraft', {id: event._id, touched: 1, lab: lab});
     }
 
     self.delete = function(id, index) {
