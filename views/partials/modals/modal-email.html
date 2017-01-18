@@ -8,9 +8,7 @@
     <div class="alert alert-danger" role="alert" ng-show="ec.sending">
         <strong>Failed to send to: </strong>
         <ul ng-repeat="err in ec.errors track by $index">
-            <li>{{ err.email }}
-                <button class="btn btn-default" type="button" ng-click="ec.retry(err, $index)">Retry</button>
-            </li>
+            <li>{{ err.email }} <span class="badge" ng-click="ec.retry(err, $index)">Retry</span></li>
         </ul>
     </div>
     <form class="form-horizontal">
