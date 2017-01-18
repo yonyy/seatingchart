@@ -5,7 +5,7 @@
     <div class="alert alert-success" role="alert" ng-show="ec.sending">
         <strong>Emails Sent: {{ec.sent}} / {{ec.total}}</strong>
     </div>
-    <div class="alert alert-danger" role="alert" ng-show="ec.sending">
+    <div class="alert alert-danger" role="alert" ng-show="ec.sending && ec.errors.length > 0">
         <strong>Failed to send to: </strong>
         <ul ng-repeat="err in ec.errors track by $index">
             <li>{{ err.email }} <span class="badge" ng-click="ec.retry(err, $index)">Retry</span></li>
