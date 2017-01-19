@@ -137,12 +137,13 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             resource.emails.sendEmail({email: email},
                 function success(res) {
                     self.sent += 1;
-                    growl.success('Email Sent! ' + self.sent + '/' + emails.length);
                 }, function error(err) {
                     self.errors.push(email);
                     growl.error('Error sending to ' + email.email);
                 });
         });
+
+        growl.success('Emails Sent! ' + self.sent + '/' + emails.length);
     }
 
     self.retry = function(email, index) {

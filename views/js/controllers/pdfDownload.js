@@ -4,6 +4,7 @@ angular.module('app').controller('pdfDownloadController',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
     self.formatText = '';
+    console.log($stateParams.lab);
     self.dateStr = $filter('date')(event.date, 'EEEE, MMMM dd');
     self.timeStr = $filter('date')(event.date, 'shortTime');
     self.pdfName = event.name + " " + event.section + " " + self.dateStr + " " + self.timeStr + " " + room.name;
@@ -112,7 +113,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var colIndex = 4;
         var midterm = false;
         var grid = false;
-        self.lastNameLength = 9;
+        self.lastNameLength = 6;
         self.firstNameLength = 6;
 
         switch(predicate) {
@@ -212,27 +213,18 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             docDefinition.content[colIndex].table.body.push(gridRow);
         }
 
-        // var totalStudentsStr = "\n\nTotal Students: " + totalStudents.toString() + "\n";
-        // var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
-        // var actualPresent = "# of Students Absent: _____\n";
-        // var extraInfo = [totalStudentsStr, totalSeats, actualPresent];
-        // var text = {text: '', style: 'student'};
-        // for (var i = 0; i < extraInfo.length; i++) {
-        //     text.text += extraInfo[i];
-        // }
-
-        // docDefinition.content.push(text);
-
         return docDefinition;
 
     }
 
     self.writeStudents = function (docDefinition, container, colIndex) {
         var text = {text: '', style: 'student'};
-        var maxPerCol = 56;
+        var maxPerCol = 60;
+        var maxColumns = 5;
         var tracker = 1;
         var totalStudents = 0;
         var empty = [];
+        var columnIndex = 1;
 
         for (var i = 0; i < container.length; i++) {
 
@@ -240,6 +232,17 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 docDefinition.content[colIndex].columns.push(text);
                 text = {text: '', style: 'student'};
                 tracker = 1;
+                columnIndex++;
+
+                if (columnIndex == maxColumns) {
+                    columnIndex = 1;
+                    var newPage = {text: '', pageBreak: 'after'};
+                    docDefinition.styles.student.fontSize = 9;
+                    docDefinition.content.push(newPage);
+                    docDefinition.content.push({columns: []});
+                    colIndex += 2;
+                    maxPerCol = 70;
+                }
             }
 
             if (container[i].email) {
