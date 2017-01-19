@@ -14,41 +14,41 @@
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputEmail1">Room Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Room Name" ng-model="rfc.newRoom.name" 
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Room Name" ng-model="rfc.newRoom.name"
             ng-disabled="rfc.selectedExistingRoom._id" ng-required="!rfc.selectedExistingRoom._id">
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputEmail2">Event Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="CSE XX Midterm" ng-model="rfc.event.name" 
+          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="CSE XX Midterm" ng-model="rfc.event.name"
             ng-required="true">
         </div>
       </div>
       <div class="row" ng-hide="!rfc.lab">
         <div class="form-group col-md-12">
           <label for="exampleInputEmail3">Section ID</label>
-          <input type="text" class="form-control" id="exampleInputEmail3" placeholder="A00" ng-model="rfc.event.section" 
+          <input type="text" class="form-control" id="exampleInputEmail3" placeholder="A00" ng-model="rfc.event.section"
             ng-required="true">
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-4">
           <label for="exampleInputPassword1">Max Width</label>
-          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="20" 
-            ng-max="30" max="30" ng-min="1"  min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.width" 
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="20"
+            ng-max="30" max="30" ng-min="1"  min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.width"
               ng-disabled="rfc.selectedExistingRoom._id">
         </div>
         <div class="form-group col-md-4">
             <label for="exampleInputPassword2">Max Height</label>
-            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="1" 
-              ng-max="15" max="15" ng-min="1" min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.height" 
+            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="1"
+              ng-max="20" max="20" ng-min="1" min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.height" 
                 ng-disabled="rfc.selectedExistingRoom._id">
         </div>
         <div class="form-group col-md-4">
             <label for="exampleInputPassword2">Students Per Seat</label>
-            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="1" 
-              ng-max="3" max="3" ng-min="1" min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.numPerStation" 
+            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="1"
+              ng-max="3" max="3" ng-min="1" min="1" ng-required="!rfc.selectedExistingRoom._id" ng-model="rfc.newRoom.numPerStation"
                 ng-disabled="rfc.lab">
         </div>
       </div>
@@ -76,14 +76,14 @@
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputEmail1">Existing Classrooms</label>
-          <select class="form-control" ng-options="room as room.name for room in rfc.rooms" ng-model="rfc.selectedExistingRoom" 
+          <select class="form-control" ng-options="room as room.name for room in rfc.rooms" ng-model="rfc.selectedExistingRoom"
             ng-disabled="!rfc.noInputs()" ng-required="rfc.noInputs()"></select>
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-12">
           <label for="exampleInputPassword1">Existing Rosters</label>
-          <select class="form-control" ng-options="roster as roster.name for roster in rfc.rosters" ng-model="rfc.selectedRoster" 
+          <select class="form-control" ng-options="roster as roster.name for roster in rfc.rosters" ng-model="rfc.selectedRoster"
             ng-disabled="!rfc.noRoster()" ng-required="rfc.noRoster()"></select>
         </div>
       </div>
