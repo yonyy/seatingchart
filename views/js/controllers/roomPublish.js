@@ -309,6 +309,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.applyChange = function(student){
         var target = student.seat.id;   // get id of the targeted seat
         var origin = self.physicalMap[student.seat.y][student.seat.x].id;   // get id of current seat
+        console.log(target);
 
         // get object that should hold the targeted seat
         var targetSeat = null;
@@ -327,11 +328,13 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             return;
         }
 
+        console.log(targetSeat);
+
         // verifying that there is a spot avaliable if the seat holds more than one
         var targetIndex = -1;
         if (targetSeat.students.length > 1) {
             for (var i = 0; i < targetSeat.students.length; i++) {
-                if (targetSeat.students[i].id == 0){
+                if (targetSeat.students[i].studentID == 0){
                     targetIndex = i;
                     break;
                 }
@@ -350,7 +353,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         // finding the index at which the student is stored in the students array
         var originIndex = 0;
         for (var i = 0; i < originSeat.students.length; i++) {
-            if (originSeat.students[i].id == student.id) {
+            if (originSeat.students[i].studentID == student.studentID) {
                 originIndex = i;
                 break;
             }

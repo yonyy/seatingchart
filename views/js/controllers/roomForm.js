@@ -27,6 +27,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     var type = ($stateParams.lab) ? "Lab" : "Class";
 
 	self.newRoom = {type: type, numPerStation: 1};
+	if ($stateParams.lab) self.newRoom.numPerStation = 2;
+	
 	self.event = {date: new Date() };
 	self.newRoster = {};
 	self.manualPaste = false;
@@ -66,7 +68,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             growl.error('Error getting rosters');
         });
 
-	resource.rosters.getRosters({}, 
+	resource.rosters.getRosters({},
 		function success (rosters){
 			self.rosters = rosters;
 			self.rosters.push({name: '--Select--', students: null});
@@ -120,7 +122,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     	var height = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.height : self.newRoom.height;
         var numPerStation = (self.selectedExistingRoom._id) ? self.selectedExistingRoom.numPerStation : self.newRoom.numPerStation;
 
-    	if (width * height * numPerStation < numStudents) { 
+    	if (width * height * numPerStation < numStudents) {
     		self.error = true;
     		self.message = 'Invalid dimensions! Not enough seats.';
     		return false;
@@ -132,7 +134,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.uploadRoom = function() {
         if (self.isNewRoom) {
             self.newRoom.totalSeats = self.newRoom.width * self.newRoom.height;
- 
+
             resource.rooms.addRoom({room: self.newRoom},
                 function success (room) {
                     growl.success('Successfully created new room');
@@ -157,7 +159,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 });
         } else {self.createEvent(roomID, self.selectedRoster._id)};
     }
-    
+
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
         var seed = (self.seed) ? 1 : self.seed;
