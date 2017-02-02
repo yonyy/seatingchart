@@ -264,8 +264,13 @@ app.factory('textParser', function() {
 			if (!exam) exam = (i-start + 1).toString();
 
 			if (!fname || !lname || !email) { continue; }
+            var firstNames = titleCase(fname.trim()).split(' ');
+            var firstName = firstNames[0];
+            if (firstNames.length > 1) {
+                firstName += ' ' + firstNames[1];
+            }
 			stud.push({
-				firstName:  titleCase(fname.trim()),
+				firstName:  firstName,
 				lastName: titleCase(lname.trim()),
 				email: email,
 				studentID: exam,

@@ -99,7 +99,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             styles: {
                 header: {fontSize: 14, bold: true},
                 predicate: {fontSize: 14, bold: true, italics: true},
-                student: {fontSize: 10},
+                student: {fontSize: 8},
                 secrecy: {fontSize: 14, bold: true},
                 label: {bold: true},
                 grid: {fontSize: 9}
@@ -113,8 +113,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var colIndex = 4;
         var midterm = false;
         var grid = false;
-        self.lastNameLength = 6;
-        self.firstNameLength = 6;
+        self.lastNameLength = 20;
+        self.firstNameLength = 20;
 
         switch(predicate) {
             case 'grd':
@@ -219,8 +219,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
     self.writeStudents = function (docDefinition, container, colIndex) {
         var text = {text: '', style: 'student'};
-        var maxPerCol = 60;
-        var maxColumns = 5;
+        var maxPerCol = 66;
+        var maxColumns = 4;
         var tracker = 1;
         var totalStudents = 0;
         var empty = [];
@@ -237,11 +237,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 if (columnIndex == maxColumns) {
                     columnIndex = 1;
                     var newPage = {text: '', pageBreak: 'after'};
-                    docDefinition.styles.student.fontSize = 9;
                     docDefinition.content.push(newPage);
                     docDefinition.content.push({columns: []});
                     colIndex += 2;
-                    maxPerCol = 70;
+                    maxPerCol = 77;
                 }
             }
 
