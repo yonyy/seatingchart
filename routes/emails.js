@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
 	}));
 
 	var mailOptions = {
-		from: 'Seating Charts <cs12x@ucsd.edu>', // sender address
+		from: 'Seating Charts', // sender address
 		to: email.email, // list of receivers
 		subject: email.subject, // Subject line
 		text: email.text // plaintext body
