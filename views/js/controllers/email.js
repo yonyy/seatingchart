@@ -129,6 +129,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         }
 
         self.sending = true;
+        self.failed = 0;
         self.sent = 0;
         self.total = emails.length;
         self.errors = [];
@@ -138,6 +139,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 function success(res) {
                     self.sent += 1;
                 }, function error(err) {
+                    self.failed += 1;
                     self.errors.push(email);
                     growl.error('Error sending to ' + email.email);
                 });

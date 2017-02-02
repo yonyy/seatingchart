@@ -3,7 +3,9 @@
 </div>
 <div class="modal-body" id="modal-body">
     <div class="alert alert-success" role="alert" ng-show="ec.sending">
-        <strong>Emails Sent: {{ec.sent}} / {{ec.total}}</strong>
+        <div><strong>Emails Attempted: {{ec.sent + ec.failed}} / {{ec.total}}</strong></div>
+        <div><strong>Emails Sent: {{ec.sent}} / {{ec.total}}</strong></div>
+        <div><strong>Emails Failed: {{ec.failed}} / {{ec.total}}</strong></div>
     </div>
     <div class="alert alert-danger" role="alert" ng-show="ec.sending && ec.errors.length > 0">
         <strong>Failed to send to: </strong>

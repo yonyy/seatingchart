@@ -1,9 +1,9 @@
 {
 	"development" : {
 		"url" : "mongodb://localhost/seating_chart_dev",
-		"email" : "cseseatingcharts@gmail.com",
+		"email" : "seatingcharts@ucsd.edu",
 		"pw" : "s3@tingCh@rt5",
-		"host" : "smtp.gmail.com"
+		"host" : "smtp.ucsd.edu"
 	},
 	"production" : {
 		"url" : "mongodb://heroku_n962vc91:tpt3f1qo5taamu1r82jnmvjn3p@ds111559.mlab.com:11559/heroku_n962vc91",
