@@ -102,7 +102,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 student: {fontSize: 8},
                 secrecy: {fontSize: 14, bold: true},
                 label: {bold: true},
-                grid: {fontSize: 9}
+                grid: {fontSize: 8}
             }
         }
     }
@@ -278,13 +278,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         for (var index = 0; index < containers.length; index++) {
             var group = containers[index];
 
-            fromStr = group[0].lastName.substring(0,1);
-            toStr = group[group.length-1].lastName.substring(0,1);
-            var rangeStr = fromStr.toUpperCase() + " to " + toStr.toUpperCase();
+            fromStr = group[0].lastName;
+            toStr = group[group.length-1].lastName;
+            var rangeStr = fromStr.toUpperCase() + " \n to \n " + toStr.toUpperCase();
 
- //           docDefinition.content[colIndex] = {text: rangeStr, bold: true, fontSize: 20};
             docDefinition = self.writeStudents(docDefinition, group, colIndex);
-            docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 60});
+            docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 30});
 
             if (index < containers.length-1) {
                 docDefinition.content.push({text: '', pageBreak: 'before'});
@@ -301,7 +300,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     }
 
     self.toString = function(student) {
-        //console.log(student);
         var seatId = student.seat.id.toString();
         var firstname = student.firstName;
         var lastname = student.lastName;
@@ -340,7 +338,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             return (elmt.email != null);
         });
 
-        var threshold = 40;
+        var threshold = 60;
 
         var currentLN = filteredContainer[0].lastName.charAt(0);
         var counter = 0;
@@ -356,7 +354,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         lastnameCounter.push(counter);
 
-        var generator = function*() {
+        var generatorByLastName = function*() {
             var perGroup = 0;
             for (var index = 0; index < lastnameCounter.length; index++) {
                 if (perGroup + lastnameCounter[index] <= (threshold*1.20)) {
@@ -370,10 +368,30 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             yield perGroup;
         }
 
-        var gen = generator();
+        var generatorEvenlyDivide = function*() {
+            var groups = Math.floor(filteredContainer.length / threshold);
+
+            for (var index = 0; index < groups; index++) {
+                if (index == groups-1) {
+                    var lastGroup = filteredContainer.length % threshold;
+                    if (lastGroup <= 0.3*threshold)
+                        yield (threshold + lastGroup);
+                    else {
+                        yield threshold;
+                        yield lastGroup;
+                    }
+                } else {
+                    yield threshold;
+                }
+            }
+        }
+
+        //var gen = generatorByLastName();
+        var gen = generatorEvenlyDivide();
         var groups = gen.next();
         var tracker = 0;
         while(groups.value) {
+            console.log(groups.value);
             var group = [];
             for (var index = 0; index < groups.value; index++) {
                 group.push(filteredContainer[tracker]);

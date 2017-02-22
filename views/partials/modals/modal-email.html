@@ -5,13 +5,13 @@
     <div class="alert alert-success" role="alert" ng-show="ec.sending">
         <div><strong>Emails Attempted: {{ec.sent + ec.failed}} / {{ec.total}}</strong></div>
         <div><strong>Emails Sent: {{ec.sent}} / {{ec.total}}</strong></div>
-        <div><strong>Emails Failed: {{ec.failed}} / {{ec.total}}</strong></div>
     </div>
     <div class="alert alert-danger" role="alert" ng-show="ec.sending && ec.errors.length > 0">
-        <strong>Failed to send to: </strong>
+        <div><strong>Emails Failed: {{ec.failed}} / {{ec.total}}</strong> <span class="badge" ng-click="ec.sendEmails(ec.errors)">Retry All</span></div>
+        <div><strong>Failed to send to: </strong>
         <ul ng-repeat="err in ec.errors track by $index">
             <li>{{ err.email }} <span class="badge" ng-click="ec.retry(err, $index)">Retry</span></li>
-        </ul>
+        </ul></div>
     </div>
     <form class="form-horizontal">
         <div class="form-group">
