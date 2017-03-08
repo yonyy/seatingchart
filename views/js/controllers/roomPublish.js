@@ -481,8 +481,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     // Function that shuffles the array
     self.shuffle = function (array, seed) {
-        if (!isNaN(seed))   // If seed is a number
-            Math.seedrandom(seed)
+        Math.seedrandom(seed)
         var currentIndex = array.length
         var temporaryValue
         var randomIndex
