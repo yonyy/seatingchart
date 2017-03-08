@@ -186,6 +186,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.applyStudents = function(subClass, quota, offset) {
         var counter = 0;
+        var iterations = 0;
         (function() {
             while(counter < quota) {
                 // start from bottom row and move upwards left to right
@@ -199,8 +200,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     }
                 }
                 if (counter < quota) {
-                    for (var i = 0; i < subClass.length; i += (offset.row + 1)) {
-                        for (var j = 0; j < subClass[i].length; j += (offset.row + 1)) {
+                    for (var i = 1; i < subClass.length; i += (offset.row + 1)) {
+                        for (var j = 0; j < subClass[i].length; j += (offset.col + 1)) {
                             if (subClass[i][j].isEmpty) {
                                 subClass[i][j].isEmpty = false;
                                 counter += self.room.numPerStation;
@@ -210,6 +211,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                     }
                 }
 
+                console.log(iterations);
+                iterations++;
+                if (iterations == 8) return;
             }
         })();
 
