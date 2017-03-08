@@ -162,7 +162,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
-		Math.seedrandom();
+	Math.seedrandom();
         var seed = (self.seed) ? self.seed : Math.random();
         self.event.roomID  =  roomID;
         self.event.rosterID = rosterID;
