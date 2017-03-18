@@ -44,6 +44,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     };
 
     self.generateRecievers = function(students) {
+        students = students.filter(function(s) {
+            return !s.exclude;
+        });
+
         var list = students.sort(self.sortByName);
 
         for (var i = 0; i < list.length; i++) {
