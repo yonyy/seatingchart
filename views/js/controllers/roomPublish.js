@@ -12,6 +12,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.hasBeenMarkedMarked = [];
     self.sIndex = 0;
     self.seed = 0;
+    self.excludeNum = 0;
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
@@ -218,6 +219,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 if (!subClass[i][j].isEmpty) {
                     subClass[i][j].students = [];
                     for (var s = 0; s < self.room.numPerStation; s++) {
+                        while (self.roster.students[self.sIndex].exclude === true) {
+                            self.roster.students[self.sIndex].seat = { id: '' };
+                            self.sIndex++;
+                            self.excludeNum++;
+                        }
                         if (self.sIndex >= self.roster.students.length) {
                             var emptyStudent = {
                                 firstName: 'EMPTY',
@@ -225,6 +231,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                                 email: null,
                                 studentID: 0,
                                 isLeftHanded: false,
+                                exclude: false,
                                 seat: {
                                     id: subClass[i][j].id,
                                     x: subClass[i][j].x,
@@ -252,6 +259,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                             email: null,
                             studentID: 0,
                             isLeftHanded: false,
+                            exclude: false,
                             seat: {
                                id: subClass[i][j].id,
                                 x: subClass[i][j].x,

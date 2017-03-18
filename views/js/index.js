@@ -274,7 +274,8 @@ app.factory('textParser', function() {
 				lastName: titleCase(lname.trim()),
 				email: email,
 				studentID: exam,
-				isLeftHanded: false
+				isLeftHanded: false,
+                exclude: false
 			});
 		}
 
@@ -318,7 +319,8 @@ app.directive('ngFileReader', function() {
                 lastName: lname.replace(/['"]+/g, '').toTitleCase(),
                 email: email,
                 studentID: (i-start + 1).toString(),
-                isLeftHanded: false
+                isLeftHanded: false,
+                exclude: false
             });
         }
         if (!stud.length) { success = false; }
