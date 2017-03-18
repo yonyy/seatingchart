@@ -152,20 +152,28 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         self.docDefinition = self.generateDoc(grid);
 
+        var include = container.filter(function(s) {
+            return !s.exclude;
+        });
+
+        var exclude = container.filter(function(s) {
+            return s.exclude;
+        });
+
         if (midterm) {
             var containers = self.separateStudents(container);
             self.docDefinition = self.generateDoc(grid)
-            self.docDefinition = self.writeGroupStudents(self.docDefinition, containers);
+            self.docDefinition = self.writeGroupStudents(self.docDefinition, containers, exclude);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.pdfName +  self.formatText);
 
         } else if (grid) {
             self.docDefinition.pageOrientation = 'landscape';
-            self.docDefinition = self.createGrid(self.docDefinition, container, colIndex);
+            self.docDefinition = self.createGrid(self.docDefinition, include, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         } else {
-            self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
+            self.docDefinition = self.writeStudents(self.docDefinition, include, colIndex, exclude);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         }
@@ -217,7 +225,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
     }
 
-    self.writeStudents = function (docDefinition, container, colIndex) {
+    self.writeStudents = function (docDefinition, container, colIndex, exclude) {
         var text = {text: '', style: 'student'};
         var maxPerCol = 66;
         var maxColumns = 4;
@@ -253,6 +261,41 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             }
         }
 
+
+        if (exclude.length > 0) {
+            if (maxPerCol - tracker < 5) {
+                docDefinition.content[colIndex].columns.push(text);
+                text = {text: '', style: 'student'};
+                text.text = 'Students not included in the seating chart\n';
+            } else {
+                text.text += '\n\nStudents not included in the seating chart\n';
+            }
+            for (var i = 0; i < exclude.length; i++) {
+                if (tracker == maxPerCol) {
+                    docDefinition.content[colIndex].columns.push(text);
+                    text = {text: '', style: 'student'};
+                    tracker = 1;
+                    columnIndex++;
+
+                    if (columnIndex == maxColumns) {
+                        columnIndex = 1;
+                        var newPage = {text: '', pageBreak: 'after'};
+                        docDefinition.content.push(newPage);
+                        docDefinition.content.push({columns: []});
+                        colIndex += 2;
+                        maxPerCol = 77;
+                    }
+                }
+
+                if (exclude[i].email) {
+                    text.text += self.toString(exclude[i]);
+                    tracker++;
+                } else {
+                    empty.push(self.toString(container[i]));
+                }
+            }
+        }
+
         var totalStudents = "\n\nTotal Students: " + totalStudents.toString() + "\n";
         var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
         var actualPresent = "# of Students Absent: _____\n";
@@ -271,18 +314,25 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         return docDefinition;
     }
 
-    self.writeGroupStudents = function(docDefinition, containers) {
+    self.writeGroupStudents = function(docDefinition, containers, exclude) {
         var colIndex = 4;
         var fromStr = "";
         var toStr = "";
         for (var index = 0; index < containers.length; index++) {
             var group = containers[index];
-
             fromStr = group[0].lastName;
             toStr = group[group.length-1].lastName;
             var rangeStr = fromStr.toUpperCase() + " \n to \n " + toStr.toUpperCase();
 
-            docDefinition = self.writeStudents(docDefinition, group, colIndex);
+            var subset_exclude = exclude.filter(function(s) {
+                return (s.lastName.toUpperCase() >= fromStr.toUpperCase() && s.lastName.toUpperCase() <= toStr.toUpperCase());
+            });
+
+            group = group.filter(function(s) {
+                return !s.exclude;
+            });
+
+            docDefinition = self.writeStudents(docDefinition, group, colIndex, subset_exclude);
             docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 30});
 
             if (index < containers.length-1) {
