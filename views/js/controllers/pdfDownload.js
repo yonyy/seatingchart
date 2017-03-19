@@ -151,11 +151,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         self.docDefinition = self.generateDoc(grid);
 
         var include = container.filter(function(s) {
-            return !s.exclude;
+            return (!s.exclude && !s.isOsd);
         });
 
         var exclude = container.filter(function(s) {
-            return s.exclude;
+            return (s.exclude || s.isOsd);
         });
 
         if (midterm) {
@@ -231,6 +231,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var totalStudents = 0;
         var empty = [];
         var columnIndex = 1;
+        var specialSeatingNum = 0;
 
         for (var i = 0; i < container.length; i++) {
 
@@ -264,11 +265,11 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             if (maxPerCol - tracker < 5) {
                 docDefinition.content[colIndex].columns.push(text);
                 text = {text: '', style: 'student'};
-                text.text = 'Students not included in the seating chart\n';
+                text.text = 'Students not normally seated:\n';
                 tracker = 1;
                 columnIndex++;
             } else {
-                text.text += '\n\nStudents not included in the seating chart\n';
+                text.text += '\n\nStudents not normally seated:\n';
             }
             for (var i = 0; i < exclude.length; i++) {
                 if (tracker == maxPerCol) {
@@ -289,6 +290,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
                 if (exclude[i].email) {
                     text.text += self.toString(exclude[i]);
+                    if (!exclude[i].isOsd && exclude[i].exclude) {
+                        specialSeatingNum++;
+                    }
                     tracker++;
                 } else {
                     empty.push(self.toString(container[i]));
@@ -296,7 +300,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             }
         }
 
-        var totalStudents = "\n\nTotal Students: " + totalStudents.toString() + "\n";
+        var totalStudents = "\n\nTotal Students: " + (totalStudents + specialSeatingNum).toString() + "\n";
         var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
         var actualPresent = "# of Students Absent: _____\n";
         var tutorInfo = "Tutor taking attendance: _____\n"
@@ -329,7 +333,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             });
 
             group = group.filter(function(s) {
-                return !s.exclude;
+                return (!s.exclude && !s.isOsd);
             });
 
             docDefinition = self.writeStudents(docDefinition, group, colIndex, subset_exclude);
@@ -361,9 +365,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         if (seatId.length < 3 ) seatId += "  ";
         /*  ID Seat Last Name, First Name */
 
+        var special = '';
+
+        if (student.isOsd) { special = " (OSD Different Room)"; }
+        else if (student.exclude) { special = " (Special Seating)"; }
+
         return paddedId + " _____ " + seatId +
                 " " + lastname.split(" ")[0].substring(0,self.lastNameLength) + ", " +
-                firstname.substring(0,self.firstNameLength) + "\n";
+                firstname.substring(0,self.firstNameLength) + special + "\n";
     }
 
     self.padZero = function(str, maxPad) {

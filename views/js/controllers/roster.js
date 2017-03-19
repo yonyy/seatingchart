@@ -46,6 +46,9 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 				if (s.exclude === undefined || s.exclude === null) {
 					s.exclude = false;
 				}
+				if (s.isOsd === undefined || s.isOsd === null) {
+					s.isOsd = false;
+				}
 				return s;
 			});
 			self.roster = roster;
