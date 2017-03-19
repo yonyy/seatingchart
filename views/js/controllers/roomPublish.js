@@ -219,6 +219,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             for (var j = 0; j < subClass[i].length; j++) {
                 if (!subClass[i][j].isEmpty) {
                     subClass[i][j].students = [];
+                    var numSeated = 0;
                     for (var s = 0; s < self.room.numPerStation; s++) {
                         while (self.roster.students[self.sIndex].exclude === true ||
                             self.roster.students[self.sIndex].isOsd === true) {
@@ -244,6 +245,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                                     y: subClass[i][j].y
                                 }
                             };
+                            if (numSeated == 0) { subClass[i][j].isEmpty = true; }
+                            else { subClass[i][j].isEmpty = false; }
                             subClass[i][j].students.push(emptyStudent);
                             self.roster.students.push(emptyStudent);
                         } else {
@@ -254,6 +257,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                             }
                             subClass[i][j].students.push(self.roster.students[self.sIndex]);
                             self.sIndex++;
+                            numSeated++;
                         }
                     }
                 } else {
