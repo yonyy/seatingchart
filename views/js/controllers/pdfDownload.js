@@ -4,7 +4,6 @@ angular.module('app').controller('pdfDownloadController',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
     self.formatText = '';
-    console.log($stateParams.lab);
     self.dateStr = $filter('date')(event.date, 'EEEE, MMMM dd');
     self.timeStr = $filter('date')(event.date, 'shortTime');
     self.pdfName = event.name + " " + event.section + " " + self.dateStr + " " + self.timeStr + " " + room.name;
@@ -108,7 +107,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     }
 
     self.download = function(predicate) {
-        //console.log(students);
         var container = [];
         var colIndex = 4;
         var midterm = false;
@@ -442,14 +440,23 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var gen = generatorEvenlyDivide();
         var groups = gen.next();
         var tracker = 0;
+        var currGroup = 0;
         while(groups.value) {
-            console.log(groups.value);
             var group = [];
             for (var index = 0; index < groups.value; index++) {
-                group.push(filteredContainer[tracker]);
-                tracker++;
+                if (tracker < filteredContainer.length) {
+                    group.push(filteredContainer[tracker]);
+                    tracker++;
+                }
             }
-            containers.push(group);
+
+            var lastPersonNum = group.length - 1;
+            while (tracker < filteredContainer.length &&
+                filteredContainer[tracker].lastName == group[lastPersonNum].lastName) {
+                    group.push(filteredContainer[tracker]);
+                    tracker++;
+            }
+            if (group.length > 0) { containers.push(group); }
             groups = gen.next();
         }
 
