@@ -59,7 +59,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     resource.rooms.getRooms({},
         function success(rooms) {
-            self.rooms = rooms;
+            self.rooms = rooms.filter(function(r) { return r.type == type; });
             self.rooms.push({name: '--Select--', _id: null});
             self.selectedExistingRoom = self.rooms[self.rooms.length-1];
         }, function error(err) {
