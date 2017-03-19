@@ -267,6 +267,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 docDefinition.content[colIndex].columns.push(text);
                 text = {text: '', style: 'student'};
                 text.text = 'Students not included in the seating chart\n';
+                tracker = 1;
+                columnIndex++;
             } else {
                 text.text += '\n\nStudents not included in the seating chart\n';
             }
