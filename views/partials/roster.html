@@ -47,6 +47,7 @@
 					<th ng-click="rc.predicate = 'email'">Email</th>
 					<th>Preferences</th>
 					<th>Exclude</th>
+					<th>OSD</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -61,6 +62,10 @@
 					</td>
 					<td>
 						<select class="form-control" ng-model="student.exclude" ng-options="op.val as op.text for op in [{ text: 'False', val: false }, { text: 'True', val: true }]">
+						</select>
+					</td>
+					<td>
+						<select class="form-control" ng-model="student.isOsd" ng-options="op.val as op.text for op in [{ text: 'False', val: false }, { text: 'True', val: true }]">
 						</select>
 					</td>
 				</tr>

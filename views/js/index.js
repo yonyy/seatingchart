@@ -275,7 +275,8 @@ app.factory('textParser', function() {
 				email: email,
 				studentID: exam,
 				isLeftHanded: false,
-                exclude: false
+                exclude: false,
+                isOsd: false
 			});
 		}
 
@@ -320,7 +321,8 @@ app.directive('ngFileReader', function() {
                 email: email,
                 studentID: (i-start + 1).toString(),
                 isLeftHanded: false,
-                exclude: false
+                exclude: false,
+                isOsd: false
             });
         }
         if (!stud.length) { success = false; }
