@@ -46,6 +46,7 @@
 					<th ng-click="rc.predicate = 'lastName'">Last Name</th>
 					<th ng-click="rc.predicate = 'email'">Email</th>
 					<th>Preferences</th>
+					<th>Exclude</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,6 +57,10 @@
 					<td>{{student.email}}</td>
 					<td>
 						<select class="form-control" ng-model="student.isLeftHanded" ng-options="op.val as op.text for op in [{ text: 'Right Handed', val: false }, { text: 'Left Handed', val: true }]">
+						</select>
+					</td>
+					<td>
+						<select class="form-control" ng-model="student.exclude" ng-options="op.val as op.text for op in [{ text: 'False', val: false }, { text: 'True', val: true }]">
 						</select>
 					</td>
 				</tr>
