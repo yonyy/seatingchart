@@ -367,7 +367,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         var special = '';
 
-        if (student.isOsd) { special = " (OSD Different Room)"; }
+        if (student.isOsd) { special = " (Different Room)"; }
         else if (student.exclude) { special = " (Special Seating)"; }
 
         return paddedId + " _____ " + seatId +
