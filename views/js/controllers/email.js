@@ -98,6 +98,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             seat : student.seat.id
         }
 
+        if (info.seat === '') { info.seat = 'No Assigned Seating'; }
+
         for (var i = 0; i < text.length; i++) {
             if (text[i] == "[") {
                 leftBracket = true;
