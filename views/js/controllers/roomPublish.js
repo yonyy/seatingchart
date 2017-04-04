@@ -12,6 +12,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
     self.hasBeenMarkedMarked = [];
     self.sIndex = 0;
     self.seed = 0;
+    self.osdNum = 0;
+    self.excludeNum = 0;
 
     resource.events.getByID({id: $stateParams.id},
         function success(event) {
@@ -200,7 +202,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                 }
                 if (counter < quota) {
                     for (var i = 0; i < subClass.length; i += (offset.row + 1)) {
-                        for (var j = 0; j < subClass[i].length; j += (offset.row + 1)) {
+                        for (var j = 1; j < subClass[i].length; j += (offset.col + 1)) {
                             if (subClass[i][j].isEmpty) {
                                 subClass[i][j].isEmpty = false;
                                 counter += self.room.numPerStation;
@@ -217,7 +219,18 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
             for (var j = 0; j < subClass[i].length; j++) {
                 if (!subClass[i][j].isEmpty) {
                     subClass[i][j].students = [];
+                    var numSeated = 0;
                     for (var s = 0; s < self.room.numPerStation; s++) {
+                        while (self.roster.students[self.sIndex].exclude === true ||
+                            self.roster.students[self.sIndex].isOsd === true) {
+                            self.roster.students[self.sIndex].seat = { id: '' };
+                            if (self.roster.students[self.sIndex].exclude === true) {
+                                self.excludeNum++;
+                            } else if (self.roster.students[self.sIndex].isOsd === true) {
+                                self.osdNum++;
+                            }
+                            self.sIndex++;
+                        }
                         if (self.sIndex >= self.roster.students.length) {
                             var emptyStudent = {
                                 firstName: 'EMPTY',
@@ -225,12 +238,15 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                                 email: null,
                                 studentID: 0,
                                 isLeftHanded: false,
+                                exclude: false,
                                 seat: {
                                     id: subClass[i][j].id,
                                     x: subClass[i][j].x,
                                     y: subClass[i][j].y
                                 }
                             };
+                            if (numSeated == 0) { subClass[i][j].isEmpty = true; }
+                            else { subClass[i][j].isEmpty = false; }
                             subClass[i][j].students.push(emptyStudent);
                             self.roster.students.push(emptyStudent);
                         } else {
@@ -241,10 +257,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                             }
                             subClass[i][j].students.push(self.roster.students[self.sIndex]);
                             self.sIndex++;
+                            numSeated++;
                         }
                     }
                 } else {
                     subClass[i][j].students = [];
+                    subClass[i][j].isEmpty = true;
                     for (var s = 0; s < self.room.numPerStation; s++) {
                         var emptyStudent = {
                             firstName: 'EMPTY',
@@ -252,6 +270,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
                             email: null,
                             studentID: 0,
                             isLeftHanded: false,
+                            exclude: false,
                             seat: {
                                id: subClass[i][j].id,
                                 x: subClass[i][j].x,
@@ -481,8 +500,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     // Function that shuffles the array
     self.shuffle = function (array, seed) {
-        if (!isNaN(seed))   // If seed is a number
-            Math.seedrandom(seed)
+        Math.seedrandom(seed)
         var currentIndex = array.length
         var temporaryValue
         var randomIndex

@@ -28,7 +28,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	self.newRoom = {type: type, numPerStation: 1};
 	if ($stateParams.lab) self.newRoom.numPerStation = 2;
-	
+
 	self.event = {date: new Date() };
 	self.newRoster = {};
 	self.manualPaste = false;
@@ -59,7 +59,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     resource.rooms.getRooms({},
         function success(rooms) {
-            self.rooms = rooms;
+            self.rooms = rooms.filter(function(r) { return r.type == type; });
             self.rooms.push({name: '--Select--', _id: null});
             self.selectedExistingRoom = self.rooms[self.rooms.length-1];
         }, function error(err) {
@@ -162,7 +162,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
     self.createEvent = function(roomID, rosterID) {
         var touched = (self.isNewRoom) ? 0 : 1;
-        var seed = (self.seed) ? 1 : self.seed;
+	Math.seedrandom();
+        var seed = (self.seed) ? self.seed : Math.random();
         self.event.roomID  =  roomID;
         self.event.rosterID = rosterID;
         self.event.seed = seed;

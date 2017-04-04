@@ -4,7 +4,6 @@ angular.module('app').controller('pdfDownloadController',
 function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalInstance, growl, students, event, room) {
     var self = this;
     self.formatText = '';
-    console.log($stateParams.lab);
     self.dateStr = $filter('date')(event.date, 'EEEE, MMMM dd');
     self.timeStr = $filter('date')(event.date, 'shortTime');
     self.pdfName = event.name + " " + event.section + " " + self.dateStr + " " + self.timeStr + " " + room.name;
@@ -102,13 +101,12 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
                 student: {fontSize: 8},
                 secrecy: {fontSize: 14, bold: true},
                 label: {bold: true},
-                grid: {fontSize: 9}
+                grid: {fontSize: 8}
             }
         }
     }
 
     self.download = function(predicate) {
-        //console.log(students);
         var container = [];
         var colIndex = 4;
         var midterm = false;
@@ -152,20 +150,28 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         self.docDefinition = self.generateDoc(grid);
 
+        var include = container.filter(function(s) {
+            return (!s.exclude && !s.isOsd);
+        });
+
+        var exclude = container.filter(function(s) {
+            return (s.exclude || s.isOsd);
+        });
+
         if (midterm) {
             var containers = self.separateStudents(container);
             self.docDefinition = self.generateDoc(grid)
-            self.docDefinition = self.writeGroupStudents(self.docDefinition, containers);
+            self.docDefinition = self.writeGroupStudents(self.docDefinition, containers, exclude);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download("StudentVersion" + self.pdfName +  self.formatText);
 
         } else if (grid) {
             self.docDefinition.pageOrientation = 'landscape';
-            self.docDefinition = self.createGrid(self.docDefinition, container, colIndex);
+            self.docDefinition = self.createGrid(self.docDefinition, include, colIndex);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         } else {
-            self.docDefinition = self.writeStudents(self.docDefinition, container, colIndex);
+            self.docDefinition = self.writeStudents(self.docDefinition, include, colIndex, exclude);
             pdfMake.createPdf(self.docDefinition).open();
             pdfMake.createPdf(self.docDefinition).download(self.pdfName + self.formatText);
         }
@@ -217,7 +223,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
     }
 
-    self.writeStudents = function (docDefinition, container, colIndex) {
+    self.writeStudents = function (docDefinition, container, colIndex, exclude) {
         var text = {text: '', style: 'student'};
         var maxPerCol = 66;
         var maxColumns = 4;
@@ -225,6 +231,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         var totalStudents = 0;
         var empty = [];
         var columnIndex = 1;
+        var specialSeatingNum = 0;
 
         for (var i = 0; i < container.length; i++) {
 
@@ -253,7 +260,47 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             }
         }
 
-        var totalStudents = "\n\nTotal Students: " + totalStudents.toString() + "\n";
+
+        if (exclude.length > 0) {
+            if (maxPerCol - tracker < 5) {
+                docDefinition.content[colIndex].columns.push(text);
+                text = {text: '', style: 'student'};
+                text.text = 'Students not normally seated:\n';
+                tracker = 1;
+                columnIndex++;
+            } else {
+                text.text += '\n\nStudents not normally seated:\n';
+            }
+            for (var i = 0; i < exclude.length; i++) {
+                if (tracker == maxPerCol) {
+                    docDefinition.content[colIndex].columns.push(text);
+                    text = {text: '', style: 'student'};
+                    tracker = 1;
+                    columnIndex++;
+
+                    if (columnIndex == maxColumns) {
+                        columnIndex = 1;
+                        var newPage = {text: '', pageBreak: 'after'};
+                        docDefinition.content.push(newPage);
+                        docDefinition.content.push({columns: []});
+                        colIndex += 2;
+                        maxPerCol = 77;
+                    }
+                }
+
+                if (exclude[i].email) {
+                    text.text += self.toString(exclude[i]);
+                    if (!exclude[i].isOsd && exclude[i].exclude) {
+                        specialSeatingNum++;
+                    }
+                    tracker++;
+                } else {
+                    empty.push(self.toString(container[i]));
+                }
+            }
+        }
+
+        var totalStudents = "\n\nTotal Students: " + (totalStudents + specialSeatingNum).toString() + "\n";
         var totalSeats = "Total Seats: " + room.totalSeats.toString() + "\n";
         var actualPresent = "# of Students Absent: _____\n";
         var tutorInfo = "Tutor taking attendance: _____\n"
@@ -271,20 +318,26 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         return docDefinition;
     }
 
-    self.writeGroupStudents = function(docDefinition, containers) {
+    self.writeGroupStudents = function(docDefinition, containers, exclude) {
         var colIndex = 4;
         var fromStr = "";
         var toStr = "";
         for (var index = 0; index < containers.length; index++) {
             var group = containers[index];
+            fromStr = group[0].lastName;
+            toStr = group[group.length-1].lastName;
+            var rangeStr = fromStr.toUpperCase() + " \n to \n " + toStr.toUpperCase();
 
-            fromStr = group[0].lastName.substring(0,1);
-            toStr = group[group.length-1].lastName.substring(0,1);
-            var rangeStr = fromStr.toUpperCase() + " to " + toStr.toUpperCase();
+            var subset_exclude = exclude.filter(function(s) {
+                return (s.lastName.toUpperCase() >= fromStr.toUpperCase() && s.lastName.toUpperCase() <= toStr.toUpperCase());
+            });
 
- //           docDefinition.content[colIndex] = {text: rangeStr, bold: true, fontSize: 20};
-            docDefinition = self.writeStudents(docDefinition, group, colIndex);
-            docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 60});
+            group = group.filter(function(s) {
+                return (!s.exclude && !s.isOsd);
+            });
+
+            docDefinition = self.writeStudents(docDefinition, group, colIndex, subset_exclude);
+            docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 30});
 
             if (index < containers.length-1) {
                 docDefinition.content.push({text: '', pageBreak: 'before'});
@@ -301,7 +354,6 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     }
 
     self.toString = function(student) {
-        //console.log(student);
         var seatId = student.seat.id.toString();
         var firstname = student.firstName;
         var lastname = student.lastName;
@@ -313,9 +365,14 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         if (seatId.length < 3 ) seatId += "  ";
         /*  ID Seat Last Name, First Name */
 
+        var special = '';
+
+        if (student.isOsd) { special = " (Different Room)"; }
+        else if (student.exclude) { special = " (Special Seating)"; }
+
         return paddedId + " _____ " + seatId +
                 " " + lastname.split(" ")[0].substring(0,self.lastNameLength) + ", " +
-                firstname.substring(0,self.firstNameLength) + "\n";
+                firstname.substring(0,self.firstNameLength) + special + "\n";
     }
 
     self.padZero = function(str, maxPad) {
@@ -340,7 +397,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             return (elmt.email != null);
         });
 
-        var threshold = 40;
+        var threshold = 60;
 
         var currentLN = filteredContainer[0].lastName.charAt(0);
         var counter = 0;
@@ -356,7 +413,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
 
         lastnameCounter.push(counter);
 
-        var generator = function*() {
+        var generatorByLastName = function*() {
             var perGroup = 0;
             for (var index = 0; index < lastnameCounter.length; index++) {
                 if (perGroup + lastnameCounter[index] <= (threshold*1.20)) {
@@ -370,16 +427,45 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             yield perGroup;
         }
 
-        var gen = generator();
+        var generatorEvenlyDivide = function*() {
+            var groups = Math.floor(filteredContainer.length / threshold);
+
+            for (var index = 0; index < groups; index++) {
+                if (index == groups-1) {
+                    var lastGroup = filteredContainer.length % threshold;
+                    if (lastGroup <= 0.3*threshold)
+                        yield (threshold + lastGroup);
+                    else {
+                        yield threshold;
+                        yield lastGroup;
+                    }
+                } else {
+                    yield threshold;
+                }
+            }
+        }
+
+        //var gen = generatorByLastName();
+        var gen = generatorEvenlyDivide();
         var groups = gen.next();
         var tracker = 0;
+        var currGroup = 0;
         while(groups.value) {
             var group = [];
             for (var index = 0; index < groups.value; index++) {
-                group.push(filteredContainer[tracker]);
-                tracker++;
+                if (tracker < filteredContainer.length) {
+                    group.push(filteredContainer[tracker]);
+                    tracker++;
+                }
             }
-            containers.push(group);
+
+            var lastPersonNum = group.length - 1;
+            while (tracker < filteredContainer.length &&
+                filteredContainer[tracker].lastName == group[lastPersonNum].lastName) {
+                    group.push(filteredContainer[tracker]);
+                    tracker++;
+            }
+            if (group.length > 0) { containers.push(group); }
             groups = gen.next();
         }
 

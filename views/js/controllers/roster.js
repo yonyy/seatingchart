@@ -42,7 +42,16 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
 
 	resource.rosters.getByID({id: $stateParams.id},
 		function success(roster) {
-		self.roster = roster;
+			roster.students = roster.students.map(function(s) {
+				if (s.exclude === undefined || s.exclude === null) {
+					s.exclude = false;
+				}
+				if (s.isOsd === undefined || s.isOsd === null) {
+					s.isOsd = false;
+				}
+				return s;
+			});
+			self.roster = roster;
 		}, function error(err) {
 		console.log(err);
 		}

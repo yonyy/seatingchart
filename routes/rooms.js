@@ -98,7 +98,7 @@ router.route('/:id')
 
 router.route('/class')
 	.get(function(req, res, next){
-		Room.find({classType: 'class'}, function (err, rooms){
+		Room.find({type: 'Class'}, function (err, rooms){
 			if (err) {
 				console.error(err);
 				res.status(500).send(err);
@@ -111,7 +111,7 @@ router.route('/class')
 
 router.route('/labs')
 	.get(function(req, res, next){
-		Room.find({classType: 'lab'}, function (err, rooms){
+		Room.find({type: 'Lab'}, function (err, rooms){
 			if (err) {
 				console.error(err);
 				res.status(500).send(err);

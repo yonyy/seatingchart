@@ -171,8 +171,8 @@ app.factory('resource', ['$resource', function($resource) {
 			'addRoom' : {url: '/api/rooms', method: 'POST', isArray: false},
 			'getRooms' : {url: '/api/rooms', method: 'GET', isArray: true, params: {}},
 			'getByID' : {url: '/api/rooms/:id', method: 'GET', isArray: false, params: {id: '@id'}},
-			'getClasses' : {url: '/api/rooms/class', method: 'GET', isArray: true, params: {}},
-			'getLabs' : {url: '/api/rooms/labs', method: 'GET', isArray: true, params: {}},
+			'getClasses' : {url: '/api/rooms/class/', method: 'GET', isArray: true, params: {}},
+			'getLabs' : {url: '/api/rooms/labs/', method: 'GET', isArray: true, params: {}},
 			'updateRoom': {url: '/api/rooms/:id', method: 'PUT', isArray: false, params: {id: '@id'}},
 			'deleteRoom': {url: '/api/rooms/:id', method: 'DELETE', isArray: false, params: {id: '@id'}}
 		}
@@ -274,7 +274,9 @@ app.factory('textParser', function() {
 				lastName: titleCase(lname.trim()),
 				email: email,
 				studentID: exam,
-				isLeftHanded: false
+				isLeftHanded: false,
+                exclude: false,
+                isOsd: false
 			});
 		}
 
@@ -318,7 +320,9 @@ app.directive('ngFileReader', function() {
                 lastName: lname.replace(/['"]+/g, '').toTitleCase(),
                 email: email,
                 studentID: (i-start + 1).toString(),
-                isLeftHanded: false
+                isLeftHanded: false,
+                exclude: false,
+                isOsd: false
             });
         }
         if (!stud.length) { success = false; }

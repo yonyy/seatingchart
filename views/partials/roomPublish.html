@@ -51,9 +51,11 @@
 </div>
 <div class="row text-center">
 	<div class="col-md-4">
-		<h1>Expected Students: {{rpc.roster.totalStudents}}</h1>
+        <h1>Expected Normal Seated Students: {{rpc.roster.totalStudents - rpc.excludeNum - rpc.osdNum}}</h1>
 	</div>
 	<div class="col-md-4">
+        <h1 ng-show="rpc.excludeNum > 0">Special Seatings: {{ rpc.excludeNum }}   </h1>
+        <h1 ng-show="rpc.osdNum > 0">Students in different rooms: {{ rpc.osdNum }}</h1>
 	</div>
 	<div class="col-md-4">
 		<h1>Actual Attendance: ______</h1>

@@ -44,6 +44,10 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
     };
 
     self.generateRecievers = function(students) {
+        students = students.filter(function(s) {
+            return (!s.isOsd);
+        });
+
         var list = students.sort(self.sortByName);
 
         for (var i = 0; i < list.length; i++) {
@@ -94,6 +98,8 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             seat : student.seat.id
         }
 
+        if (info.seat === '') { info.seat = 'No Assigned Seating'; }
+
         for (var i = 0; i < text.length; i++) {
             if (text[i] == "[") {
                 leftBracket = true;
@@ -114,25 +120,29 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         return parsedText;
     }
 
+
     self.generateEmails = function(text) {
-        var emails = [];
-        for (var i = 0; i < self.nonnull.length; i++) {
-            var parsedText = self.parse(text, self.nonnull[i]);
+        var emails = self.nonnull.map(function(student) {
+            var parsedText = self.parse(text, student);
             self.docDefinition.content.push({text: parsedText, style: 'message'});
 
-            var email = {
-                email: self.nonnull[i].email,
+            return {
+                email: student.email,
                 text: parsedText,
                 subject: self.subject
             };
-            emails.push(email);
-        }
+        })
 
-        self.sending = true;
+        self.total = self.nonnull.length;
         self.failed = 0;
         self.sent = 0;
-        self.total = emails.length;
         self.errors = [];
+        self.sendEmails(emails);
+    }
+
+    self.sendEmails = function(emails) {
+        self.sending = true;
+
         //pdfMake.createPdf(self.docDefinition).open();
         emails.map(function(email) {
             resource.emails.sendEmail({email: email},
@@ -148,10 +158,19 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         growl.success('Emails Sent! ' + self.sent + '/' + emails.length);
     }
 
+    self.retryAll = function(emails) {
+        var clone = emails.splice(0);   // clone array
+        self.errors = [];
+        self.sent -= self.failed;
+        self.failed = 0;
+        self.sendEmails(clone);
+    }
+
     self.retry = function(email, index) {
         resource.emails.sendEmail({email: email},
             function success(res) {
                 self.sent += 1;
+                self.failed -= 1;
                 self.errors.splice(index,1);
                 growl.success('Email Sent!');
             }, function error(err) {
