@@ -1,28 +1,51 @@
 import sys
+import json
+import requests
+
 from bs4 import BeautifulSoup
 
 section_data = open('sections.xls')
 
-table_data = [table# [cell.parent for cell in row("td")]
-    for table in BeautifulSoup(section_data)("table")]
-
+# Grab every table in the sections file
+table_data = [table for table in BeautifulSoup(section_data)("table")]
 table_index = 0
+
+# look through every table, filtering out the important, student_info
+# sections of the file
 for table in table_data:
     table_id = table.get('id')
-
     if ( table_id ):
+        # if it is a student info table, create the roster object
         if ( "DataList1_DataGrid1" in table_id ):
+            roster_obj = {}
+
+            # Grab the section name
             section_text = table_data[table_index - 1]("td")[0].text.split('\n')
+            roster_obj['name'] = section_text[2].lstrip().rstrip().encode('ascii','ignore')
+            roster_obj['students'] = []
+
+            # handle the student data for this section
             student_data = [[cell.text for cell in row("td")]
               for row in table("tr")]
-            print( '\n' + section_text[2] + '\n' )
+            totalStudents = 0
             for data_point in student_data[1:]:
+                # Build student object for insertion into array
+                stu_obj = {"isLeftHanded": False}
                 stu_name = data_point[0].split(' ')
-                stu_last = stu_name[1]
-                stu_first = stu_name[0]
-                stu_email = data_point[2][1:-1]
-                stu_section = data_point[3]
-                print ( stu_last + '\t' + stu_first + '\t' + stu_email )
+                stu_obj['lastName'] = stu_name[1].encode('ascii','ignore')
+                stu_obj['firstName'] = stu_name[0].encode('ascii','ignore')
+                stu_obj['email'] = data_point[2][1:-1].encode('ascii','ignore')
+                stu_obj['studentID'] = totalStudents + 1
+                #stu_section = data_point[3]
+
+                roster_obj['students'].append( stu_obj )
+
+                totalStudents += 1
+
+            roster_obj['totalStudents'] = totalStudents
+            request_obj = {'roster': roster_obj}
+            req = requests.post("http://localhost:8000/api/rosters",
+                    json=request_obj )
 
     table_index += 1
 
