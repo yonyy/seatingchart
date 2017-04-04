@@ -1,0 +1,2488 @@
+<div id="DataPanel">
+	
+<table id="DataList1" cellspacing="0" style="border-collapse:collapse;">
+		<tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</span>
+		(5890)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">46</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_0" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>daniel gwag</td><td>a08388009</td><td>
+                   <a href="MAILTO:dgwag@ucsd.edu">dgwag@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kirill vasylyev</td><td>a10997049</td><td>
+                   <a href="MAILTO:kvasilye@ucsd.edu">kvasilye@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>alan su</td><td>a11315803</td><td>
+                   <a href="MAILTO:a2su@ucsd.edu">a2su@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kevin gong</td><td>a11334214</td><td>
+                   <a href="MAILTO:kgong@ucsd.edu">kgong@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>brennan lincoln</td><td>a11390018</td><td>
+                   <a href="MAILTO:blincoln@ucsd.edu">blincoln@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>mejan rostamian</td><td>a11610144</td><td>
+                   <a href="MAILTO:mrostami@ucsd.edu">mrostami@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aleksandr bgatov</td><td>a11610828</td><td>
+                   <a href="MAILTO:abgatov@ucsd.edu">abgatov@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>amr elfiky</td><td>a12003476</td><td>
+                   <a href="MAILTO:aelfiky@ucsd.edu">aelfiky@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>catherine sun</td><td>a12113455</td><td>
+                   <a href="MAILTO:clsun@ucsd.edu">clsun@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>brian nguyen</td><td>a12124221</td><td>
+                   <a href="MAILTO:bdn003@ucsd.edu">bdn003@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>eddie liu</td><td>a12184754</td><td>
+                   <a href="MAILTO:edliu@ucsd.edu">edliu@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>adrian ramirez</td><td>a12241219</td><td>
+                   <a href="MAILTO:aar026@ucsd.edu">aar026@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nicole rodriguez</td><td>a12271476</td><td>
+                   <a href="MAILTO:nlrodrig@ucsd.edu">nlrodrig@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>louise jensen</td><td>a12596562</td><td>
+                   <a href="MAILTO:l1jensen@ucsd.edu">l1jensen@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>carolyn nguyen</td><td>a12755549</td><td>
+                   <a href="MAILTO:can040@ucsd.edu">can040@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kajal soni</td><td>a12822662</td><td>
+                   <a href="MAILTO:kasoni@ucsd.edu">kasoni@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>stephanie mitchener</td><td>a12861347</td><td>
+                   <a href="MAILTO:smitchen@ucsd.edu">smitchen@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>karl chen</td><td>a12900934</td><td>
+                   <a href="MAILTO:klc026@ucsd.edu">klc026@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>alisabeth rogers</td><td>a12974737</td><td>
+                   <a href="MAILTO:arogers@ucsd.edu">arogers@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>daniel barone</td><td>a13130624</td><td>
+                   <a href="MAILTO:dbarone@ucsd.edu">dbarone@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>arshdeep singh</td><td>a13167243</td><td>
+                   <a href="MAILTO:ars039@ucsd.edu">ars039@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>joshua hernandez</td><td>a13182586</td><td>
+                   <a href="MAILTO:jah148@ucsd.edu">jah148@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lee liang</td><td>a13357916</td><td>
+                   <a href="MAILTO:ltliang@ucsd.edu">ltliang@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kimberly lopez</td><td>a13448649</td><td>
+                   <a href="MAILTO:kel189@ucsd.edu">kel189@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yuean wang</td><td>a13459835</td><td>
+                   <a href="MAILTO:yuw456@ucsd.edu">yuw456@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>dustin pilkington</td><td>a13463368</td><td>
+                   <a href="MAILTO:dgpilkin@ucsd.edu">dgpilkin@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mingxun song</td><td>a13503439</td><td>
+                   <a href="MAILTO:mis045@ucsd.edu">mis045@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>william brown</td><td>a13538584</td><td>
+                   <a href="MAILTO:w4brown@ucsd.edu">w4brown@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>cameron foster</td><td>a13662080</td><td>
+                   <a href="MAILTO:cafoster@ucsd.edu">cafoster@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>aaron phan</td><td>a13680532</td><td>
+                   <a href="MAILTO:ahp022@ucsd.edu">ahp022@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zhixian chen</td><td>a13680919</td><td>
+                   <a href="MAILTO:zhc149@ucsd.edu">zhc149@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>luis calona</td><td>a13687351</td><td>
+                   <a href="MAILTO:lcalona@ucsd.edu">lcalona@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>marlon gamez</td><td>a13748516</td><td>
+                   <a href="MAILTO:m2gamez@ucsd.edu">m2gamez@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zhongyu chen</td><td>a13801210</td><td>
+                   <a href="MAILTO:zhc180@ucsd.edu">zhc180@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ziqiao zhu</td><td>a13883490</td><td>
+                   <a href="MAILTO:ziz195@ucsd.edu">ziz195@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jad barrere</td><td>a14009653</td><td>
+                   <a href="MAILTO:jbarrere@ucsd.edu">jbarrere@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>alyssa ramiro</td><td>a14154092</td><td>
+                   <a href="MAILTO:aramiro@ucsd.edu">aramiro@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ryan peov</td><td>a14210111</td><td>
+                   <a href="MAILTO:rpeov@ucsd.edu">rpeov@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jinxiao chen</td><td>a14236655</td><td>
+                   <a href="MAILTO:jic383@ucsd.edu">jic383@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>andy tran</td><td>a91049088</td><td>
+                   <a href="MAILTO:ant048@ucsd.edu">ant048@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ruyin zhang</td><td>a92027791</td><td>
+                   <a href="MAILTO:ruz074@ucsd.edu">ruz074@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jiuqi xian</td><td>a92091282</td><td>
+                   <a href="MAILTO:jixian@ucsd.edu">jixian@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jiayun li</td><td>a92107147</td><td>
+                   <a href="MAILTO:jil603@ucsd.edu">jil603@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yun tang</td><td>a92134717</td><td>
+                   <a href="MAILTO:yut039@ucsd.edu">yut039@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yujia chen</td><td>a92145239</td><td>
+                   <a href="MAILTO:yuc254@ucsd.edu">yuc254@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zongqi chen</td><td>a92427993</td><td>
+                   <a href="MAILTO:zoc004@ucsd.edu">zoc004@ucsd.edu</a>
+              </td><td>CSE 15L (C50:  905828): Wednesdays, 3pm-4:50pm in CSE B250</td><td>905828</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</span>
+		(5891)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">48</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_1" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>thuc nguyen</td><td>a11438658</td><td>
+                   <a href="MAILTO:thn079@ucsd.edu">thn079@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>anmolbir mann</td><td>a11450024</td><td>
+                   <a href="MAILTO:amann@ucsd.edu">amann@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>margaret tsui</td><td>a12118052</td><td>
+                   <a href="MAILTO:m2tsui@ucsd.edu">m2tsui@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>samuel nye</td><td>a12140695</td><td>
+                   <a href="MAILTO:snye@ucsd.edu">snye@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>william horrocks</td><td>a12598196</td><td>
+                   <a href="MAILTO:whorrock@ucsd.edu">whorrock@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>rubaiat tazim</td><td>a12739293</td><td>
+                   <a href="MAILTO:rtazim@ucsd.edu">rtazim@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xiao zou</td><td>a12740694</td><td>
+                   <a href="MAILTO:xxzou@ucsd.edu">xxzou@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>john lin</td><td>a12764682</td><td>
+                   <a href="MAILTO:jdl044@ucsd.edu">jdl044@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>john deegan</td><td>a12886175</td><td>
+                   <a href="MAILTO:jdeegan@ucsd.edu">jdeegan@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>alan bui</td><td>a12909805</td><td>
+                   <a href="MAILTO:apb004@ucsd.edu">apb004@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>anh nguyen</td><td>a13010458</td><td>
+                   <a href="MAILTO:adn034@ucsd.edu">adn034@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sunny zhou</td><td>a13080043</td><td>
+                   <a href="MAILTO:spzhou@ucsd.edu">spzhou@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ethan armand</td><td>a13184761</td><td>
+                   <a href="MAILTO:earmand@ucsd.edu">earmand@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>davood mojtabavi-naeini</td><td>a13221026</td><td>
+                   <a href="MAILTO:dmojtaba@ucsd.edu">dmojtaba@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>you li</td><td>a13222387</td><td>
+                   <a href="MAILTO:yol096@ucsd.edu">yol096@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kent thai</td><td>a13382470</td><td>
+                   <a href="MAILTO:ket037@ucsd.edu">ket037@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>miguel garcia</td><td>a13426757</td><td>
+                   <a href="MAILTO:mig053@ucsd.edu">mig053@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zachary colton</td><td>a13463164</td><td>
+                   <a href="MAILTO:zcolton@ucsd.edu">zcolton@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>phillip lagoc</td><td>a13469618</td><td>
+                   <a href="MAILTO:plagoc@ucsd.edu">plagoc@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>909327</td><td>4/3/2017 2:27:36 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>haimei yang</td><td>a13519498</td><td>
+                   <a href="MAILTO:hay100@ucsd.edu">hay100@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lawrence shiu</td><td>a13549986</td><td>
+                   <a href="MAILTO:lshiu@ucsd.edu">lshiu@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>luyanda mdanda</td><td>a13567468</td><td>
+                   <a href="MAILTO:lmdanda@ucsd.edu">lmdanda@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>younghoon kwon</td><td>a13634705</td><td>
+                   <a href="MAILTO:yok113@ucsd.edu">yok113@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>joshua quan</td><td>a13650052</td><td>
+                   <a href="MAILTO:jmquan@ucsd.edu">jmquan@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yuqing yang</td><td>a13715931</td><td>
+                   <a href="MAILTO:yuy238@ucsd.edu">yuy238@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>luke fahmy</td><td>a13849289</td><td>
+                   <a href="MAILTO:lfahmy@ucsd.edu">lfahmy@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>dung do</td><td>a13871090</td><td>
+                   <a href="MAILTO:dtd007@ucsd.edu">dtd007@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>robert screven</td><td>a13888772</td><td>
+                   <a href="MAILTO:rscreven@ucsd.edu">rscreven@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>brayden crosta</td><td>a13901386</td><td>
+                   <a href="MAILTO:bcrosta@ucsd.edu">bcrosta@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ivan perez-zuniga</td><td>a13935082</td><td>
+                   <a href="MAILTO:igp002@ucsd.edu">igp002@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>maria kalyuzhny</td><td>a13935554</td><td>
+                   <a href="MAILTO:makalyuz@ucsd.edu">makalyuz@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>barbara vargas</td><td>a13971081</td><td>
+                   <a href="MAILTO:bcvargas@ucsd.edu">bcvargas@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jimin mun</td><td>a14049775</td><td>
+                   <a href="MAILTO:jmmun@ucsd.edu">jmmun@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>martin galvan</td><td>a14144250</td><td>
+                   <a href="MAILTO:m4galvan@ucsd.edu">m4galvan@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>noh park</td><td>a14227039</td><td>
+                   <a href="MAILTO:nkp014@ucsd.edu">nkp014@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tobias stodieck</td><td>a14235923</td><td>
+                   <a href="MAILTO:tstodiec@ucsd.edu">tstodiec@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jason chau</td><td>a14265931</td><td>
+                   <a href="MAILTO:jdchau@ucsd.edu">jdchau@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>chujiao cai</td><td>a91083250</td><td>
+                   <a href="MAILTO:chcai@ucsd.edu">chcai@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nichakarn ratanaphaithun</td><td>a91147501</td><td>
+                   <a href="MAILTO:nratanap@ucsd.edu">nratanap@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>lu yu</td><td>a92042882</td><td>
+                   <a href="MAILTO:luy015@ucsd.edu">luy015@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905830</td><td>4/3/2017 4:48:15 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jianing zhang</td><td>a92069506</td><td>
+                   <a href="MAILTO:jiz305@ucsd.edu">jiz305@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>haoxian sun</td><td>a92072371</td><td>
+                   <a href="MAILTO:has057@ucsd.edu">has057@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jared vitug</td><td>a92083122</td><td>
+                   <a href="MAILTO:jevitug@ucsd.edu">jevitug@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tianchong jiang</td><td>a92089573</td><td>
+                   <a href="MAILTO:tij005@ucsd.edu">tij005@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>dun lin</td><td>a92142940</td><td>
+                   <a href="MAILTO:dflin@ucsd.edu">dflin@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hayley oliver</td><td>a92151884</td><td>
+                   <a href="MAILTO:holiver@ucsd.edu">holiver@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>hanshin lee</td><td>a98110783</td><td>
+                   <a href="MAILTO:hal073@ucsd.edu">hal073@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kuan-wei chen</td><td>a99045121</td><td>
+                   <a href="MAILTO:kuc010@ucsd.edu">kuc010@ucsd.edu</a>
+              </td><td>CSE 15L (C51:  905829): Wednesdays, 5pm-6:50pm in CSE B250</td><td>905829</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</span>
+		(5892)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">41</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_2" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kathleen grant</td><td>a12132800</td><td>
+                   <a href="MAILTO:kdgrant@ucsd.edu">kdgrant@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>shelby connors</td><td>a12137806</td><td>
+                   <a href="MAILTO:seconnor@ucsd.edu">seconnor@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>charlotte forgey-jahn</td><td>a12580549</td><td>
+                   <a href="MAILTO:cforgeyj@ucsd.edu">cforgeyj@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xuhan yang</td><td>a13311043</td><td>
+                   <a href="MAILTO:xuy021@ucsd.edu">xuy021@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>arkin gupta</td><td>a13311083</td><td>
+                   <a href="MAILTO:arg061@ucsd.edu">arg061@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>4/3/2017 10:16:45 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yifei sun</td><td>a13342987</td><td>
+                   <a href="MAILTO:yis175@ucsd.edu">yis175@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>songlin li</td><td>a13374454</td><td>
+                   <a href="MAILTO:sol014@ucsd.edu">sol014@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jacob chazen</td><td>a13394388</td><td>
+                   <a href="MAILTO:jchazen@ucsd.edu">jchazen@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yujie xu</td><td>a13458937</td><td>
+                   <a href="MAILTO:yux121@ucsd.edu">yux121@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>vinamr madan</td><td>a13464556</td><td>
+                   <a href="MAILTO:vimadan@ucsd.edu">vimadan@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yilin cai</td><td>a13516989</td><td>
+                   <a href="MAILTO:yic263@ucsd.edu">yic263@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>dongyao zhu</td><td>a13530399</td><td>
+                   <a href="MAILTO:doz022@ucsd.edu">doz022@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zi wang</td><td>a13530862</td><td>
+                   <a href="MAILTO:ziw261@ucsd.edu">ziw261@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>nancy vuong</td><td>a13572030</td><td>
+                   <a href="MAILTO:navuong@ucsd.edu">navuong@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>allston fojas</td><td>a13574143</td><td>
+                   <a href="MAILTO:amfojas@ucsd.edu">amfojas@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>javisth chabria</td><td>a13597429</td><td>
+                   <a href="MAILTO:jchabria@ucsd.edu">jchabria@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>atul antil</td><td>a13684613</td><td>
+                   <a href="MAILTO:aantil@ucsd.edu">aantil@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kevinmiles dolay</td><td>a13685961</td><td>
+                   <a href="MAILTO:kdolay@ucsd.edu">kdolay@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>soobin park</td><td>a13697871</td><td>
+                   <a href="MAILTO:sbp021@ucsd.edu">sbp021@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>danny fung</td><td>a13700439</td><td>
+                   <a href="MAILTO:d3fung@ucsd.edu">d3fung@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chunan huang</td><td>a13716180</td><td>
+                   <a href="MAILTO:chh179@ucsd.edu">chh179@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>chau do</td><td>a13777122</td><td>
+                   <a href="MAILTO:c6do@ucsd.edu">c6do@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jiayi hu</td><td>a13779186</td><td>
+                   <a href="MAILTO:jih254@ucsd.edu">jih254@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zijing wang</td><td>a13808607</td><td>
+                   <a href="MAILTO:ziw253@ucsd.edu">ziw253@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chaitanya prashant</td><td>a13827758</td><td>
+                   <a href="MAILTO:cprashan@ucsd.edu">cprashan@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>905830</td><td>4/3/2017 5:48:50 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>alberto nencioni</td><td>a13838816</td><td>
+                   <a href="MAILTO:anencion@ucsd.edu">anencion@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kevin hsu</td><td>a13841534</td><td>
+                   <a href="MAILTO:keh065@ucsd.edu">keh065@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>huan mai</td><td>a13897246</td><td>
+                   <a href="MAILTO:hlmai@ucsd.edu">hlmai@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xuanchen lu</td><td>a13903630</td><td>
+                   <a href="MAILTO:xul076@ucsd.edu">xul076@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>gabriel pizzolato</td><td>a13933286</td><td>
+                   <a href="MAILTO:gpizzola@ucsd.edu">gpizzola@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909327</td><td>4/3/2017 4:27:14 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nicole clements</td><td>a13943976</td><td>
+                   <a href="MAILTO:nclement@ucsd.edu">nclement@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>905830</td><td>4/3/2017 2:28:07 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>haozhe an</td><td>a13974711</td><td>
+                   <a href="MAILTO:haa001@ucsd.edu">haa001@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>4/3/2017 5:34:20 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>stephen knox</td><td>a14005487</td><td>
+                   <a href="MAILTO:saknox@ucsd.edu">saknox@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>chieko imai</td><td>a14077871</td><td>
+                   <a href="MAILTO:csimai@ucsd.edu">csimai@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xuran liu</td><td>a14089870</td><td>
+                   <a href="MAILTO:xul078@ucsd.edu">xul078@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>derek tse</td><td>a14136586</td><td>
+                   <a href="MAILTO:d1tse@ucsd.edu">d1tse@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>qiaoou guan</td><td>a53207858</td><td>
+                   <a href="MAILTO:q2guan@ucsd.edu">q2guan@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yuxuan liu</td><td>a91051461</td><td>
+                   <a href="MAILTO:yul067@ucsd.edu">yul067@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ming xie</td><td>a92070502</td><td>
+                   <a href="MAILTO:m9xie@ucsd.edu">m9xie@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jen-jun yen</td><td>a92071645</td><td>
+                   <a href="MAILTO:jeyen@ucsd.edu">jeyen@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>905823</td><td>4/3/2017 7:04:41 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>wenxi xu</td><td>a92086475</td><td>
+                   <a href="MAILTO:wex021@ucsd.edu">wex021@ucsd.edu</a>
+              </td><td>CSE 15L (C53:  909449): Wednesdays, 5pm-6:50pm in CSE B260 (not CSE B250)</td><td>909449</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</span>
+		(5893)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">45</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_3" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>luis-eduardo carson</td><td>a12174767</td><td>
+                   <a href="MAILTO:lrcarson@ucsd.edu">lrcarson@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>garrett boulais</td><td>a12626301</td><td>
+                   <a href="MAILTO:gboulais@ucsd.edu">gboulais@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905823</td><td>4/3/2017 10:30:45 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>stephen estrin</td><td>a12632575</td><td>
+                   <a href="MAILTO:sestrin@ucsd.edu">sestrin@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>rushil vig</td><td>a12966078</td><td>
+                   <a href="MAILTO:r1vig@ucsd.edu">r1vig@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>othman akel</td><td>a13170269</td><td>
+                   <a href="MAILTO:oakel@ucsd.edu">oakel@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sachi shibata</td><td>a13404068</td><td>
+                   <a href="MAILTO:sashibat@ucsd.edu">sashibat@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>daniel gao</td><td>a13427223</td><td>
+                   <a href="MAILTO:djgao@ucsd.edu">djgao@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zezhen xu</td><td>a13486893</td><td>
+                   <a href="MAILTO:zex016@ucsd.edu">zex016@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nourah alrasheed</td><td>a13498380</td><td>
+                   <a href="MAILTO:nalrashe@ucsd.edu">nalrashe@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>trevor mazza</td><td>a13514859</td><td>
+                   <a href="MAILTO:tmazza@ucsd.edu">tmazza@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>brent neldner</td><td>a13588008</td><td>
+                   <a href="MAILTO:bneldner@ucsd.edu">bneldner@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tyler wiltz</td><td>a13601636</td><td>
+                   <a href="MAILTO:twiltz@ucsd.edu">twiltz@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>weisi luo</td><td>a13629635</td><td>
+                   <a href="MAILTO:wel205@ucsd.edu">wel205@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zichao wu</td><td>a13645764</td><td>
+                   <a href="MAILTO:ziw255@ucsd.edu">ziw255@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nirha patel</td><td>a13695370</td><td>
+                   <a href="MAILTO:nrp001@ucsd.edu">nrp001@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jennifer wu</td><td>a13709538</td><td>
+                   <a href="MAILTO:jew083@ucsd.edu">jew083@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>stephanie zhu</td><td>a13737167</td><td>
+                   <a href="MAILTO:stzhu@ucsd.edu">stzhu@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>junzhi ge</td><td>a13778523</td><td>
+                   <a href="MAILTO:jug038@ucsd.edu">jug038@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ashvin lakhwani</td><td>a13816697</td><td>
+                   <a href="MAILTO:alakhwan@ucsd.edu">alakhwan@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>909449</td><td>4/3/2017 9:19:32 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ting yu</td><td>a13822971</td><td>
+                   <a href="MAILTO:tiy062@ucsd.edu">tiy062@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zening li</td><td>a13903960</td><td>
+                   <a href="MAILTO:zel051@ucsd.edu">zel051@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yilin xie</td><td>a13904503</td><td>
+                   <a href="MAILTO:yix176@ucsd.edu">yix176@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>karissa jacobsen</td><td>a13908856</td><td>
+                   <a href="MAILTO:kjacobse@ucsd.edu">kjacobse@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>allison patacsil</td><td>a13910179</td><td>
+                   <a href="MAILTO:apatacsi@ucsd.edu">apatacsi@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>clark phan</td><td>a13911477</td><td>
+                   <a href="MAILTO:clp013@ucsd.edu">clp013@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>david alexander</td><td>a13917683</td><td>
+                   <a href="MAILTO:d1alexan@ucsd.edu">d1alexan@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>wenxuan huang</td><td>a13963226</td><td>
+                   <a href="MAILTO:weh073@ucsd.edu">weh073@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sutianyi wen</td><td>a13992949</td><td>
+                   <a href="MAILTO:s5wen@ucsd.edu">s5wen@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mao li</td><td>a13995795</td><td>
+                   <a href="MAILTO:mal131@ucsd.edu">mal131@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>guangyan cai</td><td>a14007270</td><td>
+                   <a href="MAILTO:g5cai@ucsd.edu">g5cai@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>haoming zhang</td><td>a14012520</td><td>
+                   <a href="MAILTO:haz260@ucsd.edu">haz260@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>wenlin mao</td><td>a14032137</td><td>
+                   <a href="MAILTO:w6mao@ucsd.edu">w6mao@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>909449</td><td>4/4/2017 12:47:54 AM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lijin chen</td><td>a14053340</td><td>
+                   <a href="MAILTO:lic127@ucsd.edu">lic127@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zhuoyuan ren</td><td>a14070615</td><td>
+                   <a href="MAILTO:zhr003@ucsd.edu">zhr003@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>emma logomasini</td><td>a14125382</td><td>
+                   <a href="MAILTO:elogomas@ucsd.edu">elogomas@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hao-tzu deng</td><td>a14193255</td><td>
+                   <a href="MAILTO:had008@ucsd.edu">had008@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yibo wang</td><td>a14227935</td><td>
+                   <a href="MAILTO:yiw448@ucsd.edu">yiw448@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xudong wang</td><td>a53224306</td><td>
+                   <a href="MAILTO:xuw080@ucsd.edu">xuw080@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mingqi zhu</td><td>a91069037</td><td>
+                   <a href="MAILTO:m6zhu@ucsd.edu">m6zhu@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xiaofu feng</td><td>a91117050</td><td>
+                   <a href="MAILTO:xif011@ucsd.edu">xif011@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>shengwei liang</td><td>a92089940</td><td>
+                   <a href="MAILTO:shl418@ucsd.edu">shl418@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905829</td><td>4/3/2017 3:47:05 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jiawei zhou</td><td>a92119932</td><td>
+                   <a href="MAILTO:jiz108@ucsd.edu">jiz108@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jincheng hu</td><td>a92138271</td><td>
+                   <a href="MAILTO:jih234@ucsd.edu">jih234@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jang gang</td><td>a98067009</td><td>
+                   <a href="MAILTO:jhgang@ucsd.edu">jhgang@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>byoung han</td><td>a99128404</td><td>
+                   <a href="MAILTO:bhhan@ucsd.edu">bhhan@ucsd.edu</a>
+              </td><td>CSE 15L (C52:  905830): Wednesdays, 7pm-8:50pm in CSE B250</td><td>905830</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</span>
+		(5894)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">48</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_4" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>edward chao</td><td>a11296729</td><td>
+                   <a href="MAILTO:echao@ucsd.edu">echao@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>brian monteverde</td><td>a11440871</td><td>
+                   <a href="MAILTO:bmonteve@ucsd.edu">bmonteve@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>dylan harcourt</td><td>a11598999</td><td>
+                   <a href="MAILTO:dharcour@ucsd.edu">dharcour@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>winson quan</td><td>a11720809</td><td>
+                   <a href="MAILTO:w1quan@ucsd.edu">w1quan@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>faith kim</td><td>a11943503</td><td>
+                   <a href="MAILTO:fhkim@ucsd.edu">fhkim@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>madalynn norton</td><td>a12569536</td><td>
+                   <a href="MAILTO:mlnorton@ucsd.edu">mlnorton@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lillian chu</td><td>a12630246</td><td>
+                   <a href="MAILTO:l2chu@ucsd.edu">l2chu@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sally u</td><td>a12680517</td><td>
+                   <a href="MAILTO:su@ucsd.edu">su@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ashley ting</td><td>a12788071</td><td>
+                   <a href="MAILTO:akting@ucsd.edu">akting@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>4/3/2017 3:36:50 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>daniel xiao</td><td>a13050552</td><td>
+                   <a href="MAILTO:d2xiao@ucsd.edu">d2xiao@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yuting xu</td><td>a13361405</td><td>
+                   <a href="MAILTO:yux007@ucsd.edu">yux007@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>michelle kao</td><td>a13365518</td><td>
+                   <a href="MAILTO:m4kao@ucsd.edu">m4kao@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yichen huang</td><td>a13410625</td><td>
+                   <a href="MAILTO:yih202@ucsd.edu">yih202@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>anson nguyen</td><td>a13454225</td><td>
+                   <a href="MAILTO:atn128@ucsd.edu">atn128@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>guyuan yu</td><td>a13497193</td><td>
+                   <a href="MAILTO:g6yu@ucsd.edu">g6yu@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>emmanuel diaz</td><td>a13548378</td><td>
+                   <a href="MAILTO:e4diaz@ucsd.edu">e4diaz@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>909449</td><td>4/3/2017 8:57:03 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>elvis tran</td><td>a13592181</td><td>
+                   <a href="MAILTO:elt007@ucsd.edu">elt007@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>toan bui</td><td>a13599266</td><td>
+                   <a href="MAILTO:tkb001@ucsd.edu">tkb001@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>goutham yegappan</td><td>a13607634</td><td>
+                   <a href="MAILTO:gyegappa@ucsd.edu">gyegappa@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>909449</td><td>4/3/2017 10:04:27 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xiaotian shi</td><td>a13614310</td><td>
+                   <a href="MAILTO:xshi@ucsd.edu">xshi@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>seth d''agostino</td><td>a13651408</td><td>
+                   <a href="MAILTO:sdagosti@ucsd.edu">sdagosti@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>angelynne pawaan</td><td>a13652953</td><td>
+                   <a href="MAILTO:apawaan@ucsd.edu">apawaan@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>cong hoang</td><td>a13659904</td><td>
+                   <a href="MAILTO:choang@ucsd.edu">choang@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yuezhou sun</td><td>a13693438</td><td>
+                   <a href="MAILTO:yus174@ucsd.edu">yus174@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>eric ping</td><td>a13695216</td><td>
+                   <a href="MAILTO:eping@ucsd.edu">eping@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>lavanya satyan</td><td>a13704484</td><td>
+                   <a href="MAILTO:lsatyan@ucsd.edu">lsatyan@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905830</td><td>4/3/2017 2:36:52 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ittoop shibu</td><td>a13719148</td><td>
+                   <a href="MAILTO:ishibu@ucsd.edu">ishibu@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sevag keosseian</td><td>a13733813</td><td>
+                   <a href="MAILTO:skeossei@ucsd.edu">skeossei@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>danyang zhou</td><td>a13757170</td><td>
+                   <a href="MAILTO:daz026@ucsd.edu">daz026@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tianze zhang</td><td>a13769405</td><td>
+                   <a href="MAILTO:tiz150@ucsd.edu">tiz150@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yifeng zhang</td><td>a13820262</td><td>
+                   <a href="MAILTO:yiz569@ucsd.edu">yiz569@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>909449</td><td>4/3/2017 2:42:27 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>leonard bessis</td><td>a13847981</td><td>
+                   <a href="MAILTO:lbessis@ucsd.edu">lbessis@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>guangzheng zhang</td><td>a13900677</td><td>
+                   <a href="MAILTO:guz009@ucsd.edu">guz009@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>paul wilson</td><td>a13986913</td><td>
+                   <a href="MAILTO:p3wilson@ucsd.edu">p3wilson@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>alan chen</td><td>a13989230</td><td>
+                   <a href="MAILTO:alc185@ucsd.edu">alc185@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>michelle nguyen</td><td>a14158920</td><td>
+                   <a href="MAILTO:mnn027@ucsd.edu">mnn027@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chen li</td><td>a14165942</td><td>
+                   <a href="MAILTO:chl618@ucsd.edu">chl618@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>joseph rico</td><td>a14180701</td><td>
+                   <a href="MAILTO:jcrico@ucsd.edu">jcrico@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>hunter lira</td><td>a14232806</td><td>
+                   <a href="MAILTO:hlira@ucsd.edu">hlira@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jason ngo</td><td>a14250682</td><td>
+                   <a href="MAILTO:j1ngo@ucsd.edu">j1ngo@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xiaoqi dong</td><td>a91028075</td><td>
+                   <a href="MAILTO:xid003@ucsd.edu">xid003@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jun zhang</td><td>a91102014</td><td>
+                   <a href="MAILTO:juz010@ucsd.edu">juz010@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nanxiong wang</td><td>a92038237</td><td>
+                   <a href="MAILTO:naw020@ucsd.edu">naw020@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>guangyan shen</td><td>a92069711</td><td>
+                   <a href="MAILTO:g1shen@ucsd.edu">g1shen@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yiwei sang</td><td>a92079525</td><td>
+                   <a href="MAILTO:yisang@ucsd.edu">yisang@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905829</td><td>4/3/2017 2:25:08 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xiaowen zhang</td><td>a92088328</td><td>
+                   <a href="MAILTO:xiz306@ucsd.edu">xiz306@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>rentian dong</td><td>a99037372</td><td>
+                   <a href="MAILTO:r2dong@ucsd.edu">r2dong@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>gabriel saghbini</td><td>a99069030</td><td>
+                   <a href="MAILTO:gsaghbin@ucsd.edu">gsaghbin@ucsd.edu</a>
+              </td><td>CSE 15L (B50:  905825): Thursdays, 9am-10:50am in CSE B250</td><td>905830</td><td>4/3/2017 5:12:23 PM</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</span>
+		(5895)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">50</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_5" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aliah sweiss</td><td>a11691435</td><td>
+                   <a href="MAILTO:asweiss@ucsd.edu">asweiss@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>shubha bhaskaran</td><td>a12029957</td><td>
+                   <a href="MAILTO:srbhaska@ucsd.edu">srbhaska@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>arteen galstyan</td><td>a12174505</td><td>
+                   <a href="MAILTO:a1galsty@ucsd.edu">a1galsty@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>joshue aguirre</td><td>a12669527</td><td>
+                   <a href="MAILTO:j8aguirr@ucsd.edu">j8aguirr@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>gabriel schaub</td><td>a12985995</td><td>
+                   <a href="MAILTO:gschaub@ucsd.edu">gschaub@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>matthew kaloroumakis</td><td>a13060998</td><td>
+                   <a href="MAILTO:mkalorou@ucsd.edu">mkalorou@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yicheng bao</td><td>a13301594</td><td>
+                   <a href="MAILTO:yib002@ucsd.edu">yib002@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>michael phillips</td><td>a13327021</td><td>
+                   <a href="MAILTO:mpphilli@ucsd.edu">mpphilli@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mu he</td><td>a13361247</td><td>
+                   <a href="MAILTO:muh005@ucsd.edu">muh005@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>anthony ngo</td><td>a13377635</td><td>
+                   <a href="MAILTO:a4ngo@ucsd.edu">a4ngo@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>evan okamoto</td><td>a13379279</td><td>
+                   <a href="MAILTO:eokamoto@ucsd.edu">eokamoto@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kristine baluyot</td><td>a13447798</td><td>
+                   <a href="MAILTO:kmbaluyo@ucsd.edu">kmbaluyo@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>wei zeng</td><td>a13487193</td><td>
+                   <a href="MAILTO:wzeng@ucsd.edu">wzeng@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>bella le</td><td>a13498622</td><td>
+                   <a href="MAILTO:bbl003@ucsd.edu">bbl003@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>quang do</td><td>a13500965</td><td>
+                   <a href="MAILTO:qddo@ucsd.edu">qddo@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>steven fimbres</td><td>a13513534</td><td>
+                   <a href="MAILTO:sfimbres@ucsd.edu">sfimbres@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nikki hardiman</td><td>a13547731</td><td>
+                   <a href="MAILTO:nhardima@ucsd.edu">nhardima@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>alex ng</td><td>a13578607</td><td>
+                   <a href="MAILTO:atn118@ucsd.edu">atn118@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>gujri singh</td><td>a13590987</td><td>
+                   <a href="MAILTO:gks004@ucsd.edu">gks004@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>shunqi lei</td><td>a13595074</td><td>
+                   <a href="MAILTO:s8lei@ucsd.edu">s8lei@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nikhil pothuru</td><td>a13611204</td><td>
+                   <a href="MAILTO:npothuru@ucsd.edu">npothuru@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>quy dieu</td><td>a13618731</td><td>
+                   <a href="MAILTO:qudieu@ucsd.edu">qudieu@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>trevor scherbaum</td><td>a13674060</td><td>
+                   <a href="MAILTO:tdscherb@ucsd.edu">tdscherb@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905830</td><td>4/3/2017 2:27:04 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>rachel duncan</td><td>a13682157</td><td>
+                   <a href="MAILTO:rmduncan@ucsd.edu">rmduncan@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>charbel douaihy</td><td>a13712259</td><td>
+                   <a href="MAILTO:cdouaihy@ucsd.edu">cdouaihy@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zhaoyi huang</td><td>a13713155</td><td>
+                   <a href="MAILTO:zhh083@ucsd.edu">zhh083@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>junyi cao</td><td>a13715355</td><td>
+                   <a href="MAILTO:juc161@ucsd.edu">juc161@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yiran chen</td><td>a13722673</td><td>
+                   <a href="MAILTO:yic328@ucsd.edu">yic328@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>eric jiang</td><td>a13742681</td><td>
+                   <a href="MAILTO:e5jiang@ucsd.edu">e5jiang@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kalvin lam</td><td>a13752914</td><td>
+                   <a href="MAILTO:kkl038@ucsd.edu">kkl038@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>christian lay-geng</td><td>a13765266</td><td>
+                   <a href="MAILTO:claygeng@ucsd.edu">claygeng@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>guanzhang chen</td><td>a13783495</td><td>
+                   <a href="MAILTO:guc025@ucsd.edu">guc025@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yijiu zhong</td><td>a13796207</td><td>
+                   <a href="MAILTO:yiz499@ucsd.edu">yiz499@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jinghao jia</td><td>a13827526</td><td>
+                   <a href="MAILTO:j8jia@ucsd.edu">j8jia@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>danny mercado</td><td>a13861094</td><td>
+                   <a href="MAILTO:d4mercad@ucsd.edu">d4mercad@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>abdullah amin</td><td>a13863025</td><td>
+                   <a href="MAILTO:aba006@ucsd.edu">aba006@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>michael marsella</td><td>a13868805</td><td>
+                   <a href="MAILTO:mmarsell@ucsd.edu">mmarsell@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>weicong dong</td><td>a13898714</td><td>
+                   <a href="MAILTO:w9dong@ucsd.edu">w9dong@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yundong wang</td><td>a13924087</td><td>
+                   <a href="MAILTO:yuw485@ucsd.edu">yuw485@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>lixuan lang</td><td>a13948946</td><td>
+                   <a href="MAILTO:l1lang@ucsd.edu">l1lang@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kebing fang</td><td>a14002301</td><td>
+                   <a href="MAILTO:k2fang@ucsd.edu">k2fang@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>wye chin</td><td>a14002736</td><td>
+                   <a href="MAILTO:wmchin@ucsd.edu">wmchin@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>qinghui xia</td><td>a14013055</td><td>
+                   <a href="MAILTO:q5xia@ucsd.edu">q5xia@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>xiaoyang zeng</td><td>a14073155</td><td>
+                   <a href="MAILTO:xiz460@ucsd.edu">xiz460@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yanzhi ding</td><td>a14109703</td><td>
+                   <a href="MAILTO:yad027@ucsd.edu">yad027@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>subhankar panda</td><td>a14120780</td><td>
+                   <a href="MAILTO:s1panda@ucsd.edu">s1panda@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yuhang jiang</td><td>a14176189</td><td>
+                   <a href="MAILTO:yuj115@ucsd.edu">yuj115@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>aaron brown</td><td>a14178110</td><td>
+                   <a href="MAILTO:amb012@ucsd.edu">amb012@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>huijing zhao</td><td>a14213772</td><td>
+                   <a href="MAILTO:huz065@ucsd.edu">huz065@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>myles albaladejo</td><td>a14215723</td><td>
+                   <a href="MAILTO:malbalad@ucsd.edu">malbalad@ucsd.edu</a>
+              </td><td>CSE 15L (B51:  905826): Thursdays, 11am-12:50pm in CSE B250</td><td>905826</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</span>
+		(5896)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">49</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_6" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>roland kong</td><td>a11415613</td><td>
+                   <a href="MAILTO:rkong@ucsd.edu">rkong@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>marissa behnke</td><td>a12374782</td><td>
+                   <a href="MAILTO:mrbehnke@ucsd.edu">mrbehnke@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aaron hernandez</td><td>a12623880</td><td>
+                   <a href="MAILTO:aah007@ucsd.edu">aah007@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>justin lieu</td><td>a12723428</td><td>
+                   <a href="MAILTO:j7lieu@ucsd.edu">j7lieu@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>niki tam</td><td>a12799638</td><td>
+                   <a href="MAILTO:nitam@ucsd.edu">nitam@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yescenia alvarez</td><td>a13179986</td><td>
+                   <a href="MAILTO:yealvare@ucsd.edu">yealvare@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>karina lee-feng</td><td>a13311971</td><td>
+                   <a href="MAILTO:kleefeng@ucsd.edu">kleefeng@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>rui qiu</td><td>a13361067</td><td>
+                   <a href="MAILTO:r3qiu@ucsd.edu">r3qiu@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nathan orenstein</td><td>a13363267</td><td>
+                   <a href="MAILTO:norenste@ucsd.edu">norenste@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>abigail paterson</td><td>a13370320</td><td>
+                   <a href="MAILTO:apaterso@ucsd.edu">apaterso@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nathan browne</td><td>a13410028</td><td>
+                   <a href="MAILTO:nbrowne@ucsd.edu">nbrowne@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>frances debrunner</td><td>a13412330</td><td>
+                   <a href="MAILTO:fdebrunn@ucsd.edu">fdebrunn@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>andrew muro</td><td>a13420698</td><td>
+                   <a href="MAILTO:aamuro@ucsd.edu">aamuro@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>muying ji</td><td>a13456771</td><td>
+                   <a href="MAILTO:muji@ucsd.edu">muji@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905825</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>andrew liu</td><td>a13483339</td><td>
+                   <a href="MAILTO:anl254@ucsd.edu">anl254@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kevin thai</td><td>a13483393</td><td>
+                   <a href="MAILTO:khthai@ucsd.edu">khthai@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aditya mangharam</td><td>a13524421</td><td>
+                   <a href="MAILTO:amanghar@ucsd.edu">amanghar@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yaocong hu</td><td>a13528992</td><td>
+                   <a href="MAILTO:yah068@ucsd.edu">yah068@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>909449</td><td>4/3/2017 2:26:15 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nataliya ratosh</td><td>a13534242</td><td>
+                   <a href="MAILTO:nratosh@ucsd.edu">nratosh@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yuxuan zhang</td><td>a13621024</td><td>
+                   <a href="MAILTO:yuz563@ucsd.edu">yuz563@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>olivia thai</td><td>a13631946</td><td>
+                   <a href="MAILTO:olthai@ucsd.edu">olthai@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905830</td><td>4/3/2017 4:08:51 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>poonam varkhedi</td><td>a13660291</td><td>
+                   <a href="MAILTO:pvarkhed@ucsd.edu">pvarkhed@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>alissa ren</td><td>a13666524</td><td>
+                   <a href="MAILTO:alren@ucsd.edu">alren@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>stacy phan</td><td>a13672597</td><td>
+                   <a href="MAILTO:svphan@ucsd.edu">svphan@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>justin chen</td><td>a13709829</td><td>
+                   <a href="MAILTO:jlc051@ucsd.edu">jlc051@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>leonard vincent</td><td>a13715883</td><td>
+                   <a href="MAILTO:lvvincen@ucsd.edu">lvvincen@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>rajandeep kaur</td><td>a13736425</td><td>
+                   <a href="MAILTO:rak019@ucsd.edu">rak019@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>joshua hsieh</td><td>a13758500</td><td>
+                   <a href="MAILTO:j1hsieh@ucsd.edu">j1hsieh@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mrinal verghese</td><td>a13777647</td><td>
+                   <a href="MAILTO:mtverghe@ucsd.edu">mtverghe@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jiawei tang</td><td>a13839408</td><td>
+                   <a href="MAILTO:jit072@ucsd.edu">jit072@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>eric wang</td><td>a13847857</td><td>
+                   <a href="MAILTO:ecw007@ucsd.edu">ecw007@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hao cheng</td><td>a13875266</td><td>
+                   <a href="MAILTO:hac171@ucsd.edu">hac171@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>licheng huang</td><td>a13877004</td><td>
+                   <a href="MAILTO:lih075@ucsd.edu">lih075@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>siyuan fan</td><td>a13988998</td><td>
+                   <a href="MAILTO:sif018@ucsd.edu">sif018@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905824</td><td>4/3/2017 4:37:31 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yan liang</td><td>a13997203</td><td>
+                   <a href="MAILTO:y9liang@ucsd.edu">y9liang@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>peizhen wu</td><td>a14005992</td><td>
+                   <a href="MAILTO:pew047@ucsd.edu">pew047@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xinyi bian</td><td>a14017240</td><td>
+                   <a href="MAILTO:xibian@ucsd.edu">xibian@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>andrew chen</td><td>a14056425</td><td>
+                   <a href="MAILTO:ayc062@ucsd.edu">ayc062@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>sahil kalra</td><td>a14066280</td><td>
+                   <a href="MAILTO:s1kalra@ucsd.edu">s1kalra@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ana martinez-barrera</td><td>a14096269</td><td>
+                   <a href="MAILTO:akm003@ucsd.edu">akm003@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>olivia miano</td><td>a14101709</td><td>
+                   <a href="MAILTO:omiano@ucsd.edu">omiano@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>christie shu</td><td>a14104559</td><td>
+                   <a href="MAILTO:c3shu@ucsd.edu">c3shu@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>tina ghafel</td><td>a14184808</td><td>
+                   <a href="MAILTO:tghafel@ucsd.edu">tghafel@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>lara hagopian</td><td>a14199398</td><td>
+                   <a href="MAILTO:llhagopi@ucsd.edu">llhagopi@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ricardo molina</td><td>a14240548</td><td>
+                   <a href="MAILTO:r3molina@ucsd.edu">r3molina@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>calvin kousol</td><td>a14270602</td><td>
+                   <a href="MAILTO:ckousol@ucsd.edu">ckousol@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>qiran sun</td><td>a91102793</td><td>
+                   <a href="MAILTO:qis001@ucsd.edu">qis001@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tianyu ma</td><td>a92094901</td><td>
+                   <a href="MAILTO:tim007@ucsd.edu">tim007@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905827</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>wenyi li</td><td>a92126727</td><td>
+                   <a href="MAILTO:wel164@ucsd.edu">wel164@ucsd.edu</a>
+              </td><td>CSE 15L (B52:  905827): Thursdays, 1pm-2:50pm in CSE B250</td><td>905830</td><td>4/3/2017 2:27:22 PM</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</span>
+		(5897)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">48</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_7" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>abdul anwar</td><td>a09678998</td><td>
+                   <a href="MAILTO:aanwar@ucsd.edu">aanwar@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yan lee</td><td>a09955532</td><td>
+                   <a href="MAILTO:yll003@ucsd.edu">yll003@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>joy nwarueze</td><td>a11201203</td><td>
+                   <a href="MAILTO:jnwaruez@ucsd.edu">jnwaruez@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>michael zavian</td><td>a11566801</td><td>
+                   <a href="MAILTO:mzavian@ucsd.edu">mzavian@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chris zhang</td><td>a11678357</td><td>
+                   <a href="MAILTO:chz051@ucsd.edu">chz051@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>motasim malik</td><td>a11940669</td><td>
+                   <a href="MAILTO:m2malik@ucsd.edu">m2malik@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nathan apolonio</td><td>a12111196</td><td>
+                   <a href="MAILTO:napoloni@ucsd.edu">napoloni@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>guanliang yan</td><td>a12267638</td><td>
+                   <a href="MAILTO:guyan@ucsd.edu">guyan@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>paul chong</td><td>a12720614</td><td>
+                   <a href="MAILTO:p2chong@ucsd.edu">p2chong@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>shafeen pittal</td><td>a12748408</td><td>
+                   <a href="MAILTO:spittal@ucsd.edu">spittal@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>hanson qin</td><td>a12870331</td><td>
+                   <a href="MAILTO:h3qin@ucsd.edu">h3qin@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yasir jangda</td><td>a12994060</td><td>
+                   <a href="MAILTO:yjangda@ucsd.edu">yjangda@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>andrew boyd</td><td>a13034918</td><td>
+                   <a href="MAILTO:asboyd@ucsd.edu">asboyd@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>alexander hansen</td><td>a13088898</td><td>
+                   <a href="MAILTO:a3hansen@ucsd.edu">a3hansen@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>vinh dao</td><td>a13223259</td><td>
+                   <a href="MAILTO:vxdao@ucsd.edu">vxdao@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kelly zhang</td><td>a13437284</td><td>
+                   <a href="MAILTO:kez062@ucsd.edu">kez062@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nina rothenhaus</td><td>a13452654</td><td>
+                   <a href="MAILTO:nrothenh@ucsd.edu">nrothenh@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sarah youn</td><td>a13466746</td><td>
+                   <a href="MAILTO:smyoun@ucsd.edu">smyoun@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>joshua lee</td><td>a13524653</td><td>
+                   <a href="MAILTO:jtl088@ucsd.edu">jtl088@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>karan sunil</td><td>a13537263</td><td>
+                   <a href="MAILTO:ksunil@ucsd.edu">ksunil@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>benny lee</td><td>a13592070</td><td>
+                   <a href="MAILTO:bel047@ucsd.edu">bel047@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kyra rivette</td><td>a13607076</td><td>
+                   <a href="MAILTO:krivette@ucsd.edu">krivette@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lisa zhou</td><td>a13646419</td><td>
+                   <a href="MAILTO:liz160@ucsd.edu">liz160@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tyler reagan</td><td>a13679180</td><td>
+                   <a href="MAILTO:tareagan@ucsd.edu">tareagan@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>erick alvarez</td><td>a13705057</td><td>
+                   <a href="MAILTO:edalvare@ucsd.edu">edalvare@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jessica redublo</td><td>a13783751</td><td>
+                   <a href="MAILTO:jredublo@ucsd.edu">jredublo@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>haowen jiang</td><td>a13805856</td><td>
+                   <a href="MAILTO:haj047@ucsd.edu">haj047@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>siddharth jain</td><td>a13896214</td><td>
+                   <a href="MAILTO:sij001@ucsd.edu">sij001@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>evan chang</td><td>a13945245</td><td>
+                   <a href="MAILTO:emchang@ucsd.edu">emchang@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>orr toledano</td><td>a14010206</td><td>
+                   <a href="MAILTO:otoledan@ucsd.edu">otoledan@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>minxun xu</td><td>a14069735</td><td>
+                   <a href="MAILTO:mix033@ucsd.edu">mix033@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>muhammad qadir</td><td>a14112748</td><td>
+                   <a href="MAILTO:mqadir@ucsd.edu">mqadir@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zhuoran li</td><td>a14140194</td><td>
+                   <a href="MAILTO:zhl274@ucsd.edu">zhl274@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>nicole johnson</td><td>a14176422</td><td>
+                   <a href="MAILTO:npj001@ucsd.edu">npj001@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yiwei zhao</td><td>a14176771</td><td>
+                   <a href="MAILTO:yiz486@ucsd.edu">yiz486@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>stephanie hartono</td><td>a14213590</td><td>
+                   <a href="MAILTO:shartono@ucsd.edu">shartono@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>andy heng</td><td>a14230552</td><td>
+                   <a href="MAILTO:a4heng@ucsd.edu">a4heng@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ravneet dhanjal</td><td>a14265092</td><td>
+                   <a href="MAILTO:rdhanjal@ucsd.edu">rdhanjal@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kyle lortscher</td><td>a14272846</td><td>
+                   <a href="MAILTO:klortsch@ucsd.edu">klortsch@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>antonio martorana</td><td>a91065278</td><td>
+                   <a href="MAILTO:amartora@ucsd.edu">amartora@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mahib hosain</td><td>a92025178</td><td>
+                   <a href="MAILTO:mhosain@ucsd.edu">mhosain@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>chenyang an</td><td>a92061473</td><td>
+                   <a href="MAILTO:c5an@ucsd.edu">c5an@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lauren lheureux</td><td>a92073146</td><td>
+                   <a href="MAILTO:llheureu@ucsd.edu">llheureu@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hongji jiang</td><td>a92074629</td><td>
+                   <a href="MAILTO:hoj008@ucsd.edu">hoj008@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xinyi wang</td><td>a92111608</td><td>
+                   <a href="MAILTO:xiw215@ucsd.edu">xiw215@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jahya burke</td><td>a99066017</td><td>
+                   <a href="MAILTO:j1burke@ucsd.edu">j1burke@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>shulin jiang</td><td>a99091561</td><td>
+                   <a href="MAILTO:s1jiang@ucsd.edu">s1jiang@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jinbum park</td><td>a99420922</td><td>
+                   <a href="MAILTO:jip016@ucsd.edu">jip016@ucsd.edu</a>
+              </td><td>CSE 15L (A50:  905822): Thursdays, 3pm-4:50pm in CSE B250</td><td>905822</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</span>
+		(5898)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">48</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_8" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>eric tran</td><td>a10839547</td><td>
+                   <a href="MAILTO:ett006@ucsd.edu">ett006@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>aishwarya gandhi</td><td>a11610263</td><td>
+                   <a href="MAILTO:asgandhi@ucsd.edu">asgandhi@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>michael carlson</td><td>a11648679</td><td>
+                   <a href="MAILTO:m1carlso@ucsd.edu">m1carlso@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>brendan lam</td><td>a12091112</td><td>
+                   <a href="MAILTO:b4lam@ucsd.edu">b4lam@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aaron liu</td><td>a12248811</td><td>
+                   <a href="MAILTO:ahl022@ucsd.edu">ahl022@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>vidya raghvendra</td><td>a12779135</td><td>
+                   <a href="MAILTO:vraghven@ucsd.edu">vraghven@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nha do</td><td>a12842952</td><td>
+                   <a href="MAILTO:nnd002@ucsd.edu">nnd002@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jaime velazquez</td><td>a12865121</td><td>
+                   <a href="MAILTO:j5velazq@ucsd.edu">j5velazq@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aaron rothleder</td><td>a12935659</td><td>
+                   <a href="MAILTO:arothled@ucsd.edu">arothled@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>paul lee</td><td>a12950829</td><td>
+                   <a href="MAILTO:pjl002@ucsd.edu">pjl002@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jesus gutierrez</td><td>a13228299</td><td>
+                   <a href="MAILTO:jeg080@ucsd.edu">jeg080@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>connie luong</td><td>a13301736</td><td>
+                   <a href="MAILTO:col032@ucsd.edu">col032@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>bryant liu</td><td>a13458492</td><td>
+                   <a href="MAILTO:brl072@ucsd.edu">brl072@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kar teh</td><td>a13492157</td><td>
+                   <a href="MAILTO:kteh@ucsd.edu">kteh@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>anona gupta</td><td>a13606136</td><td>
+                   <a href="MAILTO:arg060@ucsd.edu">arg060@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>arthur tran</td><td>a13660401</td><td>
+                   <a href="MAILTO:art017@ucsd.edu">art017@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>brandon duong</td><td>a13688564</td><td>
+                   <a href="MAILTO:b8duong@ucsd.edu">b8duong@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>brian lai</td><td>a13724968</td><td>
+                   <a href="MAILTO:b4lai@ucsd.edu">b4lai@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kwangyun keum</td><td>a13726155</td><td>
+                   <a href="MAILTO:kkeum@ucsd.edu">kkeum@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>heejung son</td><td>a13745669</td><td>
+                   <a href="MAILTO:hes018@ucsd.edu">hes018@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>julie smith</td><td>a13763487</td><td>
+                   <a href="MAILTO:jms043@ucsd.edu">jms043@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hensen huynh</td><td>a13832781</td><td>
+                   <a href="MAILTO:h9huynh@ucsd.edu">h9huynh@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>kenneth padden</td><td>a13849362</td><td>
+                   <a href="MAILTO:kpadden@ucsd.edu">kpadden@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>woosung kim</td><td>a13870582</td><td>
+                   <a href="MAILTO:wok034@ucsd.edu">wok034@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>karapet topchyan</td><td>a13892867</td><td>
+                   <a href="MAILTO:ktopchya@ucsd.edu">ktopchya@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>megan bindra</td><td>a13903269</td><td>
+                   <a href="MAILTO:mbindra@ucsd.edu">mbindra@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>tracy pham</td><td>a13917165</td><td>
+                   <a href="MAILTO:trpham@ucsd.edu">trpham@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>michelle chang</td><td>a13945620</td><td>
+                   <a href="MAILTO:mtc017@ucsd.edu">mtc017@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>tejas sriram</td><td>a13976863</td><td>
+                   <a href="MAILTO:tesriram@ucsd.edu">tesriram@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>bryce chong</td><td>a13977978</td><td>
+                   <a href="MAILTO:bcchong@ucsd.edu">bcchong@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>shengzhi wang</td><td>a14012032</td><td>
+                   <a href="MAILTO:shw198@ucsd.edu">shw198@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>909449</td><td>4/3/2017 8:20:43 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>tianyi zhang</td><td>a14014008</td><td>
+                   <a href="MAILTO:tiz122@ucsd.edu">tiz122@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>adrian mendoza</td><td>a14037953</td><td>
+                   <a href="MAILTO:adm031@ucsd.edu">adm031@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>nishil macwan</td><td>a14053277</td><td>
+                   <a href="MAILTO:nmacwan@ucsd.edu">nmacwan@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>patrick mcgrath</td><td>a14161483</td><td>
+                   <a href="MAILTO:pmcgrath@ucsd.edu">pmcgrath@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>khoa tran</td><td>a14161521</td><td>
+                   <a href="MAILTO:knt024@ucsd.edu">knt024@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>adrian herrmann</td><td>a14202007</td><td>
+                   <a href="MAILTO:adherrma@ucsd.edu">adherrma@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>adrian mariscal</td><td>a14217425</td><td>
+                   <a href="MAILTO:armarisc@ucsd.edu">armarisc@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zifeng chen</td><td>a14253178</td><td>
+                   <a href="MAILTO:zic079@ucsd.edu">zic079@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>chao long</td><td>a53224755</td><td>
+                   <a href="MAILTO:c3long@ucsd.edu">c3long@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>huiyu yang</td><td>a91069783</td><td>
+                   <a href="MAILTO:huy004@ucsd.edu">huy004@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>daniel coronado</td><td>a91082861</td><td>
+                   <a href="MAILTO:d4corona@ucsd.edu">d4corona@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>shuqiang wang</td><td>a92024848</td><td>
+                   <a href="MAILTO:shw164@ucsd.edu">shw164@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zijing gu</td><td>a92040093</td><td>
+                   <a href="MAILTO:zig021@ucsd.edu">zig021@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>cole reynolds</td><td>a92064223</td><td>
+                   <a href="MAILTO:ctreynol@ucsd.edu">ctreynol@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>du li</td><td>a92089462</td><td>
+                   <a href="MAILTO:dul010@ucsd.edu">dul010@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>tony wu</td><td>a92097465</td><td>
+                   <a href="MAILTO:ttwu@ucsd.edu">ttwu@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yunuo wang</td><td>a92142064</td><td>
+                   <a href="MAILTO:yuw315@ucsd.edu">yuw315@ucsd.edu</a>
+              </td><td>CSE 15L (A51:  905823): Thursdays, 6:30pm-8:20pm in CSE B250</td><td>905823</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</span>
+		(5899)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">42</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_9" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>joshua williams</td><td>a12983717</td><td>
+                   <a href="MAILTO:jaw070@ucsd.edu">jaw070@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>caitlyn bryant</td><td>a13174752</td><td>
+                   <a href="MAILTO:c2bryant@ucsd.edu">c2bryant@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zhaopu wang</td><td>a13314295</td><td>
+                   <a href="MAILTO:zhw206@ucsd.edu">zhw206@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>saveree joshipura</td><td>a13349228</td><td>
+                   <a href="MAILTO:sjoshipu@ucsd.edu">sjoshipu@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>katyaini mahajan</td><td>a13421706</td><td>
+                   <a href="MAILTO:kmahajan@ucsd.edu">kmahajan@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>justin tang</td><td>a13442995</td><td>
+                   <a href="MAILTO:jqt003@ucsd.edu">jqt003@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>matthew nobuhara</td><td>a13512841</td><td>
+                   <a href="MAILTO:mnobuhar@ucsd.edu">mnobuhar@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yikai chen</td><td>a13531003</td><td>
+                   <a href="MAILTO:yic258@ucsd.edu">yic258@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>lufan xiao</td><td>a13593162</td><td>
+                   <a href="MAILTO:lux011@ucsd.edu">lux011@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909449</td><td>4/3/2017 9:29:25 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>anagha subramanian</td><td>a13597257</td><td>
+                   <a href="MAILTO:ansubram@ucsd.edu">ansubram@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>sahil saboo</td><td>a13659766</td><td>
+                   <a href="MAILTO:sasaboo@ucsd.edu">sasaboo@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yunkai chen</td><td>a13673770</td><td>
+                   <a href="MAILTO:yuc331@ucsd.edu">yuc331@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>aditi gaur</td><td>a13675621</td><td>
+                   <a href="MAILTO:adgaur@ucsd.edu">adgaur@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>905830</td><td>4/3/2017 2:29:30 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>viet nguyen</td><td>a13702483</td><td>
+                   <a href="MAILTO:vin041@ucsd.edu">vin041@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>shiwen an</td><td>a13711854</td><td>
+                   <a href="MAILTO:sha020@ucsd.edu">sha020@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>905826</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>pei-hsuan huang</td><td>a13716863</td><td>
+                   <a href="MAILTO:peh018@ucsd.edu">peh018@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ruben gonzalez</td><td>a13777913</td><td>
+                   <a href="MAILTO:rag043@ucsd.edu">rag043@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jiahang sha</td><td>a13780385</td><td>
+                   <a href="MAILTO:jisha@ucsd.edu">jisha@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>4/3/2017 6:35:37 PM</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zhenkun zhou</td><td>a13823464</td><td>
+                   <a href="MAILTO:zhz264@ucsd.edu">zhz264@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yahya daud</td><td>a13834794</td><td>
+                   <a href="MAILTO:ydaud@ucsd.edu">ydaud@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ramazan elsunkaev</td><td>a13852317</td><td>
+                   <a href="MAILTO:relsunka@ucsd.edu">relsunka@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>weijin xu</td><td>a13913775</td><td>
+                   <a href="MAILTO:wex038@ucsd.edu">wex038@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>peter ton</td><td>a13942448</td><td>
+                   <a href="MAILTO:pnton@ucsd.edu">pnton@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>longsheng zhao</td><td>a13952226</td><td>
+                   <a href="MAILTO:loz007@ucsd.edu">loz007@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yunshu gao</td><td>a13994254</td><td>
+                   <a href="MAILTO:yug129@ucsd.edu">yug129@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>haoqi wu</td><td>a13998564</td><td>
+                   <a href="MAILTO:haw175@ucsd.edu">haw175@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ani lermi</td><td>a14018542</td><td>
+                   <a href="MAILTO:alermi@ucsd.edu">alermi@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>fengjing cai</td><td>a14174321</td><td>
+                   <a href="MAILTO:f2cai@ucsd.edu">f2cai@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>seth dennison</td><td>a14237009</td><td>
+                   <a href="MAILTO:sjdennis@ucsd.edu">sjdennis@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>zhiyu gong</td><td>a53108870</td><td>
+                   <a href="MAILTO:z9gong@ucsd.edu">z9gong@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>xinhe zhang</td><td>a53221693</td><td>
+                   <a href="MAILTO:xiz515@ucsd.edu">xiz515@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>4/3/2017 4:28:43 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>cong zeng</td><td>a91103671</td><td>
+                   <a href="MAILTO:czeng@ucsd.edu">czeng@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>taehyuk yim</td><td>a91144285</td><td>
+                   <a href="MAILTO:tayim@ucsd.edu">tayim@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yue han</td><td>a92067031</td><td>
+                   <a href="MAILTO:yuh131@ucsd.edu">yuh131@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zihan xu</td><td>a92121388</td><td>
+                   <a href="MAILTO:zix045@ucsd.edu">zix045@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kenil vora</td><td>a92124709</td><td>
+                   <a href="MAILTO:kvora@ucsd.edu">kvora@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>zichen zheng</td><td>a92148279</td><td>
+                   <a href="MAILTO:ziz154@ucsd.edu">ziz154@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jun ryu</td><td>a97098957</td><td>
+                   <a href="MAILTO:juryu@ucsd.edu">juryu@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chenxi ling</td><td>a98054776</td><td>
+                   <a href="MAILTO:cling@ucsd.edu">cling@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>4/3/2017 4:28:48 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>paul edwards</td><td>a99034395</td><td>
+                   <a href="MAILTO:paedward@ucsd.edu">paedward@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>he jiang</td><td>a99048340</td><td>
+                   <a href="MAILTO:h8jiang@ucsd.edu">h8jiang@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>ruomei ye</td><td>a99074215</td><td>
+                   <a href="MAILTO:r2ye@ucsd.edu">r2ye@ucsd.edu</a>
+              </td><td>CSE 15L (A53:  909327): Thursdays, 6:30pm-8:20pm in CSE B260 (not CSE B250)</td><td>909327</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr><tr>
+			<td>
+
+	<table border="0">
+	<tr>
+	<td>
+        Section Name:
+        <span style="font-family:Arial;font-weight:bold;">CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</span>
+		(5900)
+		Students  Enrolled:  <span style="font-family:Arial;font-weight:bold;">37</span> (Limit: 50)
+	</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="DataList1_DataGrid1_10" style="border-color:#FFB546;width:800px;border-collapse:collapse;">
+				<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+					<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Name</td><td>Section Id</td><td>Accessed Website</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nathan quach</td><td>a11365202</td><td>
+                   <a href="MAILTO:n1quach@ucsd.edu">n1quach@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>giang tran</td><td>a12495264</td><td>
+                   <a href="MAILTO:gtran@ucsd.edu">gtran@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>triet lieu</td><td>a12552965</td><td>
+                   <a href="MAILTO:tlieu@ucsd.edu">tlieu@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>albert tan</td><td>a12997595</td><td>
+                   <a href="MAILTO:aktan@ucsd.edu">aktan@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>bingtian huang</td><td>a13379314</td><td>
+                   <a href="MAILTO:bih009@ucsd.edu">bih009@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>909327</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kailash jayaram</td><td>a13381914</td><td>
+                   <a href="MAILTO:kjayaram@ucsd.edu">kjayaram@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>ian hurd</td><td>a13467933</td><td>
+                   <a href="MAILTO:ihurd@ucsd.edu">ihurd@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>guanxin li</td><td>a13488024</td><td>
+                   <a href="MAILTO:gul002@ucsd.edu">gul002@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jinliang huang</td><td>a13535139</td><td>
+                   <a href="MAILTO:jih271@ucsd.edu">jih271@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>sashaank pasumarthi</td><td>a13543356</td><td>
+                   <a href="MAILTO:spasumar@ucsd.edu">spasumar@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>tammy lee</td><td>a13573330</td><td>
+                   <a href="MAILTO:tal066@ucsd.edu">tal066@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>oscar reyes</td><td>a13664593</td><td>
+                   <a href="MAILTO:oxreyes@ucsd.edu">oxreyes@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>mingqi shen</td><td>a13687448</td><td>
+                   <a href="MAILTO:mis046@ucsd.edu">mis046@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>4/3/2017 4:27:50 PM</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>hriday panchasara</td><td>a13715777</td><td>
+                   <a href="MAILTO:hpanchas@ucsd.edu">hpanchas@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nicholas calkins</td><td>a13783584</td><td>
+                   <a href="MAILTO:ncalkins@ucsd.edu">ncalkins@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>eric wei</td><td>a13788699</td><td>
+                   <a href="MAILTO:e4wei@ucsd.edu">e4wei@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yu feng</td><td>a13820630</td><td>
+                   <a href="MAILTO:yuf107@ucsd.edu">yuf107@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>shivani doshi</td><td>a13821970</td><td>
+                   <a href="MAILTO:s1doshi@ucsd.edu">s1doshi@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nathanael see</td><td>a13824606</td><td>
+                   <a href="MAILTO:nsee@ucsd.edu">nsee@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>nabi ozberkman</td><td>a13827141</td><td>
+                   <a href="MAILTO:nozberkm@ucsd.edu">nozberkm@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>vu dang</td><td>a13867113</td><td>
+                   <a href="MAILTO:v8dang@ucsd.edu">v8dang@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>kevin zhou</td><td>a13867747</td><td>
+                   <a href="MAILTO:kgzhou@ucsd.edu">kgzhou@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>edward chen</td><td>a13869881</td><td>
+                   <a href="MAILTO:ejc042@ucsd.edu">ejc042@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>christopher huang</td><td>a13898935</td><td>
+                   <a href="MAILTO:cdh006@ucsd.edu">cdh006@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chuwei yi</td><td>a13908047</td><td>
+                   <a href="MAILTO:chy160@ucsd.edu">chy160@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>boyuan yu</td><td>a13964526</td><td>
+                   <a href="MAILTO:boy026@ucsd.edu">boy026@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>chuhua sun</td><td>a13997266</td><td>
+                   <a href="MAILTO:chs090@ucsd.edu">chs090@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>dacheng li</td><td>a14013145</td><td>
+                   <a href="MAILTO:dal177@ucsd.edu">dal177@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>abhimanyu thube</td><td>a14079770</td><td>
+                   <a href="MAILTO:athube@ucsd.edu">athube@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>yidong li</td><td>a14090218</td><td>
+                   <a href="MAILTO:yil546@ucsd.edu">yil546@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>jingsong chen</td><td>a14090871</td><td>
+                   <a href="MAILTO:jic362@ucsd.edu">jic362@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>samuel cartwright</td><td>a14115191</td><td>
+                   <a href="MAILTO:sjcartwr@ucsd.edu">sjcartwr@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>sneheil saxena</td><td>a14129739</td><td>
+                   <a href="MAILTO:snsaxena@ucsd.edu">snsaxena@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>teng tu</td><td>a14138587</td><td>
+                   <a href="MAILTO:tetu@ucsd.edu">tetu@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>nang chen</td><td>a14205066</td><td>
+                   <a href="MAILTO:nac018@ucsd.edu">nac018@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+					<td>jiarong liu</td><td>a14223681</td><td>
+                   <a href="MAILTO:jil752@ucsd.edu">jil752@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr><tr style="font-family:Arial;">
+					<td>yiyao jin</td><td>a92145644</td><td>
+                   <a href="MAILTO:yij066@ucsd.edu">yij066@ucsd.edu</a>
+              </td><td>CSE 15L (A52:  905824): Thursdays, 8:30pm-10:20pm in CSE B250</td><td>905824</td><td>&nbsp;</td>
+				</tr>
+			</table>
+      </td>
+		</tr>
+	</table>
+
+		<h3>Students not in a section</h3>
+		<span id="error_message"></span>
+
+       <table cellspacing="0" cellpadding="3" rules="all" border="1" id="UnenrolledDataGrid" style="border-color:#FFB546;border-collapse:collapse;">
+		<tr align="center" style="color:White;background-color:#304997;font-family:Arial;font-weight:bold;">
+			<td>Student Name</td><td>PID</td><td>E-mail</td><td>Section Id:</td><td>Registered</td><td>Ranked Section Preferences</td>
+		</tr><tr style="font-family:Arial;">
+			<td>timothy sun</td><td>a14111078</td><td>
+                   <a href="MAILTO:tys002@ucsd.edu">tys002@ucsd.edu</a>
+              </td><td>905828</td><td>
+				Yes
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>lekya mukkamala</td><td>a12580359</td><td>
+                   <a href="MAILTO:lmukkama@ucsd.edu">lmukkama@ucsd.edu</a>
+              </td><td>905822</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>pericles corkos</td><td>a13230404</td><td>
+                   <a href="MAILTO:pcorkos@ucsd.edu">pcorkos@ucsd.edu</a>
+              </td><td>905822</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>xiyuan yang</td><td>a99060767</td><td>
+                   <a href="MAILTO:xiy024@ucsd.edu">xiy024@ucsd.edu</a>
+              </td><td>905823</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>alexandria ongjoco</td><td>a12117492</td><td>
+                   <a href="MAILTO:atongjoc@ucsd.edu">atongjoc@ucsd.edu</a>
+              </td><td>905824</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>jacqueline jabuka</td><td>a14140897</td><td>
+                   <a href="MAILTO:jjabuka@ucsd.edu">jjabuka@ucsd.edu</a>
+              </td><td>905824</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>alexander reed</td><td>a11460026</td><td>
+                   <a href="MAILTO:abreed@ucsd.edu">abreed@ucsd.edu</a>
+              </td><td>905825</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>xinwen wang</td><td>a13718766</td><td>
+                   <a href="MAILTO:xiw315@ucsd.edu">xiw315@ucsd.edu</a>
+              </td><td>905825</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>jigar patel</td><td>a12206084</td><td>
+                   <a href="MAILTO:jpatel@ucsd.edu">jpatel@ucsd.edu</a>
+              </td><td>905827</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>aaron maynard</td><td>a11873698</td><td>
+                   <a href="MAILTO:ajmaynar@ucsd.edu">ajmaynar@ucsd.edu</a>
+              </td><td>905828</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>joel jang</td><td>a12980622</td><td>
+                   <a href="MAILTO:joj005@ucsd.edu">joj005@ucsd.edu</a>
+              </td><td>905828</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>tomas aviles-rodriguez</td><td>a14263932</td><td>
+                   <a href="MAILTO:tavilesr@ucsd.edu">tavilesr@ucsd.edu</a>
+              </td><td>905828</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>huaijin li</td><td>a92038506</td><td>
+                   <a href="MAILTO:hul060@ucsd.edu">hul060@ucsd.edu</a>
+              </td><td>905828</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>di wang</td><td>a99010421</td><td>
+                   <a href="MAILTO:diw016@ucsd.edu">diw016@ucsd.edu</a>
+              </td><td>905828</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>shawn copon</td><td>a11623548</td><td>
+                   <a href="MAILTO:scopon@ucsd.edu">scopon@ucsd.edu</a>
+              </td><td>905829</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>ryan iseri</td><td>a11985521</td><td>
+                   <a href="MAILTO:riseri@ucsd.edu">riseri@ucsd.edu</a>
+              </td><td>905829</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>jacus cortes</td><td>a13831069</td><td>
+                   <a href="MAILTO:j4cortes@ucsd.edu">j4cortes@ucsd.edu</a>
+              </td><td>909327</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>jeong park</td><td>a12307292</td><td>
+                   <a href="MAILTO:jwp019@ucsd.edu">jwp019@ucsd.edu</a>
+              </td><td>909449</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="font-family:Arial;">
+			<td>kenneth david</td><td>a14023620</td><td>
+                   <a href="MAILTO:kldavid@ucsd.edu">kldavid@ucsd.edu</a>
+              </td><td>909449</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr><tr style="background-color:#EEEEEE;font-family:Arial;">
+			<td>chenhua shi</td><td>a92406678</td><td>
+                   <a href="MAILTO:c8shi@ucsd.edu">c8shi@ucsd.edu</a>
+              </td><td>909449</td><td>
+				No
+				</td><td>
+				<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+
+			</table>
+				</td>
+		</tr>
+	</table>
+
+</div>
