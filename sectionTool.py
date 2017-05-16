@@ -23,6 +23,8 @@ for table in table_data:
             section_text = table_data[table_index - 1]("td")[0].text.split('\n')
             roster_obj['name'] = section_text[2].lstrip().rstrip().encode('ascii','ignore')
             roster_obj['students'] = []
+            if ( len( sys.argv ) == 1 ):
+                print ( roster_obj['name'] )
 
             # handle the student data for this section
             student_data = [[cell.text for cell in row("td")]
@@ -37,6 +39,10 @@ for table in table_data:
                 stu_obj['email'] = data_point[2][1:-1].encode('ascii','ignore')
                 stu_obj['studentID'] = totalStudents + 1
                 #stu_section = data_point[3]
+                if ( len( sys.argv ) == 1 ):
+                    print ( stu_obj['lastName'] + '\t' +
+                            stu_obj['firstName'] + '\t'
+                            + stu_obj['email'] );
 
                 roster_obj['students'].append( stu_obj )
 
@@ -44,8 +50,10 @@ for table in table_data:
 
             roster_obj['totalStudents'] = totalStudents
             request_obj = {'roster': roster_obj}
-            req = requests.post("http://localhost:8000/api/rosters",
-                    json=request_obj )
+            if ( len( sys.argv ) == 2 ):
+                if ( sys.argv[1] == "post" ):
+                    req = requests.post("http://cseseatingcharts.herokuapp.com/api/rosters",
+                            json=request_obj )
 
     table_index += 1
 
