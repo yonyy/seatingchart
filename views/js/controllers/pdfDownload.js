@@ -339,7 +339,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
             docDefinition = self.writeStudents(docDefinition, group, colIndex, subset_exclude);
             docDefinition.content[colIndex].columns.push({text: rangeStr, bold: true, fontSize: 30});
 
-            if (index < containers.length-1) {
+            if (index < containers.length) {
                 docDefinition.content.push({text: '', pageBreak: 'before'});
                 docDefinition.content.push(generateHeader());
                 docDefinition.content.push(generateSubHeader());
@@ -428,7 +428,7 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModalI
         }
 
         var generatorEvenlyDivide = function*() {
-            var groups = Math.floor(filteredContainer.length / threshold);
+            var groups = Math.floor(filteredContainer.length / threshold) + 1;
 
             for (var index = 0; index < groups; index++) {
                 if (index == groups-1) {
