@@ -9,7 +9,9 @@ section_data = open('sections.xls')
 # Grab every table in the sections file
 table_data = [table for table in BeautifulSoup(section_data)("table")]
 table_index = 0
-
+rostList = []
+fullListOfStudents = []
+count = 1;
 # look through every table, filtering out the important, student_info
 # sections of the file
 for table in table_data:
@@ -48,15 +50,34 @@ for table in table_data:
 
                 totalStudents += 1
 
+            roster_obj['students'] = sorted(roster_obj['students'], key=lambda k: k['lastName']);
+            rostList.append( roster_obj );
+            fullListOfStudents += roster_obj['students']
+            # for stu in roster_obj['students']:
+            #     stu['studentID'] = count;
             roster_obj['totalStudents'] = totalStudents
             request_obj = {'roster': roster_obj}
-            if ( len( sys.argv ) == 2 ):
-                if ( sys.argv[1] == "post" ):
-                    req = requests.post("http://cseseatingcharts.herokuapp.com/api/rosters",
-                            json=request_obj )
+            # if ( len( sys.argv ) == 2 ):
+            #     if ( sys.argv[1] == "post" ):
+            #         req = requests.post("http://cseseatingcharts.herokuapp.com/api/rosters",
+            #                 json=request_obj )
 
     table_index += 1
 
 
-    # if ( item[0] == "Student Name" ):
-    #     print item[0]
+fullListOfStudents = sorted(fullListOfStudents, key=lambda k: k['lastName']);
+examId = 1
+for student in fullListOfStudents:
+    for roster in rostList:
+        for otherStudent in roster['students']:
+            if ( student['email'] == otherStudent['email'] ):
+                otherStudent['studentID'] = examId;
+                examId += 1;
+
+for roster_obj in rostList:
+    request_obj = {'roster': roster_obj}
+    if ( len( sys.argv ) == 2 ):
+        if ( sys.argv[1] == "post" ):
+            req = requests.post("http://cseseatingcharts.herokuapp.com/api/rosters",
+                    json=request_obj )
+
