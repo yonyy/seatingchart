@@ -80,14 +80,18 @@
 				<tr>
 					<th>Last Name</th>
 					<th>First Name</th>
+					<th>Exam ID</th>
+					<th>Email</th>
 					<th>Seat Number</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="student in rpc.roster.students | orderBy: 'lastName' | filter: rpc.filter ">
-					<td>{{student.lastName}}</td>
-					<td>{{student.firstName}}</td>
+				<tr ng-repeat="student in rpc.roster.students">
+					<td><input type="text" class="form-control" ng-model="student.lastName"></td>
+					<td><input type="text" class="form-control" ng-model="student.firstName"></td>
+					<td><input type="text" class="form-control" ng-model="student.studentID"></td>
+					<td><input type="text" class="form-control" ng-model="student.email"></td>
 					<td><input type="text" class="form-control" ng-model="student.seat.id"></td>
 					<td>
 						<span class="badge" ng-click="rpc.applyChange(student)">Apply</span>

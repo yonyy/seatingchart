@@ -392,14 +392,19 @@ function($rootScope, $scope, $state, $stateParams, $filter, resource, $uibModal,
         originSeat.students[originIndex].seat.x = originSeat.x;
         originSeat.students[originIndex].seat.y = originSeat.y;
 
-        targetSeat.isEmpty = false; // targeted seat is no long empty
         originSeat.isEmpty = true;  // original seat might be empty
+        targetSeat.isEmpty = false; // targeted seat is no long empty
 
         // verifies is original seat is empty
         for (var i = 0; i < originSeat.students.length; i++) {
             if (originSeat.students[i].email != null) {
                 originSeat.isEmpty = false;
             }
+        }
+
+        // If the student is not a student, create the student
+        if ( student.studentID == 0) {
+          self.roster.students.push(student);
         }
 
         growl.success('Swapped seats');
